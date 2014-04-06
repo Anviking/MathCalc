@@ -9,7 +9,6 @@
 #import "Circle.h"
 
 @implementation Circle
-@synthesize primitiveFormulas = _primitiveFormulas;
 
 - (NSDictionary *)attributeVariables
 {
@@ -24,18 +23,15 @@
     return @[ @"radius" ];
 }
 
-- (NSArray *)primitiveFormulaStings
-{
-    return @[ @"$radius = $diameter / 2",
-              @"$radius = sqrt($area / pi)",
-              @"$radius = ($circonference /pi) / 2"];
-}
-
 - (NSArray *)formulaStrings
 {
     return @[ @"$diameter = 2 * $radius",
               @"$area = pi * pow($radius, 2)",
-              @"$circonference = $diameter * pi"];
+              @"$circonference = $diameter * pi",
+              
+              @"$radius = $diameter / 2",
+              @"$radius = sqrt($area / pi)",
+              @"$radius = ($circonference /pi) / 2"];
 }
 
 @end

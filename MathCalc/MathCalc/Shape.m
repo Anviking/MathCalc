@@ -14,7 +14,6 @@
 {
     self = [super init];
     if (self) {
-        self.primitiveFormulas = [Formula formulasWithFormulasStrings:[self primitiveFormulaStings]];
         self.formulas = [Formula formulasWithFormulasStrings:[self formulaStrings]];
     }
     return self;
@@ -62,33 +61,47 @@
 
 - (void)calculate
 {
+    self.validAttributes = nil;
+    NSMutableArray *formulas = [self formulas].mutableCopy;
+    [self calculateWithFormulas:formulas];
     
 }
 
-- (void)calculateVariable:(NSString *)string
+- (void)calculateWithFormulas:(NSArray *)formulas
 {
-    
-}
-
-- (void)calculatePrimitiveAttributes
-{
-    NSMutableSet *missingPrimitiveAttributes = [self missingPrimitiveAttributes];
-    NSMutableSet *validAttributes = [self validAttributes];
-    for (NSString *attribute in missingPrimitiveAttributes) {
-        NSLog(@"Looking to calculate: %@", attribute);
-        for (Formula *formula in self.primitiveFormulas) {
-            if (NSSetContainsItemsFromNSArray(validAttributes, formula.variableAttributes) && [formula.resultAttribute isEqualToString:attribute]) {
+    NSMutableArray *array = formulas.mutableCopy;
+    for (Formula *formula in formulas) {
+        if (![self.validAttributes containsObject:formula.resultAttribute]) {
+            // It is a formula we should evaluete
+            if (NSArrayContainsItemsFromArray(self.validAttributes, formula.variableAttributes)) {
+                // We can evaluate it.
                 [self evaluateFormula:formula];
-                [validAttributes addObject:formula.resultAttribute];
+                [self.validAttributes addObject:formula.resultAttribute];
+                [array removeObject:formulas];
+                
+                NSLog(@"Calculated :%@", formula.resultAttribute);
+                
+                // Start all over again
+                [self calculateWithFormulas:array];
+                break;
             }
+            else {
+                // We cannot evaluate the formula yet, maybe next time
+                NSLog(@"Cannot calculate: %@", formula.resultAttribute);
+            }
+        }
+        else {
+            // We already have the result of this formula
+            [array removeObject:formula];
         }
     }
 }
 
-extern BOOL NSSetContainsItemsFromNSArray(NSSet *set, NSArray *array)
+
+extern BOOL NSArrayContainsItemsFromArray(NSArray *array1, NSArray *array2)
 {
-    for (id obj in array) {
-        if (![set containsObject:obj]) {
+    for (id obj in array2) {
+        if (![array1 containsObject:obj]) {
             return NO;
         }
     }
@@ -104,49 +117,22 @@ extern BOOL NSSetContainsItemsFromNSArray(NSSet *set, NSArray *array)
 
 #pragma mark - Helpers
 
-- (NSMutableSet *)validAttributes
+- (NSMutableArray *)validAttributes
 {
-    NSMutableSet *set = [NSMutableSet set];
-    for (NSString *key in [self attributes]) {
-        if ([self valueForKey:key]) {
-            [set addObject:key];
+    if (!_validAttributes) {
+        _validAttributes = [NSMutableArray array];
+        for (NSString *key in [self attributes]) {
+            if ([self valueForKey:key]) {
+                [_validAttributes addObject:key];
+            }
         }
     }
-    return set;
-}
-
-- (NSMutableSet *)missingAttributes
-{
-    NSMutableSet *set = [NSMutableSet set];
-    for (NSString *key in [self attributes]) {
-        if (![self valueForKey:key]) {
-            [set addObject:key];
-        }
-    }
-    return set;
-}
-
-- (NSMutableSet *)validPrimitiveAttributes
-{
-    NSMutableSet *set = [NSMutableSet set];
-    for (NSString *key in [self primitiveAttributes]) {
-        if ([self valueForKey:key]) {
-            [set addObject:key];
-        }
-    }
-    return set;
-}
-
-- (NSMutableSet *)missingPrimitiveAttributes
-{
-    NSMutableSet *set = [NSMutableSet setWithArray:[self primitiveAttributes]];
-    [set minusSet:[self validPrimitiveAttributes]];
-    return set;
+    return _validAttributes;
 }
 
 - (void)evaluateFormula:(Formula *)formula
 {
-    NSString *attribute = [self attributeFromVariableName:formula.resultAttribute];
+    NSString *attribute = formula.resultAttribute;
     NSNumber *value = [formula evaluateWithVariables:[self substitutionDictionaryWithAttributes:formula.variableAttributes]];
     [self setValue:value forKey:attribute];
 }

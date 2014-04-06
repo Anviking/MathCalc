@@ -15,7 +15,6 @@
 - (void)calculate;
 - (void)calculateAttributes;
 
-- (NSArray *)primitiveFormulaStings;
 - (NSArray *)formulaStrings;
 
 - (void)evaluateFormula:(Formula *)formula;
@@ -23,19 +22,11 @@
 //Basic generic information about the shape
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) NSArray *attributes;
-@property (nonatomic, strong) NSDictionary *attributeVariables;
-
-/// Primitive attributes for the shape
-@property (nonatomic, strong) NSArray *primitiveAttributes;
-
-/// Formulas for calculating primitive attributes
-@property (nonatomic, strong) NSArray *primitiveFormulas;
-
-/// Other formulas
+@property (nonatomic, strong) NSMutableArray *validAttributes;
 @property (nonatomic, strong) NSArray *formulas;
 
-/// The attributes used for the calculation
-@property (nonatomic, strong) NSArray *providingAttributes;
+/// Like "r", "h" and @"A"
+@property (nonatomic, strong) NSDictionary *attributeVariables;
 
 /// Delegate
 @property (nonatomic, assign) id <ShapeDelegate> delegate;
