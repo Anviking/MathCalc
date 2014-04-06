@@ -72,7 +72,7 @@
     NSMutableArray *array = formulas.mutableCopy;
     for (Formula *formula in formulas) {
         if (![self.validAttributes containsObject:formula.resultAttribute]) {
-            // It is a formula we should evaluete
+            // It is a formula we should evaluate
             if (NSArrayContainsItemsFromArray(self.validAttributes, formula.variableAttributes)) {
                 // We can evaluate it.
                 [self evaluateFormula:formula];
