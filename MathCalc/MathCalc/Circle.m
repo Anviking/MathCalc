@@ -26,16 +26,16 @@
 
 - (NSArray *)primitiveFormulaStings
 {
-    return @[ @"$r = $d / 2",
-              @"$r = sqrt($A / pi)",
-              @"$r = ($C/pi)/2"];
+    return @[ @"$radius = $diameter / 2",
+              @"$radius = sqrt($area / pi)",
+              @"$radius = ($circonference /pi) / 2"];
 }
 
 - (NSArray *)formulaStrings
 {
-    return @[ @"$d = 2 * $r",
-              @"$A = pi * pow($r, 2)",
-              @"$C = $d * pi"];
+    return @[ @"$diameter = 2 * $radius",
+              @"$area = pi * pow($radius, 2)",
+              @"$circonference = $diameter * pi"];
 }
 
 @end

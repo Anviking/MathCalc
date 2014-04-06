@@ -29,10 +29,10 @@
 
 - (void)testCreation
 {
-    Formula *formula = [Formula formulaWithFormulaString:@"$a = $b+12*sin($c)"];
-    NSArray *expectedVariables = @[@"b", @"c"];
-    XCTAssertEqualObjects(formula.resultKey, @"a", @"");
-    XCTAssertEqualObjects(formula.variableKeys, expectedVariables, @"Objects are not equal: %@, %@", formula.variableKeys, expectedVariables);
+    Formula *formula = [Formula formulaWithFormulaString:@"$area = $base+12*sin($circonference)"];
+    NSArray *expectedVariables = @[@"base", @"circonference"];
+    XCTAssertEqualObjects(formula.resultAttribute, @"area", @"");
+    XCTAssertEqualObjects(formula.variableAttributes, expectedVariables, @"Objects are not equal: %@, %@", formula.variableAttributes, expectedVariables);
 }
 
 

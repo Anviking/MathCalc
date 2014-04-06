@@ -48,49 +48,38 @@
     return self.attributeVariables[attribute];
 }
 
-- (NSDictionary *)substitutionDictionaryWithVariables:(NSArray *)variables
+- (NSDictionary *)substitutionDictionaryWithAttributes:(NSArray *)attributes
 {
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-    for (NSString *variable in variables) {
-        NSString *attribute = [self attributeFromVariableName:variable];
+    for (NSString *attribute in attributes) {;
         NSNumber *number = [self valueForKey:attribute] ?: @0;
-        dictionary[variable] = number;
+        dictionary[attribute] = number;
     }
     return [NSDictionary dictionaryWithDictionary:dictionary];
-}
-
-- (NSMutableSet *)validVariables
-{
-    NSMutableSet *set = [NSMutableSet set];
-    for (NSString *key in self.attributes) {
-        NSNumber *number = [self valueForKey:key];
-        if (number.floatValue) {
-            [set addObject:[self variableNameFromAttribute:key]];
-        }
-    }
-    return set;
 }
 
 #pragma mark - Calculate
 
 - (void)calculate
 {
-    if ([self missingPrimitiveAttributes].count > 0) {
-        [self calculatePrimitiveAttributes];
-    }
-    [self calculateAttributes];
+    
+}
+
+- (void)calculateVariable:(NSString *)string
+{
+    
 }
 
 - (void)calculatePrimitiveAttributes
 {
     NSMutableSet *missingPrimitiveAttributes = [self missingPrimitiveAttributes];
-    NSMutableSet *validVariables = [self validVariables];
+    NSMutableSet *validAttributes = [self validAttributes];
     for (NSString *attribute in missingPrimitiveAttributes) {
         NSLog(@"Looking to calculate: %@", attribute);
         for (Formula *formula in self.primitiveFormulas) {
-            if (NSSetContainsItemsFromNSArray(validVariables, formula.variableKeys) && [formula.resultKey isEqualToString:[self variableNameFromAttribute:attribute]]) {
+            if (NSSetContainsItemsFromNSArray(validAttributes, formula.variableAttributes) && [formula.resultAttribute isEqualToString:attribute]) {
                 [self evaluateFormula:formula];
-                [validVariables addObject:formula.resultKey];
+                [validAttributes addObject:formula.resultAttribute];
             }
         }
     }
@@ -115,6 +104,28 @@ extern BOOL NSSetContainsItemsFromNSArray(NSSet *set, NSArray *array)
 
 #pragma mark - Helpers
 
+- (NSMutableSet *)validAttributes
+{
+    NSMutableSet *set = [NSMutableSet set];
+    for (NSString *key in [self attributes]) {
+        if ([self valueForKey:key]) {
+            [set addObject:key];
+        }
+    }
+    return set;
+}
+
+- (NSMutableSet *)missingAttributes
+{
+    NSMutableSet *set = [NSMutableSet set];
+    for (NSString *key in [self attributes]) {
+        if (![self valueForKey:key]) {
+            [set addObject:key];
+        }
+    }
+    return set;
+}
+
 - (NSMutableSet *)validPrimitiveAttributes
 {
     NSMutableSet *set = [NSMutableSet set];
@@ -135,8 +146,8 @@ extern BOOL NSSetContainsItemsFromNSArray(NSSet *set, NSArray *array)
 
 - (void)evaluateFormula:(Formula *)formula
 {
-    NSString *attribute = [self attributeFromVariableName:formula.resultKey];
-    NSNumber *value = [formula evaluateWithVariables:[self substitutionDictionaryWithVariables:formula.variableKeys]];
+    NSString *attribute = [self attributeFromVariableName:formula.resultAttribute];
+    NSNumber *value = [formula evaluateWithVariables:[self substitutionDictionaryWithAttributes:formula.variableAttributes]];
     [self setValue:value forKey:attribute];
 }
 

@@ -28,9 +28,9 @@
 + (Formula *)formulaWithFormulaString:(NSString *)rawString
 {
     Formula *formula = [Formula new];
-    formula.resultKey = [self resultKeyFromRawString:rawString];
+    formula.resultAttribute = [self resultKeyFromRawString:rawString];
     formula.formulaString  = [self formulaStringFromRawString:rawString];
-    formula.variableKeys = [self variablesFromFormula:formula.formulaString];
+    formula.variableAttributes = [self variablesFromFormula:formula.formulaString];
     
     return formula;
 }
@@ -55,7 +55,7 @@
     __block NSMutableArray *variables = @[].mutableCopy;
     static NSRegularExpression *expression;
     if (!expression) {
-        expression = [NSRegularExpression regularExpressionWithPattern:@"(?<=\\$)[A-Za-z]" options:0 error:nil];
+        expression = [NSRegularExpression regularExpressionWithPattern:@"(?<=\\$)[A-Za-z]+" options:0 error:nil];
     }
     
     [expression enumerateMatchesInString:string options:0 range:NSMakeRange(0, string.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {

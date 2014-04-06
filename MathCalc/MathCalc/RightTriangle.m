@@ -31,19 +31,19 @@
 
 - (NSArray *)primitiveFormulaStings
 {
-    return @[ @"$h = sqrt(pow($s,2)-pow($b,2))",
-              @"$h = 2 * $A / $b"
-              @"$h = 2 * $A / $b",
-              @"$b = 2 * $A / $h"];
+    return @[ @"$height = sqrt(pow($hypotenuse,2)-pow($base,2))",
+              @"$height = 2 * $area / $base",
+              @"$height = 2 * $area / $base",
+              @"$base = 2 * $area / $height"];
 }
 
 - (NSArray *)formulaStrings
 {
-    return @[ @"$s = sqrt(pow($h,2)+pow($b,2))",
-              @"$C = $h + $b + $s",
-              @"$A = $h * $b / 2",
-              @"$α = asin($h/$s)",
-              @"$β = asin($b/$s)"];
+    return @[ @"$hypotenuse = sqrt(pow($height,2)+pow($base,2))",
+              @"$circonference = $height + $base + $hypotenuse",
+              @"$area = $height * $base / 2",
+              @"$α = asin($height / $hypotenuse)",
+              @"$β = asin($base / $hypotenuse)"];
 }
 
 @end

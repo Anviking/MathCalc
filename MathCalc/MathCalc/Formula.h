@@ -10,12 +10,12 @@
 
 @interface Formula : NSObject
 
-+ (Formula *)formulaWithFormulaString:(NSString *)string; // With format of "r = d * 2";
++ (Formula *)formulaWithFormulaString:(NSString *)string;
 + (NSArray *)formulasWithFormulasStrings:(NSArray *)array;
 
 - (NSNumber *)evaluateWithVariables:(NSDictionary *)variables;
 
 @property (nonatomic, strong) NSString *formulaString;
-@property (nonatomic, strong) NSArray *variableKeys;
-@property (nonatomic, strong) NSString *resultKey;
+@property (nonatomic, strong) NSArray *variableAttributes;
+@property (nonatomic, strong) NSString *resultAttribute;
 @end
