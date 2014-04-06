@@ -79,15 +79,12 @@
                 [self.validAttributes addObject:formula.resultAttribute];
                 [array removeObject:formulas];
                 
-                NSLog(@"Calculated :%@", formula.resultAttribute);
-                
                 // Start all over again
                 [self calculateWithFormulas:array];
                 break;
             }
             else {
                 // We cannot evaluate the formula yet, maybe next time
-                NSLog(@"Cannot calculate: %@", formula.resultAttribute);
             }
         }
         else {

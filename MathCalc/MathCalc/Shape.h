@@ -31,6 +31,8 @@
 /// Delegate
 @property (nonatomic, assign) id <ShapeDelegate> delegate;
 
+- (NSDictionary *)substitutionDictionaryWithAttributes:(NSArray *)attributes;
+
 - (NSString *)variableNameFromAttribute:(NSString *)attribute;
 - (NSString *)attributeFromVariableName:(NSString *)attribute;
 
