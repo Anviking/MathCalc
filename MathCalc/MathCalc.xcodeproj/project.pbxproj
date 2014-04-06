@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8FCE8B9B18F17D4C00E8C3D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE8B9A18F17D4C00E8C3D8 /* Foundation.framework */; };
+		8FCE8B9D18F17D4C00E8C3D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE8B9C18F17D4C00E8C3D8 /* CoreGraphics.framework */; };
+		8FCE8B9F18F17D4C00E8C3D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE8B9E18F17D4C00E8C3D8 /* UIKit.framework */; };
+		8FCE8BA518F17D4C00E8C3D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE8BA318F17D4C00E8C3D8 /* InfoPlist.strings */; };
+		8FCE8BA718F17D4C00E8C3D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BA618F17D4C00E8C3D8 /* main.m */; };
+		8FCE8BAB18F17D4C00E8C3D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BAA18F17D4C00E8C3D8 /* AppDelegate.m */; };
+		8FCE8BAE18F17D4C00E8C3D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE8BAC18F17D4C00E8C3D8 /* Main.storyboard */; };
+		8FCE8BB118F17D4C00E8C3D8 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BB018F17D4C00E8C3D8 /* MasterViewController.m */; };
+		8FCE8BB418F17D4C00E8C3D8 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BB318F17D4C00E8C3D8 /* DetailViewController.m */; };
+		8FCE8BB618F17D4C00E8C3D8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE8BB518F17D4C00E8C3D8 /* Images.xcassets */; };
+		8FCE8BBD18F17D4C00E8C3D8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE8BBC18F17D4C00E8C3D8 /* XCTest.framework */; };
+		8FCE8BBE18F17D4C00E8C3D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE8B9A18F17D4C00E8C3D8 /* Foundation.framework */; };
+		8FCE8BBF18F17D4C00E8C3D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE8B9E18F17D4C00E8C3D8 /* UIKit.framework */; };
+		8FCE8BC718F17D4C00E8C3D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FCE8BC518F17D4C00E8C3D8 /* InfoPlist.strings */; };
+		8FCE8BC918F17D4C00E8C3D8 /* MathCalcTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BC818F17D4C00E8C3D8 /* MathCalcTests.m */; };
+		8FCE8BDA18F17D7200E8C3D8 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BD318F17D7200E8C3D8 /* Calculator.m */; };
+		8FCE8BDB18F17D7200E8C3D8 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BD518F17D7200E8C3D8 /* Circle.m */; };
+		8FCE8BDC18F17D7200E8C3D8 /* Formula.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BD718F17D7200E8C3D8 /* Formula.m */; };
+		8FCE8BDD18F17D7200E8C3D8 /* Shape.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BD918F17D7200E8C3D8 /* Shape.m */; };
+		8FCE8BE118F17D9700E8C3D8 /* FormulaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BE018F17D9700E8C3D8 /* FormulaTests.m */; };
+		8FCE8C1018F17DAE00E8C3D8 /* _DDFunctionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BE418F17DAE00E8C3D8 /* _DDFunctionContainer.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C1118F17DAE00E8C3D8 /* _DDFunctionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BE418F17DAE00E8C3D8 /* _DDFunctionContainer.m */; };
+		8FCE8C1218F17DAE00E8C3D8 /* _DDFunctionExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BE618F17DAE00E8C3D8 /* _DDFunctionExpression.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C1318F17DAE00E8C3D8 /* _DDFunctionExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BE618F17DAE00E8C3D8 /* _DDFunctionExpression.m */; };
+		8FCE8C1418F17DAE00E8C3D8 /* _DDFunctionTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BE818F17DAE00E8C3D8 /* _DDFunctionTerm.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C1518F17DAE00E8C3D8 /* _DDFunctionTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BE818F17DAE00E8C3D8 /* _DDFunctionTerm.m */; };
+		8FCE8C1618F17DAE00E8C3D8 /* _DDFunctionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BEA18F17DAE00E8C3D8 /* _DDFunctionUtilities.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C1718F17DAE00E8C3D8 /* _DDFunctionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BEA18F17DAE00E8C3D8 /* _DDFunctionUtilities.m */; };
+		8FCE8C1818F17DAE00E8C3D8 /* _DDGroupTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BEC18F17DAE00E8C3D8 /* _DDGroupTerm.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C1918F17DAE00E8C3D8 /* _DDGroupTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BEC18F17DAE00E8C3D8 /* _DDGroupTerm.m */; };
+		8FCE8C1A18F17DAE00E8C3D8 /* _DDNumberExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BEE18F17DAE00E8C3D8 /* _DDNumberExpression.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C1B18F17DAE00E8C3D8 /* _DDNumberExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BEE18F17DAE00E8C3D8 /* _DDNumberExpression.m */; };
+		8FCE8C1C18F17DAE00E8C3D8 /* _DDNumberTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF018F17DAE00E8C3D8 /* _DDNumberTerm.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C1D18F17DAE00E8C3D8 /* _DDNumberTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF018F17DAE00E8C3D8 /* _DDNumberTerm.m */; };
+		8FCE8C1E18F17DAE00E8C3D8 /* _DDOperatorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF218F17DAE00E8C3D8 /* _DDOperatorInfo.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C1F18F17DAE00E8C3D8 /* _DDOperatorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF218F17DAE00E8C3D8 /* _DDOperatorInfo.m */; };
+		8FCE8C2018F17DAE00E8C3D8 /* _DDOperatorTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF418F17DAE00E8C3D8 /* _DDOperatorTerm.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C2118F17DAE00E8C3D8 /* _DDOperatorTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF418F17DAE00E8C3D8 /* _DDOperatorTerm.m */; };
+		8FCE8C2218F17DAE00E8C3D8 /* _DDParserTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF618F17DAE00E8C3D8 /* _DDParserTerm.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C2318F17DAE00E8C3D8 /* _DDParserTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF618F17DAE00E8C3D8 /* _DDParserTerm.m */; };
+		8FCE8C2418F17DAE00E8C3D8 /* _DDRewriteRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF818F17DAE00E8C3D8 /* _DDRewriteRule.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C2518F17DAE00E8C3D8 /* _DDRewriteRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF818F17DAE00E8C3D8 /* _DDRewriteRule.m */; };
+		8FCE8C2618F17DAE00E8C3D8 /* _DDVariableExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BFA18F17DAE00E8C3D8 /* _DDVariableExpression.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C2718F17DAE00E8C3D8 /* _DDVariableExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BFA18F17DAE00E8C3D8 /* _DDVariableExpression.m */; };
+		8FCE8C2818F17DAE00E8C3D8 /* _DDVariableTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BFC18F17DAE00E8C3D8 /* _DDVariableTerm.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C2918F17DAE00E8C3D8 /* _DDVariableTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BFC18F17DAE00E8C3D8 /* _DDVariableTerm.m */; };
+		8FCE8C2A18F17DAE00E8C3D8 /* DDExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BFE18F17DAE00E8C3D8 /* DDExpression.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C2B18F17DAE00E8C3D8 /* DDExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BFE18F17DAE00E8C3D8 /* DDExpression.m */; };
+		8FCE8C2C18F17DAE00E8C3D8 /* DDMathEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0118F17DAE00E8C3D8 /* DDMathEvaluator.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C2D18F17DAE00E8C3D8 /* DDMathEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0118F17DAE00E8C3D8 /* DDMathEvaluator.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C2E18F17DAE00E8C3D8 /* DDMathStringToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0518F17DAE00E8C3D8 /* DDMathStringToken.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C2F18F17DAE00E8C3D8 /* DDMathStringToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0518F17DAE00E8C3D8 /* DDMathStringToken.m */; };
+		8FCE8C3018F17DAE00E8C3D8 /* DDMathStringTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0718F17DAE00E8C3D8 /* DDMathStringTokenizer.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C3118F17DAE00E8C3D8 /* DDMathStringTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0718F17DAE00E8C3D8 /* DDMathStringTokenizer.m */; };
+		8FCE8C3218F17DAE00E8C3D8 /* DDParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0918F17DAE00E8C3D8 /* DDParser.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C3318F17DAE00E8C3D8 /* DDParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0918F17DAE00E8C3D8 /* DDParser.m */; };
+		8FCE8C3418F17DAE00E8C3D8 /* DDParserTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0B18F17DAE00E8C3D8 /* DDParserTypes.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C3518F17DAE00E8C3D8 /* DDParserTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0B18F17DAE00E8C3D8 /* DDParserTypes.m */; };
+		8FCE8C3618F17DAE00E8C3D8 /* DDTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0D18F17DAE00E8C3D8 /* DDTypes.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C3718F17DAE00E8C3D8 /* DDTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0D18F17DAE00E8C3D8 /* DDTypes.m */; };
+		8FCE8C3818F17DAE00E8C3D8 /* NSString+DDMathParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0F18F17DAE00E8C3D8 /* NSString+DDMathParsing.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		8FCE8C3918F17DAE00E8C3D8 /* NSString+DDMathParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0F18F17DAE00E8C3D8 /* NSString+DDMathParsing.m */; };
+		8FCE8C3B18F18C4E00E8C3D8 /* CircleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C3A18F18C4E00E8C3D8 /* CircleTests.m */; };
+		8FCE8C3E18F1ADAB00E8C3D8 /* RightTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C3D18F1ADAB00E8C3D8 /* RightTriangle.m */; };
+		8FCE8C3F18F1ADAB00E8C3D8 /* RightTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C3D18F1ADAB00E8C3D8 /* RightTriangle.m */; };
+		8FCE8C4118F1B62A00E8C3D8 /* RightTriangleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C4018F1B62A00E8C3D8 /* RightTriangleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FCE8BC018F17D4C00E8C3D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FCE8B8F18F17D4C00E8C3D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FCE8B9618F17D4C00E8C3D8;
+			remoteInfo = MathCalc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8FCE8B9718F17D4C00E8C3D8 /* MathCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FCE8B9A18F17D4C00E8C3D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8FCE8B9C18F17D4C00E8C3D8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8FCE8B9E18F17D4C00E8C3D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8FCE8BA218F17D4C00E8C3D8 /* MathCalc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MathCalc-Info.plist"; sourceTree = "<group>"; };
+		8FCE8BA418F17D4C00E8C3D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8FCE8BA618F17D4C00E8C3D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8FCE8BA818F17D4C00E8C3D8 /* MathCalc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MathCalc-Prefix.pch"; sourceTree = "<group>"; };
+		8FCE8BA918F17D4C00E8C3D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8FCE8BAA18F17D4C00E8C3D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8FCE8BAD18F17D4C00E8C3D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8FCE8BAF18F17D4C00E8C3D8 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		8FCE8BB018F17D4C00E8C3D8 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		8FCE8BB218F17D4C00E8C3D8 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		8FCE8BB318F17D4C00E8C3D8 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		8FCE8BB518F17D4C00E8C3D8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8FCE8BBB18F17D4C00E8C3D8 /* MathCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FCE8BBC18F17D4C00E8C3D8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8FCE8BC418F17D4C00E8C3D8 /* MathCalcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MathCalcTests-Info.plist"; sourceTree = "<group>"; };
+		8FCE8BC618F17D4C00E8C3D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8FCE8BC818F17D4C00E8C3D8 /* MathCalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathCalcTests.m; sourceTree = "<group>"; };
+		8FCE8BD218F17D7200E8C3D8 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		8FCE8BD318F17D7200E8C3D8 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		8FCE8BD418F17D7200E8C3D8 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		8FCE8BD518F17D7200E8C3D8 /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
+		8FCE8BD618F17D7200E8C3D8 /* Formula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Formula.h; sourceTree = "<group>"; };
+		8FCE8BD718F17D7200E8C3D8 /* Formula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Formula.m; sourceTree = "<group>"; };
+		8FCE8BD818F17D7200E8C3D8 /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
+		8FCE8BD918F17D7200E8C3D8 /* Shape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shape.m; sourceTree = "<group>"; };
+		8FCE8BE018F17D9700E8C3D8 /* FormulaTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormulaTests.m; sourceTree = "<group>"; };
+		8FCE8BE318F17DAE00E8C3D8 /* _DDFunctionContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDFunctionContainer.h; sourceTree = "<group>"; };
+		8FCE8BE418F17DAE00E8C3D8 /* _DDFunctionContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDFunctionContainer.m; sourceTree = "<group>"; };
+		8FCE8BE518F17DAE00E8C3D8 /* _DDFunctionExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDFunctionExpression.h; sourceTree = "<group>"; };
+		8FCE8BE618F17DAE00E8C3D8 /* _DDFunctionExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDFunctionExpression.m; sourceTree = "<group>"; };
+		8FCE8BE718F17DAE00E8C3D8 /* _DDFunctionTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDFunctionTerm.h; sourceTree = "<group>"; };
+		8FCE8BE818F17DAE00E8C3D8 /* _DDFunctionTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDFunctionTerm.m; sourceTree = "<group>"; };
+		8FCE8BE918F17DAE00E8C3D8 /* _DDFunctionUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDFunctionUtilities.h; sourceTree = "<group>"; };
+		8FCE8BEA18F17DAE00E8C3D8 /* _DDFunctionUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDFunctionUtilities.m; sourceTree = "<group>"; };
+		8FCE8BEB18F17DAE00E8C3D8 /* _DDGroupTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDGroupTerm.h; sourceTree = "<group>"; };
+		8FCE8BEC18F17DAE00E8C3D8 /* _DDGroupTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDGroupTerm.m; sourceTree = "<group>"; };
+		8FCE8BED18F17DAE00E8C3D8 /* _DDNumberExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDNumberExpression.h; sourceTree = "<group>"; };
+		8FCE8BEE18F17DAE00E8C3D8 /* _DDNumberExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDNumberExpression.m; sourceTree = "<group>"; };
+		8FCE8BEF18F17DAE00E8C3D8 /* _DDNumberTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDNumberTerm.h; sourceTree = "<group>"; };
+		8FCE8BF018F17DAE00E8C3D8 /* _DDNumberTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDNumberTerm.m; sourceTree = "<group>"; };
+		8FCE8BF118F17DAE00E8C3D8 /* _DDOperatorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDOperatorInfo.h; sourceTree = "<group>"; };
+		8FCE8BF218F17DAE00E8C3D8 /* _DDOperatorInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDOperatorInfo.m; sourceTree = "<group>"; };
+		8FCE8BF318F17DAE00E8C3D8 /* _DDOperatorTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDOperatorTerm.h; sourceTree = "<group>"; };
+		8FCE8BF418F17DAE00E8C3D8 /* _DDOperatorTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDOperatorTerm.m; sourceTree = "<group>"; };
+		8FCE8BF518F17DAE00E8C3D8 /* _DDParserTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDParserTerm.h; sourceTree = "<group>"; };
+		8FCE8BF618F17DAE00E8C3D8 /* _DDParserTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDParserTerm.m; sourceTree = "<group>"; };
+		8FCE8BF718F17DAE00E8C3D8 /* _DDRewriteRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDRewriteRule.h; sourceTree = "<group>"; };
+		8FCE8BF818F17DAE00E8C3D8 /* _DDRewriteRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDRewriteRule.m; sourceTree = "<group>"; };
+		8FCE8BF918F17DAE00E8C3D8 /* _DDVariableExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDVariableExpression.h; sourceTree = "<group>"; };
+		8FCE8BFA18F17DAE00E8C3D8 /* _DDVariableExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDVariableExpression.m; sourceTree = "<group>"; };
+		8FCE8BFB18F17DAE00E8C3D8 /* _DDVariableTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDVariableTerm.h; sourceTree = "<group>"; };
+		8FCE8BFC18F17DAE00E8C3D8 /* _DDVariableTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDVariableTerm.m; sourceTree = "<group>"; };
+		8FCE8BFD18F17DAE00E8C3D8 /* DDExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDExpression.h; sourceTree = "<group>"; };
+		8FCE8BFE18F17DAE00E8C3D8 /* DDExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDExpression.m; sourceTree = "<group>"; };
+		8FCE8BFF18F17DAE00E8C3D8 /* DDMathEvaluator+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDMathEvaluator+Private.h"; sourceTree = "<group>"; };
+		8FCE8C0018F17DAE00E8C3D8 /* DDMathEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathEvaluator.h; sourceTree = "<group>"; };
+		8FCE8C0118F17DAE00E8C3D8 /* DDMathEvaluator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMathEvaluator.m; sourceTree = "<group>"; };
+		8FCE8C0218F17DAE00E8C3D8 /* DDMathParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathParser.h; sourceTree = "<group>"; };
+		8FCE8C0318F17DAE00E8C3D8 /* DDMathParserMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathParserMacros.h; sourceTree = "<group>"; };
+		8FCE8C0418F17DAE00E8C3D8 /* DDMathStringToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathStringToken.h; sourceTree = "<group>"; };
+		8FCE8C0518F17DAE00E8C3D8 /* DDMathStringToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMathStringToken.m; sourceTree = "<group>"; };
+		8FCE8C0618F17DAE00E8C3D8 /* DDMathStringTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathStringTokenizer.h; sourceTree = "<group>"; };
+		8FCE8C0718F17DAE00E8C3D8 /* DDMathStringTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMathStringTokenizer.m; sourceTree = "<group>"; };
+		8FCE8C0818F17DAE00E8C3D8 /* DDParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDParser.h; sourceTree = "<group>"; };
+		8FCE8C0918F17DAE00E8C3D8 /* DDParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDParser.m; sourceTree = "<group>"; };
+		8FCE8C0A18F17DAE00E8C3D8 /* DDParserTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDParserTypes.h; sourceTree = "<group>"; };
+		8FCE8C0B18F17DAE00E8C3D8 /* DDParserTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDParserTypes.m; sourceTree = "<group>"; };
+		8FCE8C0C18F17DAE00E8C3D8 /* DDTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTypes.h; sourceTree = "<group>"; };
+		8FCE8C0D18F17DAE00E8C3D8 /* DDTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTypes.m; sourceTree = "<group>"; };
+		8FCE8C0E18F17DAE00E8C3D8 /* NSString+DDMathParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDMathParsing.h"; sourceTree = "<group>"; };
+		8FCE8C0F18F17DAE00E8C3D8 /* NSString+DDMathParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDMathParsing.m"; sourceTree = "<group>"; };
+		8FCE8C3A18F18C4E00E8C3D8 /* CircleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleTests.m; sourceTree = "<group>"; };
+		8FCE8C3C18F1ADAB00E8C3D8 /* RightTriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightTriangle.h; sourceTree = "<group>"; };
+		8FCE8C3D18F1ADAB00E8C3D8 /* RightTriangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightTriangle.m; sourceTree = "<group>"; };
+		8FCE8C4018F1B62A00E8C3D8 /* RightTriangleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightTriangleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8FCE8B9418F17D4C00E8C3D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FCE8B9D18F17D4C00E8C3D8 /* CoreGraphics.framework in Frameworks */,
+				8FCE8B9F18F17D4C00E8C3D8 /* UIKit.framework in Frameworks */,
+				8FCE8B9B18F17D4C00E8C3D8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FCE8BB818F17D4C00E8C3D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FCE8BBD18F17D4C00E8C3D8 /* XCTest.framework in Frameworks */,
+				8FCE8BBF18F17D4C00E8C3D8 /* UIKit.framework in Frameworks */,
+				8FCE8BBE18F17D4C00E8C3D8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8FCE8B8E18F17D4C00E8C3D8 = {
+			isa = PBXGroup;
+			children = (
+				8FCE8BA018F17D4C00E8C3D8 /* MathCalc */,
+				8FCE8BC218F17D4C00E8C3D8 /* MathCalcTests */,
+				8FCE8B9918F17D4C00E8C3D8 /* Frameworks */,
+				8FCE8B9818F17D4C00E8C3D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8FCE8B9818F17D4C00E8C3D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FCE8B9718F17D4C00E8C3D8 /* MathCalc.app */,
+				8FCE8BBB18F17D4C00E8C3D8 /* MathCalcTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FCE8B9918F17D4C00E8C3D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FCE8BE218F17DAE00E8C3D8 /* DDMathParser */,
+				8FCE8B9A18F17D4C00E8C3D8 /* Foundation.framework */,
+				8FCE8B9C18F17D4C00E8C3D8 /* CoreGraphics.framework */,
+				8FCE8B9E18F17D4C00E8C3D8 /* UIKit.framework */,
+				8FCE8BBC18F17D4C00E8C3D8 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8FCE8BA018F17D4C00E8C3D8 /* MathCalc */ = {
+			isa = PBXGroup;
+			children = (
+				8FCE8BA918F17D4C00E8C3D8 /* AppDelegate.h */,
+				8FCE8BAA18F17D4C00E8C3D8 /* AppDelegate.m */,
+				8FCE8BAC18F17D4C00E8C3D8 /* Main.storyboard */,
+				8FCE8BAF18F17D4C00E8C3D8 /* MasterViewController.h */,
+				8FCE8BB018F17D4C00E8C3D8 /* MasterViewController.m */,
+				8FCE8BB218F17D4C00E8C3D8 /* DetailViewController.h */,
+				8FCE8BB318F17D4C00E8C3D8 /* DetailViewController.m */,
+				8FCE8BDF18F17D8800E8C3D8 /* Calculation */,
+				8FCE8BDE18F17D8000E8C3D8 /* Shapes */,
+				8FCE8BB518F17D4C00E8C3D8 /* Images.xcassets */,
+				8FCE8BA118F17D4C00E8C3D8 /* Supporting Files */,
+			);
+			path = MathCalc;
+			sourceTree = "<group>";
+		};
+		8FCE8BA118F17D4C00E8C3D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8FCE8BA218F17D4C00E8C3D8 /* MathCalc-Info.plist */,
+				8FCE8BA318F17D4C00E8C3D8 /* InfoPlist.strings */,
+				8FCE8BA618F17D4C00E8C3D8 /* main.m */,
+				8FCE8BA818F17D4C00E8C3D8 /* MathCalc-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8FCE8BC218F17D4C00E8C3D8 /* MathCalcTests */ = {
+			isa = PBXGroup;
+			children = (
+				8FCE8BE018F17D9700E8C3D8 /* FormulaTests.m */,
+				8FCE8C3A18F18C4E00E8C3D8 /* CircleTests.m */,
+				8FCE8BC818F17D4C00E8C3D8 /* MathCalcTests.m */,
+				8FCE8C4018F1B62A00E8C3D8 /* RightTriangleTests.m */,
+				8FCE8BC318F17D4C00E8C3D8 /* Supporting Files */,
+			);
+			path = MathCalcTests;
+			sourceTree = "<group>";
+		};
+		8FCE8BC318F17D4C00E8C3D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8FCE8BC418F17D4C00E8C3D8 /* MathCalcTests-Info.plist */,
+				8FCE8BC518F17D4C00E8C3D8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8FCE8BDE18F17D8000E8C3D8 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				8FCE8BD418F17D7200E8C3D8 /* Circle.h */,
+				8FCE8BD518F17D7200E8C3D8 /* Circle.m */,
+				8FCE8C3C18F1ADAB00E8C3D8 /* RightTriangle.h */,
+				8FCE8C3D18F1ADAB00E8C3D8 /* RightTriangle.m */,
+				8FCE8BD818F17D7200E8C3D8 /* Shape.h */,
+				8FCE8BD918F17D7200E8C3D8 /* Shape.m */,
+			);
+			name = Shapes;
+			sourceTree = "<group>";
+		};
+		8FCE8BDF18F17D8800E8C3D8 /* Calculation */ = {
+			isa = PBXGroup;
+			children = (
+				8FCE8BD218F17D7200E8C3D8 /* Calculator.h */,
+				8FCE8BD318F17D7200E8C3D8 /* Calculator.m */,
+				8FCE8BD618F17D7200E8C3D8 /* Formula.h */,
+				8FCE8BD718F17D7200E8C3D8 /* Formula.m */,
+			);
+			name = Calculation;
+			sourceTree = "<group>";
+		};
+		8FCE8BE218F17DAE00E8C3D8 /* DDMathParser */ = {
+			isa = PBXGroup;
+			children = (
+				8FCE8BE318F17DAE00E8C3D8 /* _DDFunctionContainer.h */,
+				8FCE8BE418F17DAE00E8C3D8 /* _DDFunctionContainer.m */,
+				8FCE8BE518F17DAE00E8C3D8 /* _DDFunctionExpression.h */,
+				8FCE8BE618F17DAE00E8C3D8 /* _DDFunctionExpression.m */,
+				8FCE8BE718F17DAE00E8C3D8 /* _DDFunctionTerm.h */,
+				8FCE8BE818F17DAE00E8C3D8 /* _DDFunctionTerm.m */,
+				8FCE8BE918F17DAE00E8C3D8 /* _DDFunctionUtilities.h */,
+				8FCE8BEA18F17DAE00E8C3D8 /* _DDFunctionUtilities.m */,
+				8FCE8BEB18F17DAE00E8C3D8 /* _DDGroupTerm.h */,
+				8FCE8BEC18F17DAE00E8C3D8 /* _DDGroupTerm.m */,
+				8FCE8BED18F17DAE00E8C3D8 /* _DDNumberExpression.h */,
+				8FCE8BEE18F17DAE00E8C3D8 /* _DDNumberExpression.m */,
+				8FCE8BEF18F17DAE00E8C3D8 /* _DDNumberTerm.h */,
+				8FCE8BF018F17DAE00E8C3D8 /* _DDNumberTerm.m */,
+				8FCE8BF118F17DAE00E8C3D8 /* _DDOperatorInfo.h */,
+				8FCE8BF218F17DAE00E8C3D8 /* _DDOperatorInfo.m */,
+				8FCE8BF318F17DAE00E8C3D8 /* _DDOperatorTerm.h */,
+				8FCE8BF418F17DAE00E8C3D8 /* _DDOperatorTerm.m */,
+				8FCE8BF518F17DAE00E8C3D8 /* _DDParserTerm.h */,
+				8FCE8BF618F17DAE00E8C3D8 /* _DDParserTerm.m */,
+				8FCE8BF718F17DAE00E8C3D8 /* _DDRewriteRule.h */,
+				8FCE8BF818F17DAE00E8C3D8 /* _DDRewriteRule.m */,
+				8FCE8BF918F17DAE00E8C3D8 /* _DDVariableExpression.h */,
+				8FCE8BFA18F17DAE00E8C3D8 /* _DDVariableExpression.m */,
+				8FCE8BFB18F17DAE00E8C3D8 /* _DDVariableTerm.h */,
+				8FCE8BFC18F17DAE00E8C3D8 /* _DDVariableTerm.m */,
+				8FCE8BFD18F17DAE00E8C3D8 /* DDExpression.h */,
+				8FCE8BFE18F17DAE00E8C3D8 /* DDExpression.m */,
+				8FCE8BFF18F17DAE00E8C3D8 /* DDMathEvaluator+Private.h */,
+				8FCE8C0018F17DAE00E8C3D8 /* DDMathEvaluator.h */,
+				8FCE8C0118F17DAE00E8C3D8 /* DDMathEvaluator.m */,
+				8FCE8C0218F17DAE00E8C3D8 /* DDMathParser.h */,
+				8FCE8C0318F17DAE00E8C3D8 /* DDMathParserMacros.h */,
+				8FCE8C0418F17DAE00E8C3D8 /* DDMathStringToken.h */,
+				8FCE8C0518F17DAE00E8C3D8 /* DDMathStringToken.m */,
+				8FCE8C0618F17DAE00E8C3D8 /* DDMathStringTokenizer.h */,
+				8FCE8C0718F17DAE00E8C3D8 /* DDMathStringTokenizer.m */,
+				8FCE8C0818F17DAE00E8C3D8 /* DDParser.h */,
+				8FCE8C0918F17DAE00E8C3D8 /* DDParser.m */,
+				8FCE8C0A18F17DAE00E8C3D8 /* DDParserTypes.h */,
+				8FCE8C0B18F17DAE00E8C3D8 /* DDParserTypes.m */,
+				8FCE8C0C18F17DAE00E8C3D8 /* DDTypes.h */,
+				8FCE8C0D18F17DAE00E8C3D8 /* DDTypes.m */,
+				8FCE8C0E18F17DAE00E8C3D8 /* NSString+DDMathParsing.h */,
+				8FCE8C0F18F17DAE00E8C3D8 /* NSString+DDMathParsing.m */,
+			);
+			name = DDMathParser;
+			path = ../DDMathParser/DDMathParser;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8FCE8B9618F17D4C00E8C3D8 /* MathCalc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FCE8BCC18F17D4C00E8C3D8 /* Build configuration list for PBXNativeTarget "MathCalc" */;
+			buildPhases = (
+				8FCE8B9318F17D4C00E8C3D8 /* Sources */,
+				8FCE8B9418F17D4C00E8C3D8 /* Frameworks */,
+				8FCE8B9518F17D4C00E8C3D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MathCalc;
+			productName = MathCalc;
+			productReference = 8FCE8B9718F17D4C00E8C3D8 /* MathCalc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8FCE8BBA18F17D4C00E8C3D8 /* MathCalcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FCE8BCF18F17D4C00E8C3D8 /* Build configuration list for PBXNativeTarget "MathCalcTests" */;
+			buildPhases = (
+				8FCE8BB718F17D4C00E8C3D8 /* Sources */,
+				8FCE8BB818F17D4C00E8C3D8 /* Frameworks */,
+				8FCE8BB918F17D4C00E8C3D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FCE8BC118F17D4C00E8C3D8 /* PBXTargetDependency */,
+			);
+			name = MathCalcTests;
+			productName = MathCalcTests;
+			productReference = 8FCE8BBB18F17D4C00E8C3D8 /* MathCalcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8FCE8B8F18F17D4C00E8C3D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = anviking;
+				TargetAttributes = {
+					8FCE8BBA18F17D4C00E8C3D8 = {
+						TestTargetID = 8FCE8B9618F17D4C00E8C3D8;
+					};
+				};
+			};
+			buildConfigurationList = 8FCE8B9218F17D4C00E8C3D8 /* Build configuration list for PBXProject "MathCalc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8FCE8B8E18F17D4C00E8C3D8;
+			productRefGroup = 8FCE8B9818F17D4C00E8C3D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FCE8B9618F17D4C00E8C3D8 /* MathCalc */,
+				8FCE8BBA18F17D4C00E8C3D8 /* MathCalcTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8FCE8B9518F17D4C00E8C3D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FCE8BB618F17D4C00E8C3D8 /* Images.xcassets in Resources */,
+				8FCE8BA518F17D4C00E8C3D8 /* InfoPlist.strings in Resources */,
+				8FCE8BAE18F17D4C00E8C3D8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FCE8BB918F17D4C00E8C3D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FCE8BC718F17D4C00E8C3D8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FCE8B9318F17D4C00E8C3D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FCE8C1A18F17DAE00E8C3D8 /* _DDNumberExpression.m in Sources */,
+				8FCE8C1018F17DAE00E8C3D8 /* _DDFunctionContainer.m in Sources */,
+				8FCE8C2218F17DAE00E8C3D8 /* _DDParserTerm.m in Sources */,
+				8FCE8BAB18F17D4C00E8C3D8 /* AppDelegate.m in Sources */,
+				8FCE8C1818F17DAE00E8C3D8 /* _DDGroupTerm.m in Sources */,
+				8FCE8C2A18F17DAE00E8C3D8 /* DDExpression.m in Sources */,
+				8FCE8C3818F17DAE00E8C3D8 /* NSString+DDMathParsing.m in Sources */,
+				8FCE8BB118F17D4C00E8C3D8 /* MasterViewController.m in Sources */,
+				8FCE8C1C18F17DAE00E8C3D8 /* _DDNumberTerm.m in Sources */,
+				8FCE8C2818F17DAE00E8C3D8 /* _DDVariableTerm.m in Sources */,
+				8FCE8C2618F17DAE00E8C3D8 /* _DDVariableExpression.m in Sources */,
+				8FCE8C3218F17DAE00E8C3D8 /* DDParser.m in Sources */,
+				8FCE8BDC18F17D7200E8C3D8 /* Formula.m in Sources */,
+				8FCE8BDD18F17D7200E8C3D8 /* Shape.m in Sources */,
+				8FCE8C3E18F1ADAB00E8C3D8 /* RightTriangle.m in Sources */,
+				8FCE8C3618F17DAE00E8C3D8 /* DDTypes.m in Sources */,
+				8FCE8C3018F17DAE00E8C3D8 /* DDMathStringTokenizer.m in Sources */,
+				8FCE8C1218F17DAE00E8C3D8 /* _DDFunctionExpression.m in Sources */,
+				8FCE8BA718F17D4C00E8C3D8 /* main.m in Sources */,
+				8FCE8C2C18F17DAE00E8C3D8 /* DDMathEvaluator.m in Sources */,
+				8FCE8C1418F17DAE00E8C3D8 /* _DDFunctionTerm.m in Sources */,
+				8FCE8C2E18F17DAE00E8C3D8 /* DDMathStringToken.m in Sources */,
+				8FCE8C3418F17DAE00E8C3D8 /* DDParserTypes.m in Sources */,
+				8FCE8C1E18F17DAE00E8C3D8 /* _DDOperatorInfo.m in Sources */,
+				8FCE8C2418F17DAE00E8C3D8 /* _DDRewriteRule.m in Sources */,
+				8FCE8BDB18F17D7200E8C3D8 /* Circle.m in Sources */,
+				8FCE8BB418F17D4C00E8C3D8 /* DetailViewController.m in Sources */,
+				8FCE8C1618F17DAE00E8C3D8 /* _DDFunctionUtilities.m in Sources */,
+				8FCE8BDA18F17D7200E8C3D8 /* Calculator.m in Sources */,
+				8FCE8C2018F17DAE00E8C3D8 /* _DDOperatorTerm.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FCE8BB718F17D4C00E8C3D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FCE8C1B18F17DAE00E8C3D8 /* _DDNumberExpression.m in Sources */,
+				8FCE8C2B18F17DAE00E8C3D8 /* DDExpression.m in Sources */,
+				8FCE8C2718F17DAE00E8C3D8 /* _DDVariableExpression.m in Sources */,
+				8FCE8C3118F17DAE00E8C3D8 /* DDMathStringTokenizer.m in Sources */,
+				8FCE8C3918F17DAE00E8C3D8 /* NSString+DDMathParsing.m in Sources */,
+				8FCE8C1118F17DAE00E8C3D8 /* _DDFunctionContainer.m in Sources */,
+				8FCE8C2318F17DAE00E8C3D8 /* _DDParserTerm.m in Sources */,
+				8FCE8C1518F17DAE00E8C3D8 /* _DDFunctionTerm.m in Sources */,
+				8FCE8C3518F17DAE00E8C3D8 /* DDParserTypes.m in Sources */,
+				8FCE8C1F18F17DAE00E8C3D8 /* _DDOperatorInfo.m in Sources */,
+				8FCE8C2118F17DAE00E8C3D8 /* _DDOperatorTerm.m in Sources */,
+				8FCE8BE118F17D9700E8C3D8 /* FormulaTests.m in Sources */,
+				8FCE8BC918F17D4C00E8C3D8 /* MathCalcTests.m in Sources */,
+				8FCE8C1D18F17DAE00E8C3D8 /* _DDNumberTerm.m in Sources */,
+				8FCE8C3F18F1ADAB00E8C3D8 /* RightTriangle.m in Sources */,
+				8FCE8C2918F17DAE00E8C3D8 /* _DDVariableTerm.m in Sources */,
+				8FCE8C1718F17DAE00E8C3D8 /* _DDFunctionUtilities.m in Sources */,
+				8FCE8C2518F17DAE00E8C3D8 /* _DDRewriteRule.m in Sources */,
+				8FCE8C1318F17DAE00E8C3D8 /* _DDFunctionExpression.m in Sources */,
+				8FCE8C1918F17DAE00E8C3D8 /* _DDGroupTerm.m in Sources */,
+				8FCE8C4118F1B62A00E8C3D8 /* RightTriangleTests.m in Sources */,
+				8FCE8C2F18F17DAE00E8C3D8 /* DDMathStringToken.m in Sources */,
+				8FCE8C3718F17DAE00E8C3D8 /* DDTypes.m in Sources */,
+				8FCE8C3B18F18C4E00E8C3D8 /* CircleTests.m in Sources */,
+				8FCE8C3318F17DAE00E8C3D8 /* DDParser.m in Sources */,
+				8FCE8C2D18F17DAE00E8C3D8 /* DDMathEvaluator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FCE8BC118F17D4C00E8C3D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FCE8B9618F17D4C00E8C3D8 /* MathCalc */;
+			targetProxy = 8FCE8BC018F17D4C00E8C3D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8FCE8BA318F17D4C00E8C3D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FCE8BA418F17D4C00E8C3D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8FCE8BAC18F17D4C00E8C3D8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FCE8BAD18F17D4C00E8C3D8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8FCE8BC518F17D4C00E8C3D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FCE8BC618F17D4C00E8C3D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8FCE8BCA18F17D4C00E8C3D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8FCE8BCB18F17D4C00E8C3D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8FCE8BCD18F17D4C00E8C3D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MathCalc/MathCalc-Prefix.pch";
+				INFOPLIST_FILE = "MathCalc/MathCalc-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8FCE8BCE18F17D4C00E8C3D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MathCalc/MathCalc-Prefix.pch";
+				INFOPLIST_FILE = "MathCalc/MathCalc-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8FCE8BD018F17D4C00E8C3D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MathCalc.app/MathCalc";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MathCalc/MathCalc-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MathCalcTests/MathCalcTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8FCE8BD118F17D4C00E8C3D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MathCalc.app/MathCalc";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MathCalc/MathCalc-Prefix.pch";
+				INFOPLIST_FILE = "MathCalcTests/MathCalcTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8FCE8B9218F17D4C00E8C3D8 /* Build configuration list for PBXProject "MathCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FCE8BCA18F17D4C00E8C3D8 /* Debug */,
+				8FCE8BCB18F17D4C00E8C3D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FCE8BCC18F17D4C00E8C3D8 /* Build configuration list for PBXNativeTarget "MathCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FCE8BCD18F17D4C00E8C3D8 /* Debug */,
+				8FCE8BCE18F17D4C00E8C3D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8FCE8BCF18F17D4C00E8C3D8 /* Build configuration list for PBXNativeTarget "MathCalcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FCE8BD018F17D4C00E8C3D8 /* Debug */,
+				8FCE8BD118F17D4C00E8C3D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8FCE8B8F18F17D4C00E8C3D8 /* Project object */;
+}
