@@ -7,10 +7,10 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "ShapeTests.h"
 #import "Circle.h"
 
-@interface CircleTests : XCTestCase
-@property (nonatomic, strong) NSNumberFormatter *formatter;
+@interface CircleTests : ShapeTests
 @end
 
 @implementation CircleTests
@@ -19,9 +19,6 @@
 {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    
-    self.formatter = [[NSNumberFormatter alloc] init];
-    [self.formatter setMaximumFractionDigits:4];
 }
 
 - (void)tearDown
@@ -30,19 +27,40 @@
     [super tearDown];
 }
 
-- (void)testCalculatingWithArea
+- (void)testStandardShape
+{
+    Circle *circle = (Circle *)[self standardShape];
+    
+    XCTAssertEqualObjects([self.formatter stringFromNumber:circle.area], @"10", @"");
+    XCTAssertEqualObjects([self.formatter stringFromNumber:circle.radius], @"1.7841", @"");
+    XCTAssertEqualObjects([self.formatter stringFromNumber:circle.diameter], @"3.5682", @"");
+    XCTAssertEqualObjects([self.formatter stringFromNumber:circle.circumference], @"11.21", @"");
+}
+
+- (void)testAllCombinations
+{
+    [self validateCombinationsWithDimensions:1];
+}
+
+- (void)testFormulas
+{
+    [self validateFormulas];
+}
+
+#pragma mark - Data
+
+- (Class)shapeClass
+{
+    return [Circle class];
+}
+
+- (Shape *)standardShape
 {
     Circle *circle = [Circle new];
     circle.area = @10;
     
     [circle calculate];
-    
-    XCTAssertEqualObjects([self.formatter stringFromNumber:circle.area], @"10", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:circle.radius], @"1.7841", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:circle.diameter], @"3.5682", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:circle.circonference], @"11.21", @"");
-
-    NSLog(@"Circle: %@",circle);
+    return circle;
 }
 
 @end

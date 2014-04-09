@@ -13,21 +13,21 @@
 
 @implementation RightTriangle
 
-- (NSDictionary *)attributeVariables
++ (NSArray *)attributes
 {
-    return @{ @"height" : @"h",
-              @"base" : @"b",
-              @"hypotenuse" : @"s",
-              @"circonference" : @"C",
-              @"area" : @"A",
-              @"angleA" : ALPHA,
-              @"angleB" : BETA };
+    return @[ @"height",
+              @"base",
+              @"hypotenuse",
+              @"circumference",
+              @"area",
+              @"angleA",
+              @"angleB" ];
 }
 
 - (NSArray *)formulaStrings
 {
     return @[ @"$hypotenuse = sqrt(pow($height,2)+pow($base,2))",
-              @"$circonference = $height + $base + $hypotenuse",
+              @"$circumference = $height + $base + $hypotenuse",
               @"$area = $height * $base / 2",
               
               // Calculate angles from height, base and hypotenuse
@@ -50,16 +50,16 @@
               @"$base = $height * tan($angleB)",
               @"$base = $height / tan($angleA)",
               
-              @"$height = $circonference / (tan($angleB)+sqrt( pow((1/cos($angleB)),2) ) + 1)",
+              @"$height = $circumference / (tan($angleB)+sqrt( pow((1/cos($angleB)),2) ) + 1)",
               @"$height = sqrt(2*$area*tan($angleA))",
               
               @"$height = sqrt(pow($hypotenuse,2)-pow($base,2))",
               @"$height = 2 * $area / $base",
-              @"$height = ($circonference($circonference - 2*$base))/(2($circonference - $base))",
+              @"$height = ($circumference($circumference - 2*$base))/(2($circumference - $base))",
               
               @"$base = 2 * $area / $height",
               @"$base = sqrt(pow($hypotenuse,2)-pow($height,2))",
-              @"$base = ($circonference($circonference - 2*$height))/(2($circonference - $height))"];
+              @"$base = ($circumference($circumference - 2*$height))/(2($circumference - $height))"];
 }
 
 @end

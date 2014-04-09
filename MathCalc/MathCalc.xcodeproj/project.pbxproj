@@ -73,6 +73,12 @@
 		8FCE8C3E18F1ADAB00E8C3D8 /* RightTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C3D18F1ADAB00E8C3D8 /* RightTriangle.m */; };
 		8FCE8C3F18F1ADAB00E8C3D8 /* RightTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C3D18F1ADAB00E8C3D8 /* RightTriangle.m */; };
 		8FCE8C4118F1B62A00E8C3D8 /* RightTriangleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C4018F1B62A00E8C3D8 /* RightTriangleTests.m */; };
+		8FCE8C4418F28C1500E8C3D8 /* Sphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C4318F28C1500E8C3D8 /* Sphere.m */; };
+		8FCE8C4518F28C1500E8C3D8 /* Sphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C4318F28C1500E8C3D8 /* Sphere.m */; };
+		8FCE8C4A18F28CD000E8C3D8 /* ShapeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C4918F28CD000E8C3D8 /* ShapeTests.m */; };
+		8FCE8C4D18F2D76D00E8C3D8 /* SphereTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C4C18F2D76D00E8C3D8 /* SphereTests.m */; };
+		8FCE8C5018F2F98C00E8C3D8 /* Pyramid.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C4F18F2F98C00E8C3D8 /* Pyramid.m */; };
+		8FCE8C5218F2FD3300E8C3D8 /* PyramidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C5118F2FD3300E8C3D8 /* PyramidTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,13 +115,13 @@
 		8FCE8BC818F17D4C00E8C3D8 /* MathCalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathCalcTests.m; sourceTree = "<group>"; };
 		8FCE8BD218F17D7200E8C3D8 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
 		8FCE8BD318F17D7200E8C3D8 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
-		8FCE8BD418F17D7200E8C3D8 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
-		8FCE8BD518F17D7200E8C3D8 /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
+		8FCE8BD418F17D7200E8C3D8 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Circle.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8FCE8BD518F17D7200E8C3D8 /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Circle.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8FCE8BD618F17D7200E8C3D8 /* Formula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Formula.h; sourceTree = "<group>"; };
 		8FCE8BD718F17D7200E8C3D8 /* Formula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Formula.m; sourceTree = "<group>"; };
 		8FCE8BD818F17D7200E8C3D8 /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
 		8FCE8BD918F17D7200E8C3D8 /* Shape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shape.m; sourceTree = "<group>"; };
-		8FCE8BE018F17D9700E8C3D8 /* FormulaTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormulaTests.m; sourceTree = "<group>"; };
+		8FCE8BE018F17D9700E8C3D8 /* FormulaTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FormulaTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8FCE8BE318F17DAE00E8C3D8 /* _DDFunctionContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDFunctionContainer.h; sourceTree = "<group>"; };
 		8FCE8BE418F17DAE00E8C3D8 /* _DDFunctionContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDFunctionContainer.m; sourceTree = "<group>"; };
 		8FCE8BE518F17DAE00E8C3D8 /* _DDFunctionExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDFunctionExpression.h; sourceTree = "<group>"; };
@@ -161,10 +167,18 @@
 		8FCE8C0D18F17DAE00E8C3D8 /* DDTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTypes.m; sourceTree = "<group>"; };
 		8FCE8C0E18F17DAE00E8C3D8 /* NSString+DDMathParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDMathParsing.h"; sourceTree = "<group>"; };
 		8FCE8C0F18F17DAE00E8C3D8 /* NSString+DDMathParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDMathParsing.m"; sourceTree = "<group>"; };
-		8FCE8C3A18F18C4E00E8C3D8 /* CircleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleTests.m; sourceTree = "<group>"; };
-		8FCE8C3C18F1ADAB00E8C3D8 /* RightTriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightTriangle.h; sourceTree = "<group>"; };
-		8FCE8C3D18F1ADAB00E8C3D8 /* RightTriangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightTriangle.m; sourceTree = "<group>"; };
+		8FCE8C3A18F18C4E00E8C3D8 /* CircleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CircleTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8FCE8C3C18F1ADAB00E8C3D8 /* RightTriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RightTriangle.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8FCE8C3D18F1ADAB00E8C3D8 /* RightTriangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RightTriangle.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8FCE8C4018F1B62A00E8C3D8 /* RightTriangleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightTriangleTests.m; sourceTree = "<group>"; };
+		8FCE8C4218F28C1500E8C3D8 /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = "<group>"; };
+		8FCE8C4318F28C1500E8C3D8 /* Sphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sphere.m; sourceTree = "<group>"; };
+		8FCE8C4818F28CD000E8C3D8 /* ShapeTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeTests.h; sourceTree = "<group>"; };
+		8FCE8C4918F28CD000E8C3D8 /* ShapeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeTests.m; sourceTree = "<group>"; };
+		8FCE8C4C18F2D76D00E8C3D8 /* SphereTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SphereTests.m; sourceTree = "<group>"; };
+		8FCE8C4E18F2F98C00E8C3D8 /* Pyramid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pyramid.h; sourceTree = "<group>"; };
+		8FCE8C4F18F2F98C00E8C3D8 /* Pyramid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pyramid.m; sourceTree = "<group>"; };
+		8FCE8C5118F2FD3300E8C3D8 /* PyramidTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PyramidTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,9 +268,13 @@
 		8FCE8BC218F17D4C00E8C3D8 /* MathCalcTests */ = {
 			isa = PBXGroup;
 			children = (
+				8FCE8C5118F2FD3300E8C3D8 /* PyramidTests.m */,
+				8FCE8C4818F28CD000E8C3D8 /* ShapeTests.h */,
+				8FCE8C4918F28CD000E8C3D8 /* ShapeTests.m */,
 				8FCE8BE018F17D9700E8C3D8 /* FormulaTests.m */,
 				8FCE8C3A18F18C4E00E8C3D8 /* CircleTests.m */,
 				8FCE8BC818F17D4C00E8C3D8 /* MathCalcTests.m */,
+				8FCE8C4C18F2D76D00E8C3D8 /* SphereTests.m */,
 				8FCE8C4018F1B62A00E8C3D8 /* RightTriangleTests.m */,
 				8FCE8BC318F17D4C00E8C3D8 /* Supporting Files */,
 			);
@@ -277,8 +295,12 @@
 			children = (
 				8FCE8BD418F17D7200E8C3D8 /* Circle.h */,
 				8FCE8BD518F17D7200E8C3D8 /* Circle.m */,
+				8FCE8C4218F28C1500E8C3D8 /* Sphere.h */,
+				8FCE8C4318F28C1500E8C3D8 /* Sphere.m */,
 				8FCE8C3C18F1ADAB00E8C3D8 /* RightTriangle.h */,
 				8FCE8C3D18F1ADAB00E8C3D8 /* RightTriangle.m */,
+				8FCE8C4E18F2F98C00E8C3D8 /* Pyramid.h */,
+				8FCE8C4F18F2F98C00E8C3D8 /* Pyramid.m */,
 				8FCE8BD818F17D7200E8C3D8 /* Shape.h */,
 				8FCE8BD918F17D7200E8C3D8 /* Shape.m */,
 			);
@@ -455,6 +477,7 @@
 				8FCE8C3818F17DAE00E8C3D8 /* NSString+DDMathParsing.m in Sources */,
 				8FCE8BB118F17D4C00E8C3D8 /* MasterViewController.m in Sources */,
 				8FCE8C1C18F17DAE00E8C3D8 /* _DDNumberTerm.m in Sources */,
+				8FCE8C4418F28C1500E8C3D8 /* Sphere.m in Sources */,
 				8FCE8C2818F17DAE00E8C3D8 /* _DDVariableTerm.m in Sources */,
 				8FCE8C2618F17DAE00E8C3D8 /* _DDVariableExpression.m in Sources */,
 				8FCE8C3218F17DAE00E8C3D8 /* DDParser.m in Sources */,
@@ -471,6 +494,7 @@
 				8FCE8C3418F17DAE00E8C3D8 /* DDParserTypes.m in Sources */,
 				8FCE8C1E18F17DAE00E8C3D8 /* _DDOperatorInfo.m in Sources */,
 				8FCE8C2418F17DAE00E8C3D8 /* _DDRewriteRule.m in Sources */,
+				8FCE8C5018F2F98C00E8C3D8 /* Pyramid.m in Sources */,
 				8FCE8BDB18F17D7200E8C3D8 /* Circle.m in Sources */,
 				8FCE8BB418F17D4C00E8C3D8 /* DetailViewController.m in Sources */,
 				8FCE8C1618F17DAE00E8C3D8 /* _DDFunctionUtilities.m in Sources */,
@@ -483,12 +507,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FCE8C5218F2FD3300E8C3D8 /* PyramidTests.m in Sources */,
+				8FCE8C4518F28C1500E8C3D8 /* Sphere.m in Sources */,
 				8FCE8C1B18F17DAE00E8C3D8 /* _DDNumberExpression.m in Sources */,
 				8FCE8C2B18F17DAE00E8C3D8 /* DDExpression.m in Sources */,
 				8FCE8C2718F17DAE00E8C3D8 /* _DDVariableExpression.m in Sources */,
 				8FCE8C3118F17DAE00E8C3D8 /* DDMathStringTokenizer.m in Sources */,
 				8FCE8C3918F17DAE00E8C3D8 /* NSString+DDMathParsing.m in Sources */,
 				8FCE8C1118F17DAE00E8C3D8 /* _DDFunctionContainer.m in Sources */,
+				8FCE8C4A18F28CD000E8C3D8 /* ShapeTests.m in Sources */,
 				8FCE8C2318F17DAE00E8C3D8 /* _DDParserTerm.m in Sources */,
 				8FCE8C1518F17DAE00E8C3D8 /* _DDFunctionTerm.m in Sources */,
 				8FCE8C3518F17DAE00E8C3D8 /* DDParserTypes.m in Sources */,
@@ -498,6 +525,7 @@
 				8FCE8BC918F17D4C00E8C3D8 /* MathCalcTests.m in Sources */,
 				8FCE8C1D18F17DAE00E8C3D8 /* _DDNumberTerm.m in Sources */,
 				8FCE8C3F18F1ADAB00E8C3D8 /* RightTriangle.m in Sources */,
+				8FCE8C4D18F2D76D00E8C3D8 /* SphereTests.m in Sources */,
 				8FCE8C2918F17DAE00E8C3D8 /* _DDVariableTerm.m in Sources */,
 				8FCE8C1718F17DAE00E8C3D8 /* _DDFunctionUtilities.m in Sources */,
 				8FCE8C2518F17DAE00E8C3D8 /* _DDRewriteRule.m in Sources */,

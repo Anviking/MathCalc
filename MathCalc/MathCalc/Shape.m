@@ -10,41 +10,22 @@
 
 @implementation Shape
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        self.formulas = [Formula formulasWithFormulasStrings:[self formulaStrings]];
-    }
-    return self;
-}
-
-- (NSArray *)primitiveFormulaStings
-{
-    return nil;
-}
-
 - (NSArray *)formulaStrings
 {
     return nil;
 }
 
-- (NSArray *)attributes
+- (NSArray *)formulas
 {
-    return [[self attributeVariables] allKeys];
+    if (!_formulas) {
+        _formulas = [Formula formulasWithFormulasStrings:[self formulaStrings]];
+    }
+    return _formulas;
 }
 
-
-- (NSString *)attributeFromVariableName:(NSString *)variable
++ (NSArray *)attributes
 {
-    NSArray *keys = [self.attributeVariables allKeysForObject:variable];
-    NSAssert(keys.count == 1, @"Multiple attributes associated with the same variable");
-    return keys.firstObject;
-}
-
-- (NSString *)variableNameFromAttribute:(NSString *)attribute
-{
-    return self.attributeVariables[attribute];
+    return nil;
 }
 
 - (NSDictionary *)substitutionDictionaryWithAttributes:(NSArray *)attributes
@@ -118,7 +99,7 @@ extern BOOL NSArrayContainsItemsFromArray(NSArray *array1, NSArray *array2)
 {
     if (!_validAttributes) {
         _validAttributes = [NSMutableArray array];
-        for (NSString *key in [self attributes]) {
+        for (NSString *key in [self.class attributes]) {
             if ([self valueForKey:key]) {
                 [_validAttributes addObject:key];
             }
@@ -137,7 +118,7 @@ extern BOOL NSArrayContainsItemsFromArray(NSArray *array1, NSArray *array2)
 - (NSString *)description
 {
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
-    for (NSString *key in [self attributes]) {
+    for (NSString *key in [self.class attributes]) {
         dictionary[key] = [self valueForKey:key] ?: @0;
     }
     return [dictionary description];

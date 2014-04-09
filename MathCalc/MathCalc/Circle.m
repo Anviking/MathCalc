@@ -10,28 +10,22 @@
 
 @implementation Circle
 
-- (NSDictionary *)attributeVariables
++ (NSArray *)attributes
 {
-    return @{ @"radius" : @"r",
-              @"diameter" : @"d",
-              @"circonference" : @"C",
-              @"area" : @"A"};
+    return @[ @"radius",
+              @"diameter",
+              @"circumference",
+              @"area" ];
 }
 
-- (NSArray *)primitiveAttributes
-{
-    return @[ @"radius" ];
-}
-
-- (NSArray *)formulaStrings
-{
+- (NSArray *)formulaStrings {
     return @[ @"$diameter = 2 * $radius",
               @"$area = pi * pow($radius, 2)",
-              @"$circonference = $diameter * pi",
+              @"$circumference = $diameter * pi",
               
               @"$radius = $diameter / 2",
               @"$radius = sqrt($area / pi)",
-              @"$radius = ($circonference /pi) / 2"];
+              @"$radius = ($circumference /pi) / 2"];
 }
 
 @end

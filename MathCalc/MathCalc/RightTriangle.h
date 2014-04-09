@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSNumber *base;
 @property (nonatomic, strong) NSNumber *area;
 @property (nonatomic, strong) NSNumber *hypotenuse;
-@property (nonatomic, strong) NSNumber *circonference;
+@property (nonatomic, strong) NSNumber *circumference;
 @property (nonatomic, strong) NSNumber *angleA;
 @property (nonatomic, strong) NSNumber *angleB;
 
