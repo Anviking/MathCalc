@@ -37,6 +37,8 @@
 
 @protocol ShapeDelegate <NSObject>
 
-- (void)shapeDidChange:(Shape *)shape;
+- (void)shapeWillCalculate:(Shape *)shape;
+- (void)shape:(Shape *)shape didCalculateValue:(NSNumber *)number attribute:(NSString *)attribute;
+- (void)shapeDidCalculate:(Shape *)shape;
 
 @end

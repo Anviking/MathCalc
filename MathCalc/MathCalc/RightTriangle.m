@@ -39,6 +39,14 @@
               @"$circumference = $height + $base + $hypotenuse",
               @"$area = $height * $base / 2",
               
+              @"$height = sqrt(pow($hypotenuse,2)-pow($base,2))",
+              @"$height = 2 * $area / $base",
+              @"$height = ($circumference($circumference - 2*$base))/(2($circumference - $base))",
+              
+              @"$base = 2 * $area / $height",
+              @"$base = sqrt(pow($hypotenuse,2)-pow($height,2))",
+              @"$base = ($circumference($circumference - 2*$height))/(2($circumference - $height))",
+              
               // Calculate angles from height, base and hypotenuse
               @"$angleA = asin($height / $hypotenuse)",
               @"$angleB = acos($height / $hypotenuse)",
@@ -62,13 +70,7 @@
               @"$height = $circumference / (tan($angleB)+sqrt( pow((1/cos($angleB)),2) ) + 1)",
               @"$height = sqrt(2*$area*tan($angleA))",
               
-              @"$height = sqrt(pow($hypotenuse,2)-pow($base,2))",
-              @"$height = 2 * $area / $base",
-              @"$height = ($circumference($circumference - 2*$base))/(2($circumference - $base))",
-              
-              @"$base = 2 * $area / $height",
-              @"$base = sqrt(pow($hypotenuse,2)-pow($height,2))",
-              @"$base = ($circumference($circumference - 2*$height))/(2($circumference - $height))"];
+              ];
 }
 
 @end

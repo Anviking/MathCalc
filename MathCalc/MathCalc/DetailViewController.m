@@ -9,7 +9,7 @@
 #import "DetailViewController.h"
 #import "Shape.h"
 
-@interface DetailViewController () {
+@interface DetailViewController () <ShapeDelegate> {
     NSMutableArray *definedAttributes;
     NSMutableArray *undefinedAttributes;
 }
@@ -26,6 +26,7 @@
         
         // Update the view.
         [self configureView];
+        _shape.delegate = self;
     }
 }
 
@@ -53,6 +54,31 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)reset:(id)sender
+{
+    self.shape = [self.shape.class new];
+}
+
+#pragma mark - Shape Delegate
+
+- (void)shapeWillCalculate:(Shape *)shape
+{
+    [self.tableView beginUpdates];
+}
+
+- (void)shape:(Shape *)shape didCalculateValue:(NSNumber *)number attribute:(NSString *)attribute
+{
+    if ([undefinedAttributes containsObject:attribute]) {
+        NSArray *indexPaths = @[ [NSIndexPath indexPathForRow:[undefinedAttributes indexOfObject:attribute] inSection:1] ];
+        [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
+
+- (void)shapeDidCalculate:(Shape *)shape
+{
+    [self.tableView endUpdates];
+}
+
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -63,9 +89,9 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     if (section == 0) {
-        return NSLocalizedString(@"Known Attributes", @"Known Attributes");
+        return NSLocalizedString(@"Defined Attributes", @"Defined Attributes");
     } else if (section == 1) {
-        return NSLocalizedString(@"Not Known Attributes", @"Not Known Attributes");
+        return NSLocalizedString(@"Undefined Attributes", @"Undefined Attributes");
     }
     return nil;
 }
@@ -82,8 +108,42 @@
     
     NSString *string = [self objectAtIndexPath:indexPath];
     cell.textLabel.text = string;
+    NSString *value = [[self.shape valueForKeyPath:string] string];
+    cell.detailTextLabel.text = value;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *string = [self objectAtIndexPath:indexPath];
+    [self.shape setValue:@10 forKey:string];
+    
+    if (indexPath.section == 1 && self.shape.undefindedAttributes.count) {
+        [undefinedAttributes removeObject:string];
+        [definedAttributes addObject:string];
+        
+        NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:[tableView numberOfRowsInSection:0] inSection:0];
+        [self.tableView moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
+        [self.tableView reloadRowsAtIndexPaths:@[ newIndexPath ] withRowAnimation:UITableViewRowAnimationAutomatic];
+    } else if (indexPath.section == 1 && !self.shape.undefindedAttributes.count) {
+        
+        NSString *attributeToUndefine = definedAttributes.lastObject;
+        [definedAttributes removeObject:attributeToUndefine];
+        [definedAttributes addObject:string];
+
+        undefinedAttributes[[undefinedAttributes indexOfObject:string]] = attributeToUndefine;
+        
+        [self.tableView beginUpdates];
+        NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:[tableView numberOfRowsInSection:0] - 1  inSection:0];
+        [self.tableView moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
+        [self.tableView moveRowAtIndexPath:newIndexPath toIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
+//        [self.tableView reloadRowsAtIndexPaths:@[ newIndexPathA, indexPath ] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.tableView endUpdates];
+    }
+    
+    [self.shape calculate];
+    //[self configureView];
 }
 
 #pragma mark - Helpers

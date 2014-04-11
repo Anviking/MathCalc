@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8FB2026F18F89E4F00EBCB81 /* NSNumber+JLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2026E18F89E4F00EBCB81 /* NSNumber+JLAdditions.m */; };
 		8FCE8B9B18F17D4C00E8C3D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE8B9A18F17D4C00E8C3D8 /* Foundation.framework */; };
 		8FCE8B9D18F17D4C00E8C3D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE8B9C18F17D4C00E8C3D8 /* CoreGraphics.framework */; };
 		8FCE8B9F18F17D4C00E8C3D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE8B9E18F17D4C00E8C3D8 /* UIKit.framework */; };
@@ -93,6 +94,8 @@
 
 /* Begin PBXFileReference section */
 		8FB2026B18F8861B00EBCB81 /* Shapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shapes.h; sourceTree = "<group>"; };
+		8FB2026D18F89E4F00EBCB81 /* NSNumber+JLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JLAdditions.h"; sourceTree = "<group>"; };
+		8FB2026E18F89E4F00EBCB81 /* NSNumber+JLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JLAdditions.m"; sourceTree = "<group>"; };
 		8FCE8B9718F17D4C00E8C3D8 /* MathCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FCE8B9A18F17D4C00E8C3D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8FCE8B9C18F17D4C00E8C3D8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -206,6 +209,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FB2026C18F89E3500EBCB81 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				8FB2026D18F89E4F00EBCB81 /* NSNumber+JLAdditions.h */,
+				8FB2026E18F89E4F00EBCB81 /* NSNumber+JLAdditions.m */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		8FCE8B8E18F17D4C00E8C3D8 = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +261,7 @@
 				8FCE8BB318F17D4C00E8C3D8 /* DetailViewController.m */,
 				8FCE8BDF18F17D8800E8C3D8 /* Calculation */,
 				8FCE8BDE18F17D8000E8C3D8 /* Shapes */,
+				8FB2026C18F89E3500EBCB81 /* New Group */,
 				8FCE8BB518F17D4C00E8C3D8 /* Images.xcassets */,
 				8FCE8BA118F17D4C00E8C3D8 /* Supporting Files */,
 			);
@@ -483,6 +496,7 @@
 				8FCE8C2818F17DAE00E8C3D8 /* _DDVariableTerm.m in Sources */,
 				8FCE8C2618F17DAE00E8C3D8 /* _DDVariableExpression.m in Sources */,
 				8FCE8C3218F17DAE00E8C3D8 /* DDParser.m in Sources */,
+				8FB2026F18F89E4F00EBCB81 /* NSNumber+JLAdditions.m in Sources */,
 				8FCE8BDC18F17D7200E8C3D8 /* Formula.m in Sources */,
 				8FCE8BDD18F17D7200E8C3D8 /* Shape.m in Sources */,
 				8FCE8C3E18F1ADAB00E8C3D8 /* RightTriangle.m in Sources */,

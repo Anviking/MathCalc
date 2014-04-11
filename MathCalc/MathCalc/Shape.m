@@ -51,9 +51,13 @@
 
 - (void)calculate
 {
+    if (self.delegate && [self.delegate respondsToSelector:@selector(shapeWillCalculate:)]) [self.delegate shapeWillCalculate:self];
+
     self.definedAttributes = nil;
+    self.undefindedAttributes = nil;
     NSMutableArray *formulas = [self formulas].mutableCopy;
     [self calculateWithFormulas:formulas];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(shapeDidCalculate:)]) [self.delegate shapeDidCalculate:self];
     
 }
 
@@ -135,6 +139,7 @@ extern BOOL NSArrayContainsItemsFromArray(NSArray *array1, NSArray *array2)
     NSString *attribute = formula.resultAttribute;
     NSNumber *value = [formula evaluateWithVariables:[self substitutionDictionaryWithAttributes:formula.variableAttributes]];
     [self setValue:value forKey:attribute];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(shape:didCalculateValue:attribute:)]) [self.delegate shape:self didCalculateValue:value attribute:attribute];
 }
 
 - (NSString *)description
