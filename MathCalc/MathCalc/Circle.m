@@ -10,6 +10,15 @@
 
 @implementation Circle
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.name = @"Circle";
+    }
+    return self;
+}
+
 + (NSArray *)attributes
 {
     return @[ @"radius",

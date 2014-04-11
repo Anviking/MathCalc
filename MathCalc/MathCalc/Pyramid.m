@@ -10,6 +10,15 @@
 
 @implementation Pyramid
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.name = @"Pyramid";
+    }
+    return self;
+}
+
 + (NSArray *)attributes
 {
     return @[ @"base",

@@ -10,6 +10,15 @@
 
 @implementation Sphere
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.name = @"Sphere";
+    }
+    return self;
+}
+
 + (NSArray *)attributes
 {
     return @[ @"radius",

@@ -15,6 +15,7 @@
 - (void)calculate;
 - (void)calculateAttributes;
 
+
 + (NSArray *)attributes;
 
 - (NSArray *)formulaStrings;
@@ -23,7 +24,8 @@
 
 //Basic generic information about the shape
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, strong) NSMutableArray *validAttributes;
+@property (nonatomic, strong) NSMutableArray *definedAttributes;
+@property (nonatomic, strong) NSMutableArray *undefindedAttributes;
 @property (nonatomic, strong) NSArray *formulas;
 
 /// Delegate

@@ -10,6 +10,15 @@
 
 @implementation Shape
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.name = NSStringFromClass(self.class);
+    }
+    return self;
+}
+
 - (NSArray *)formulaStrings
 {
     return nil;
@@ -42,7 +51,7 @@
 
 - (void)calculate
 {
-    self.validAttributes = nil;
+    self.definedAttributes = nil;
     NSMutableArray *formulas = [self formulas].mutableCopy;
     [self calculateWithFormulas:formulas];
     
@@ -52,12 +61,12 @@
 {
     NSMutableArray *array = formulas.mutableCopy;
     for (Formula *formula in formulas) {
-        if (![self.validAttributes containsObject:formula.resultAttribute]) {
+        if (![self.definedAttributes containsObject:formula.resultAttribute]) {
             // It is a formula we should evaluate
-            if (NSArrayContainsItemsFromArray(self.validAttributes, formula.variableAttributes)) {
+            if (NSArrayContainsItemsFromArray(self.definedAttributes, formula.variableAttributes)) {
                 // We can evaluate it.
                 [self evaluateFormula:formula];
-                [self.validAttributes addObject:formula.resultAttribute];
+                [self.definedAttributes addObject:formula.resultAttribute];
                 [array removeObject:formulas];
                 
                 // Start all over again
@@ -95,17 +104,30 @@ extern BOOL NSArrayContainsItemsFromArray(NSArray *array1, NSArray *array2)
 
 #pragma mark - Helpers
 
-- (NSMutableArray *)validAttributes
+- (NSMutableArray *)definedAttributes
 {
-    if (!_validAttributes) {
-        _validAttributes = [NSMutableArray array];
+    if (!_definedAttributes) {
+        _definedAttributes = [NSMutableArray array];
         for (NSString *key in [self.class attributes]) {
             if ([self valueForKey:key]) {
-                [_validAttributes addObject:key];
+                [_definedAttributes addObject:key];
             }
         }
     }
-    return _validAttributes;
+    return _definedAttributes;
+}
+
+- (NSMutableArray *)undefindedAttributes
+{
+    if (!_undefindedAttributes) {
+        _undefindedAttributes = [NSMutableArray array];
+        for (NSString *key in [self.class attributes]) {
+            if (![self valueForKey:key]) {
+                [_undefindedAttributes addObject:key];
+            }
+        }
+    }
+    return _undefindedAttributes;
 }
 
 - (void)evaluateFormula:(Formula *)formula

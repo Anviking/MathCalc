@@ -13,6 +13,15 @@
 
 @implementation RightTriangle
 
+- (id)init
+{
+    self = [super init];
+    if (self) {
+        self.name = @"Right Triangle";
+    }
+    return self;
+}
+
 + (NSArray *)attributes
 {
     return @[ @"height",

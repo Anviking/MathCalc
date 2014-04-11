@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
+@class Shape;
 
-@property (strong, nonatomic) id detailItem;
+@interface DetailViewController : UITableViewController
+
+@property (strong, nonatomic) Shape *shape;
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end

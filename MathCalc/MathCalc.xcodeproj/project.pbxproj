@@ -92,6 +92,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8FB2026B18F8861B00EBCB81 /* Shapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shapes.h; sourceTree = "<group>"; };
 		8FCE8B9718F17D4C00E8C3D8 /* MathCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FCE8B9A18F17D4C00E8C3D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8FCE8B9C18F17D4C00E8C3D8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -293,6 +294,7 @@
 		8FCE8BDE18F17D8000E8C3D8 /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
+				8FB2026B18F8861B00EBCB81 /* Shapes.h */,
 				8FCE8BD418F17D7200E8C3D8 /* Circle.h */,
 				8FCE8BD518F17D7200E8C3D8 /* Circle.m */,
 				8FCE8C4218F28C1500E8C3D8 /* Sphere.h */,
@@ -733,6 +735,7 @@
 				8FCE8BCE18F17D4C00E8C3D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FCE8BCF18F17D4C00E8C3D8 /* Build configuration list for PBXNativeTarget "MathCalcTests" */ = {
 			isa = XCConfigurationList;
@@ -741,6 +744,7 @@
 				8FCE8BD118F17D4C00E8C3D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
