@@ -7,8 +7,11 @@
 //
 
 #import "Shape.h"
+#import "JLDelegateProxy.h"
 
-@implementation Shape
+@implementation Shape {
+    id <ShapeDelegate> delegateProxy;
+}
 
 - (id)init
 {
@@ -47,30 +50,31 @@
     return [NSDictionary dictionaryWithDictionary:dictionary];
 }
 
+- (void)setDelegate:(id<ShapeDelegate>)delegate
+{
+    _delegate = delegate;
+    delegateProxy = (id <ShapeDelegate>)[[JLDelegateProxy alloc] initWithDelegate:delegate];
+}
+
 #pragma mark - Calculate
 
 - (void)calculate
 {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(shapeWillCalculate:)]) [self.delegate shapeWillCalculate:self];
-
-    self.definedAttributes = nil;
-    self.undefindedAttributes = nil;
+    [delegateProxy shapeWillCalculate:self];
     NSMutableArray *formulas = [self formulas].mutableCopy;
     [self calculateWithFormulas:formulas];
-    if (self.delegate && [self.delegate respondsToSelector:@selector(shapeDidCalculate:)]) [self.delegate shapeDidCalculate:self];
-    
+    [delegateProxy shapeDidCalculate:self];
 }
 
 - (void)calculateWithFormulas:(NSArray *)formulas
 {
     NSMutableArray *array = formulas.mutableCopy;
     for (Formula *formula in formulas) {
-        if (![self.definedAttributes containsObject:formula.resultAttribute]) {
+        if (![self hasValueForAttribute:formula.resultAttribute]) {
             // It is a formula we should evaluate
-            if (NSArrayContainsItemsFromArray(self.definedAttributes, formula.variableAttributes)) {
+            if ([self hasValueForAttributes:formula.variableAttributes]) {
                 // We can evaluate it.
                 [self evaluateFormula:formula];
-                [self.definedAttributes addObject:formula.resultAttribute];
                 [array removeObject:formulas];
                 
                 // Start all over again
@@ -88,17 +92,6 @@
     }
 }
 
-
-extern BOOL NSArrayContainsItemsFromArray(NSArray *array1, NSArray *array2)
-{
-    for (id obj in array2) {
-        if (![array1 containsObject:obj]) {
-            return NO;
-        }
-    }
-    return YES;
-}
-
 - (void)calculateAttributes
 {
     [self.formulas enumerateObjectsUsingBlock:^(Formula *formula, NSUInteger idx, BOOL *stop) {
@@ -108,38 +101,84 @@ extern BOOL NSArrayContainsItemsFromArray(NSArray *array1, NSArray *array2)
 
 #pragma mark - Helpers
 
+- (BOOL)hasValueForAttribute:(NSString *)attribute
+{
+    NSNumber *number = [self valueForKey:attribute];
+    if (number && number.floatValue > 0.0) {
+        return YES;
+    }
+    return NO;
+}
+
+- (BOOL)hasValueForAttributes:(NSArray *)attributes
+{
+    for (NSString *string in attributes) {
+        if (![self hasValueForAttribute:string]) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
+- (void)defineAttribute:(NSString *)attribute
+{
+    [delegateProxy shape:self willDefineAttribute:attribute];
+    if (self.undefinedAttributes.count > 0) {
+        [self moveAttribute:attribute toArray:self.definedAttributes];
+    }
+    else if (self.undefinedAttributes.count == 0) {
+        [self undefineAttribute:self.undefinedAttributes.lastObject];
+        [self moveAttribute:attribute toArray:self.definedAttributes];
+    }
+    [delegateProxy shape:self didDefineAttribute:attribute];
+}
+
+- (void)undefineAttribute:(NSString *)attribute
+{
+    [delegateProxy shape:self willUndefineAttribute:attribute];
+    [self moveAttribute:attribute toArray:self.undefinedAttributes];
+    [delegateProxy shape:self didUndefineAttribute:attribute];
+}
+
+- (void)moveAttribute:(NSString *)attribute toArray:(NSMutableArray *)array
+{
+    [self.calculatedAttributes removeObject:attribute];
+    [self.definedAttributes removeObject:attribute];
+    [self.undefinedAttributes removeObject:attribute];
+    [array addObject:attribute];
+}
+
 - (NSMutableArray *)definedAttributes
 {
     if (!_definedAttributes) {
         _definedAttributes = [NSMutableArray array];
-        for (NSString *key in [self.class attributes]) {
-            if ([self valueForKey:key]) {
-                [_definedAttributes addObject:key];
-            }
-        }
     }
     return _definedAttributes;
 }
 
-- (NSMutableArray *)undefindedAttributes
+- (NSMutableArray *)calculatedAttributes
 {
-    if (!_undefindedAttributes) {
-        _undefindedAttributes = [NSMutableArray array];
-        for (NSString *key in [self.class attributes]) {
-            if (![self valueForKey:key]) {
-                [_undefindedAttributes addObject:key];
-            }
-        }
+    if (_calculatedAttributes) {
+        _calculatedAttributes = [NSMutableArray array];
     }
-    return _undefindedAttributes;
+    return _calculatedAttributes;
+}
+
+- (NSMutableArray *)undefinedAttributes
+{
+    if (!_undefinedAttributes) {
+        _undefinedAttributes = [self.class attributes].mutableCopy;
+    }
+    return _undefinedAttributes;
 }
 
 - (void)evaluateFormula:(Formula *)formula
 {
     NSString *attribute = formula.resultAttribute;
     NSNumber *value = [formula evaluateWithVariables:[self substitutionDictionaryWithAttributes:formula.variableAttributes]];
+    [delegateProxy shape:self willCalculateValue:value attribute:attribute];
     [self setValue:value forKey:attribute];
-    if (self.delegate && [self.delegate respondsToSelector:@selector(shape:didCalculateValue:attribute:)]) [self.delegate shape:self didCalculateValue:value attribute:attribute];
+    [delegateProxy shape:self didCalculateValue:value attribute:attribute];
 }
 
 - (NSString *)description

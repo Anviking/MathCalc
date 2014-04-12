@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F9C1FB518F96E78003D6DFA /* JLDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FB418F96E78003D6DFA /* JLDelegateProxy.m */; };
 		8FB2026F18F89E4F00EBCB81 /* NSNumber+JLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2026E18F89E4F00EBCB81 /* NSNumber+JLAdditions.m */; };
 		8FCE8B9B18F17D4C00E8C3D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE8B9A18F17D4C00E8C3D8 /* Foundation.framework */; };
 		8FCE8B9D18F17D4C00E8C3D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE8B9C18F17D4C00E8C3D8 /* CoreGraphics.framework */; };
@@ -93,6 +94,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F9C1FB318F96E78003D6DFA /* JLDelegateProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLDelegateProxy.h; sourceTree = "<group>"; };
+		8F9C1FB418F96E78003D6DFA /* JLDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLDelegateProxy.m; sourceTree = "<group>"; };
 		8FB2026B18F8861B00EBCB81 /* Shapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shapes.h; sourceTree = "<group>"; };
 		8FB2026D18F89E4F00EBCB81 /* NSNumber+JLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JLAdditions.h"; sourceTree = "<group>"; };
 		8FB2026E18F89E4F00EBCB81 /* NSNumber+JLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JLAdditions.m"; sourceTree = "<group>"; };
@@ -275,6 +278,8 @@
 				8FCE8BA318F17D4C00E8C3D8 /* InfoPlist.strings */,
 				8FCE8BA618F17D4C00E8C3D8 /* main.m */,
 				8FCE8BA818F17D4C00E8C3D8 /* MathCalc-Prefix.pch */,
+				8F9C1FB318F96E78003D6DFA /* JLDelegateProxy.h */,
+				8F9C1FB418F96E78003D6DFA /* JLDelegateProxy.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -504,6 +509,7 @@
 				8FCE8C3018F17DAE00E8C3D8 /* DDMathStringTokenizer.m in Sources */,
 				8FCE8C1218F17DAE00E8C3D8 /* _DDFunctionExpression.m in Sources */,
 				8FCE8BA718F17D4C00E8C3D8 /* main.m in Sources */,
+				8F9C1FB518F96E78003D6DFA /* JLDelegateProxy.m in Sources */,
 				8FCE8C2C18F17DAE00E8C3D8 /* DDMathEvaluator.m in Sources */,
 				8FCE8C1418F17DAE00E8C3D8 /* _DDFunctionTerm.m in Sources */,
 				8FCE8C2E18F17DAE00E8C3D8 /* DDMathStringToken.m in Sources */,

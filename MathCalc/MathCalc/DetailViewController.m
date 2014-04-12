@@ -35,7 +35,7 @@
     // Update the user interface for the detail item.
     
     definedAttributes = [self.shape definedAttributes].mutableCopy;
-    undefinedAttributes = [self.shape undefindedAttributes].mutableCopy;
+    undefinedAttributes = [self.shape undefinedAttributes].mutableCopy;
     
     
     [self.tableView reloadData];
@@ -70,7 +70,7 @@
 {
     if ([undefinedAttributes containsObject:attribute]) {
         NSArray *indexPaths = @[ [NSIndexPath indexPathForRow:[undefinedAttributes indexOfObject:attribute] inSection:1] ];
-        [self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
+        //[self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
     }
 }
 
@@ -79,11 +79,25 @@
     [self.tableView endUpdates];
 }
 
+- (void)shape:(Shape *)shape willDefineAttribute:(NSString *)attribute
+{
+    NSIndexPath *indexPath = [self indexPathForObject:attribute];
+    NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:[self.tableView numberOfRowsInSection:0] inSection:0];
+    [self.tableView moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
+    [self.tableView reloadRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+- (void)shape:(Shape *)shape didUndefineAttribute:(NSString *)attribute
+{
+    
+}
+
+
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 3;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -91,6 +105,8 @@
     if (section == 0) {
         return NSLocalizedString(@"Defined Attributes", @"Defined Attributes");
     } else if (section == 1) {
+        return NSLocalizedString(@"Calculated Attributes", @"Calculated Attributes");
+    } else if (section == 2) {
         return NSLocalizedString(@"Undefined Attributes", @"Undefined Attributes");
     }
     return nil;
@@ -119,31 +135,10 @@
     NSString *string = [self objectAtIndexPath:indexPath];
     [self.shape setValue:@10 forKey:string];
     
-    if (indexPath.section == 1 && self.shape.undefindedAttributes.count) {
-        [undefinedAttributes removeObject:string];
-        [definedAttributes addObject:string];
-        
-        NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:[tableView numberOfRowsInSection:0] inSection:0];
-        [self.tableView moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
-        [self.tableView reloadRowsAtIndexPaths:@[ newIndexPath ] withRowAnimation:UITableViewRowAnimationAutomatic];
-    } else if (indexPath.section == 1 && !self.shape.undefindedAttributes.count) {
-        
-        NSString *attributeToUndefine = definedAttributes.lastObject;
-        [definedAttributes removeObject:attributeToUndefine];
-        [definedAttributes addObject:string];
-
-        undefinedAttributes[[undefinedAttributes indexOfObject:string]] = attributeToUndefine;
-        
-        [self.tableView beginUpdates];
-        NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:[tableView numberOfRowsInSection:0] - 1  inSection:0];
-        [self.tableView moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
-        [self.tableView moveRowAtIndexPath:newIndexPath toIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
-//        [self.tableView reloadRowsAtIndexPaths:@[ newIndexPathA, indexPath ] withRowAnimation:UITableViewRowAnimationAutomatic];
-        [self.tableView endUpdates];
-    }
-    
+    [self.tableView beginUpdates];
+    [self.shape defineAttribute:string];
     [self.shape calculate];
-    //[self configureView];
+    [self.tableView endUpdates];
 }
 
 #pragma mark - Helpers
@@ -151,9 +146,39 @@
 - (NSMutableArray *)arrayForSection:(NSInteger)section
 {
     if (section == 0) {
-        return definedAttributes;
+        return self.shape.definedAttributes;
     } else if (section == 1) {
-        return undefinedAttributes;
+        return self.shape.calculatedAttributes;
+    } else if (section == 2) {
+        return self.shape.undefinedAttributes;
+    }
+    return nil;
+}
+
+- (NSInteger)sectionForArray:(NSMutableArray *)array
+{
+    if (array == self.shape.definedAttributes) {
+        return 0;
+    }
+    else if (array == self.shape.calculatedAttributes) {
+        return 1;
+    }
+    else if (array == self.shape.undefinedAttributes) {
+        return 2;
+    }
+    return 0;
+}
+
+- (NSMutableArray *)arrayForObject:(id)object
+{
+    if ([self.shape.definedAttributes containsObject:object]) {
+        return self.shape.definedAttributes;
+    }
+    else if ([self.shape.calculatedAttributes containsObject:object]) {
+        return self.shape.calculatedAttributes;
+    }
+    else if ([self.shape.undefinedAttributes containsObject:object]) {
+        return self.shape.undefinedAttributes;
     }
     return nil;
 }
@@ -162,5 +187,12 @@
 {
     return [self arrayForSection:indexPath.section][indexPath.row];
 }
+
+- (NSIndexPath *)indexPathForObject:(id)object
+{
+    NSMutableArray *array = [self arrayForObject:object];
+    return [NSIndexPath indexPathForRow:[array indexOfObject:object] inSection:[self sectionForArray:array]];
+}
+
 
 @end
