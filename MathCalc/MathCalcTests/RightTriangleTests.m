@@ -33,6 +33,9 @@
     triangle.base = @3;
     triangle.height = @4;
     
+    [triangle defineAttribute:@"base"];
+    [triangle defineAttribute:@"height"];
+    
     [triangle calculate];
     
     XCTAssertEqualObjects([self.formatter stringFromNumber:triangle.height], @"4", @"");

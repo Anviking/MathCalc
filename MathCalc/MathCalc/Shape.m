@@ -56,12 +56,27 @@
     delegateProxy = (id <ShapeDelegate>)[[JLDelegateProxy alloc] initWithDelegate:delegate];
 }
 
+- (void)reset
+{
+    self.definedAttributes = nil;
+    self.undefinedAttributes = nil;
+    
+    for (NSString *attribute in [self.class attributes]) {
+        [self setValue:nil forKey:attribute];
+    }
+}
+
 #pragma mark - Calculate
 
 - (void)calculate
 {
     [delegateProxy shapeWillCalculate:self];
     NSMutableArray *formulas = [self formulas].mutableCopy;
+    
+    for (NSString *attribute in self.undefinedAttributes) {
+        [self setValue:nil forKey:attribute];
+    }
+    
     [self calculateWithFormulas:formulas];
     [delegateProxy shapeDidCalculate:self];
 }
@@ -122,12 +137,17 @@
 
 - (void)defineAttribute:(NSString *)attribute
 {
+    if ([self.definedAttributes containsObject:attribute]) {
+        return;
+    }
+    
     [delegateProxy shape:self willDefineAttribute:attribute];
-    if (self.undefinedAttributes.count > 0) {
+    NSMutableArray *invalidAttributes = [self invalidAttributes];
+    if (invalidAttributes.count > 0) {
         [self moveAttribute:attribute toArray:self.definedAttributes];
     }
-    else if (self.undefinedAttributes.count == 0) {
-        [self undefineAttribute:self.undefinedAttributes.lastObject];
+    else if (invalidAttributes.count == 0) {
+        [self undefineAttribute:self.definedAttributes.lastObject];
         [self moveAttribute:attribute toArray:self.definedAttributes];
     }
     [delegateProxy shape:self didDefineAttribute:attribute];
@@ -142,7 +162,6 @@
 
 - (void)moveAttribute:(NSString *)attribute toArray:(NSMutableArray *)array
 {
-    [self.calculatedAttributes removeObject:attribute];
     [self.definedAttributes removeObject:attribute];
     [self.undefinedAttributes removeObject:attribute];
     [array addObject:attribute];
@@ -156,13 +175,6 @@
     return _definedAttributes;
 }
 
-- (NSMutableArray *)calculatedAttributes
-{
-    if (_calculatedAttributes) {
-        _calculatedAttributes = [NSMutableArray array];
-    }
-    return _calculatedAttributes;
-}
 
 - (NSMutableArray *)undefinedAttributes
 {
@@ -170,6 +182,17 @@
         _undefinedAttributes = [self.class attributes].mutableCopy;
     }
     return _undefinedAttributes;
+}
+
+- (NSMutableArray *)invalidAttributes
+{
+    NSMutableArray *array = [NSMutableArray array];
+    for (NSString *attribute in self.class.attributes) {
+        if (![self valueForKey:attribute]) {
+            [array addObject:attribute];
+        }
+    }
+    return array;
 }
 
 - (void)evaluateFormula:(Formula *)formula

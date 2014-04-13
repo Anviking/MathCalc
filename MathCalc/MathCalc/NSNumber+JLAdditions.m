@@ -11,10 +11,15 @@
 @implementation NSNumber (JLAdditions)
 
 static NSNumberFormatter *formatter;
+static NSNumberFormatter *scientificFormatter;
 + (void)initialize
 {
     formatter = [[NSNumberFormatter alloc] init];
     [formatter setMaximumFractionDigits:4];
+    
+    scientificFormatter = [[NSNumberFormatter alloc] init];
+    [scientificFormatter setNumberStyle:NSNumberFormatterScientificStyle];
+    [scientificFormatter setMaximumFractionDigits:4];
 }
 
 + (NSNumberFormatter *)numberFormatter
@@ -24,6 +29,9 @@ static NSNumberFormatter *formatter;
 
 - (NSString *)string
 {
+    if (self.floatValue > 1000000) {
+        return [scientificFormatter stringFromNumber:self];
+    }
     return [formatter stringFromNumber:self];
 }
 

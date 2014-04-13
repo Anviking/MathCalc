@@ -15,6 +15,7 @@
 - (void)calculate;
 - (void)calculateAttributes;
 
+- (void)reset;
 
 + (NSArray *)attributes;
 - (NSArray *)formulaStrings;
@@ -27,7 +28,6 @@
 - (void)undefineAttribute:(NSString *)attribute;
 
 @property (nonatomic, strong) NSMutableArray *definedAttributes;
-@property (nonatomic, strong) NSMutableArray *calculatedAttributes;
 @property (nonatomic, strong) NSMutableArray *undefinedAttributes;
 
 //Basic generic information about the shape

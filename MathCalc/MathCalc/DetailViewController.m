@@ -8,14 +8,14 @@
 
 #import "DetailViewController.h"
 #import "Shape.h"
+#import "AttributeTableViewCell.h"
 
-@interface DetailViewController () <ShapeDelegate> {
-    NSMutableArray *definedAttributes;
-    NSMutableArray *undefinedAttributes;
-}
+@interface DetailViewController () <ShapeDelegate, AttributeTableViewCellDelegate>
 @end
 
-@implementation DetailViewController
+@implementation DetailViewController {
+    NSIndexPath *indexPathToDefine;
+}
 
 #pragma mark - Managing the detail item
 
@@ -33,10 +33,6 @@
 - (void)configureView
 {
     // Update the user interface for the detail item.
-    
-    definedAttributes = [self.shape definedAttributes].mutableCopy;
-    undefinedAttributes = [self.shape undefinedAttributes].mutableCopy;
-    
     
     [self.tableView reloadData];
 }
@@ -56,7 +52,8 @@
 
 - (IBAction)reset:(id)sender
 {
-    self.shape = [self.shape.class new];
+    [self.shape reset];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Shape Delegate
@@ -66,38 +63,48 @@
     [self.tableView beginUpdates];
 }
 
-- (void)shape:(Shape *)shape didCalculateValue:(NSNumber *)number attribute:(NSString *)attribute
-{
-    if ([undefinedAttributes containsObject:attribute]) {
-        NSArray *indexPaths = @[ [NSIndexPath indexPathForRow:[undefinedAttributes indexOfObject:attribute] inSection:1] ];
-        //[self.tableView reloadRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationAutomatic];
-    }
-}
-
 - (void)shapeDidCalculate:(Shape *)shape
 {
+    indexPathToDefine = nil;
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationNone];
     [self.tableView endUpdates];
 }
 
 - (void)shape:(Shape *)shape willDefineAttribute:(NSString *)attribute
 {
-    NSIndexPath *indexPath = [self indexPathForObject:attribute];
-    NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:[self.tableView numberOfRowsInSection:0] inSection:0];
-    [self.tableView moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
-    [self.tableView reloadRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationAutomatic];
+    indexPathToDefine = [self indexPathForObject:attribute];
 }
 
+
+- (void)shape:(Shape *)shape didDefineAttribute:(NSString *)attribute
+{
+    NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:shape.definedAttributes.count - 1 inSection:0];
+    [self.tableView moveRowAtIndexPath:indexPathToDefine toIndexPath:newIndexPath];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPathToDefine];
+    [self configureCell:(AttributeTableViewCell *)cell atIndexPath:newIndexPath];
+}
+
+/*
 - (void)shape:(Shape *)shape didUndefineAttribute:(NSString *)attribute
 {
-    
+    NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:0 inSection:1];
+    [self.tableView moveRowAtIndexPath:indexPathToUndefine toIndexPath:newIndexPath];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPathToUndefine];
+    [self configureCell:(AttributeTableViewCell *)cell atIndexPath:indexPathToUndefine];
 }
-
+ 
+ - (void)shape:(Shape *)shape willUndefineAttribute:(NSString *)attribute
+ {
+ indexPathToUndefine = [self indexPathForObject:attribute];
+ }
+ 
+*/
 
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 3;
+    return 2;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -105,8 +112,6 @@
     if (section == 0) {
         return NSLocalizedString(@"Defined Attributes", @"Defined Attributes");
     } else if (section == 1) {
-        return NSLocalizedString(@"Calculated Attributes", @"Calculated Attributes");
-    } else if (section == 2) {
         return NSLocalizedString(@"Undefined Attributes", @"Undefined Attributes");
     }
     return nil;
@@ -120,25 +125,60 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
+    AttributeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    [self configureCell:cell atIndexPath:indexPath];
+    return cell;
+}
+
+- (void)configureCell:(AttributeTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
     NSString *string = [self objectAtIndexPath:indexPath];
     cell.textLabel.text = string;
     NSString *value = [[self.shape valueForKeyPath:string] string];
-    cell.detailTextLabel.text = value;
+    cell.textField.text = value;
     
-    return cell;
+    if (indexPath.section == 1 && cell.textField.text.length > 0) {
+        cell.userInteractionEnabled = NO;
+    } else {
+        cell.userInteractionEnabled = YES;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    AttributeTableViewCell *cell = (AttributeTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
+    [cell.textField becomeFirstResponder];
+}
+
+#pragma mark - AttributeTableViewCellDelegate
+
+- (void)attributeTableViewCellDidBeginEditing:(AttributeTableViewCell *)cell
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     NSString *string = [self objectAtIndexPath:indexPath];
-    [self.shape setValue:@10 forKey:string];
     
     [self.tableView beginUpdates];
+    [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
     [self.shape defineAttribute:string];
-    [self.shape calculate];
     [self.tableView endUpdates];
+}
+
+- (BOOL)attributeTableViewCellShouldBeginEditing:(AttributeTableViewCell *)cell
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    NSString *string = [self objectAtIndexPath:indexPath];
+    NSNumber *number = [self.shape valueForKey:string];
+    
+    return !(number && indexPath.section == 1);
+}
+
+- (void)attributeTableViewCellDidChange:(AttributeTableViewCell *)cell
+{
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    NSString *attribute = [self objectAtIndexPath:indexPath];
+    NSNumber *number = [[NSNumber numberFormatter] numberFromString:cell.textField.text];
+    [self.shape setValue:number forKey:attribute];
+    [self.shape calculate];
 }
 
 #pragma mark - Helpers
@@ -148,8 +188,6 @@
     if (section == 0) {
         return self.shape.definedAttributes;
     } else if (section == 1) {
-        return self.shape.calculatedAttributes;
-    } else if (section == 2) {
         return self.shape.undefinedAttributes;
     }
     return nil;
@@ -160,11 +198,8 @@
     if (array == self.shape.definedAttributes) {
         return 0;
     }
-    else if (array == self.shape.calculatedAttributes) {
-        return 1;
-    }
     else if (array == self.shape.undefinedAttributes) {
-        return 2;
+        return 1;
     }
     return 0;
 }
@@ -173,9 +208,6 @@
 {
     if ([self.shape.definedAttributes containsObject:object]) {
         return self.shape.definedAttributes;
-    }
-    else if ([self.shape.calculatedAttributes containsObject:object]) {
-        return self.shape.calculatedAttributes;
     }
     else if ([self.shape.undefinedAttributes containsObject:object]) {
         return self.shape.undefinedAttributes;
