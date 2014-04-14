@@ -20,7 +20,8 @@
         
         CAGradientLayer *gradientLayer = [CAGradientLayer layer];
         gradientLayer.frame = frame;
-        gradientLayer.colors = @[(id)[[UIColor colorWithRed:46.0/255.0 green:120.0/255.0 blue:208.0/255 alpha:1] CGColor],
+        CGFloat multiplier = 1.4;
+        gradientLayer.colors = @[(id)[[UIColor colorWithRed:multiplier * 46.0/255.0 green:multiplier * 120.0/255.0 blue:multiplier * 208.0/255 alpha:1] CGColor],
                                  (id)[[UIColor colorWithWhite:1.0f alpha:1.0f] CGColor]];
         gradientLayer.locations = @[@0, @6.0f];
         [self.layer insertSublayer:gradientLayer atIndex:0];
@@ -40,9 +41,9 @@
         circle.fillColor = [UIColor colorWithWhite:1.0 alpha:0.5].CGColor;
         
         // Add to parent layer
-        [self.layer addSublayer:circle];
+//        [self.layer addSublayer:circle];
 
-        [self setup];
+//        [self setup];
 
     }
     return self;
