@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		8F9C1FB518F96E78003D6DFA /* JLDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FB418F96E78003D6DFA /* JLDelegateProxy.m */; };
 		8F9C1FB818F9E7E2003D6DFA /* AttributeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FB718F9E7E2003D6DFA /* AttributeTableViewCell.m */; };
+		8F9C1FBB18FB165E003D6DFA /* Animator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FBA18FB165E003D6DFA /* Animator.m */; };
+		8F9C1FC118FB16D3003D6DFA /* NavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FC018FB16D3003D6DFA /* NavigationControllerDelegate.m */; };
+		8F9C1FC418FBC5BE003D6DFA /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FC318FBC5BE003D6DFA /* BackgroundView.m */; };
 		8FB2026F18F89E4F00EBCB81 /* NSNumber+JLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2026E18F89E4F00EBCB81 /* NSNumber+JLAdditions.m */; };
 		8FCE8B9B18F17D4C00E8C3D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE8B9A18F17D4C00E8C3D8 /* Foundation.framework */; };
 		8FCE8B9D18F17D4C00E8C3D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE8B9C18F17D4C00E8C3D8 /* CoreGraphics.framework */; };
@@ -99,6 +102,12 @@
 		8F9C1FB418F96E78003D6DFA /* JLDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLDelegateProxy.m; sourceTree = "<group>"; };
 		8F9C1FB618F9E7E2003D6DFA /* AttributeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributeTableViewCell.h; sourceTree = "<group>"; };
 		8F9C1FB718F9E7E2003D6DFA /* AttributeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeTableViewCell.m; sourceTree = "<group>"; };
+		8F9C1FB918FB165E003D6DFA /* Animator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animator.h; sourceTree = "<group>"; };
+		8F9C1FBA18FB165E003D6DFA /* Animator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animator.m; sourceTree = "<group>"; };
+		8F9C1FBF18FB16D3003D6DFA /* NavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDelegate.h; sourceTree = "<group>"; };
+		8F9C1FC018FB16D3003D6DFA /* NavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDelegate.m; sourceTree = "<group>"; };
+		8F9C1FC218FBC5BE003D6DFA /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
+		8F9C1FC318FBC5BE003D6DFA /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
 		8FB2026B18F8861B00EBCB81 /* Shapes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shapes.h; sourceTree = "<group>"; };
 		8FB2026D18F89E4F00EBCB81 /* NSNumber+JLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JLAdditions.h"; sourceTree = "<group>"; };
 		8FB2026E18F89E4F00EBCB81 /* NSNumber+JLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JLAdditions.m"; sourceTree = "<group>"; };
@@ -267,6 +276,12 @@
 				8FCE8BB318F17D4C00E8C3D8 /* DetailViewController.m */,
 				8F9C1FB618F9E7E2003D6DFA /* AttributeTableViewCell.h */,
 				8F9C1FB718F9E7E2003D6DFA /* AttributeTableViewCell.m */,
+				8F9C1FB918FB165E003D6DFA /* Animator.h */,
+				8F9C1FBA18FB165E003D6DFA /* Animator.m */,
+				8F9C1FC218FBC5BE003D6DFA /* BackgroundView.h */,
+				8F9C1FC318FBC5BE003D6DFA /* BackgroundView.m */,
+				8F9C1FBF18FB16D3003D6DFA /* NavigationControllerDelegate.h */,
+				8F9C1FC018FB16D3003D6DFA /* NavigationControllerDelegate.m */,
 				8FCE8BDF18F17D8800E8C3D8 /* Calculation */,
 				8FCE8BDE18F17D8000E8C3D8 /* Shapes */,
 				8FB2026C18F89E3500EBCB81 /* New Group */,
@@ -495,6 +510,7 @@
 			files = (
 				8FCE8C1A18F17DAE00E8C3D8 /* _DDNumberExpression.m in Sources */,
 				8FCE8C1018F17DAE00E8C3D8 /* _DDFunctionContainer.m in Sources */,
+				8F9C1FC418FBC5BE003D6DFA /* BackgroundView.m in Sources */,
 				8FCE8C2218F17DAE00E8C3D8 /* _DDParserTerm.m in Sources */,
 				8FCE8BAB18F17D4C00E8C3D8 /* AppDelegate.m in Sources */,
 				8FCE8C1818F17DAE00E8C3D8 /* _DDGroupTerm.m in Sources */,
@@ -518,6 +534,7 @@
 				8F9C1FB818F9E7E2003D6DFA /* AttributeTableViewCell.m in Sources */,
 				8FCE8C2C18F17DAE00E8C3D8 /* DDMathEvaluator.m in Sources */,
 				8FCE8C1418F17DAE00E8C3D8 /* _DDFunctionTerm.m in Sources */,
+				8F9C1FC118FB16D3003D6DFA /* NavigationControllerDelegate.m in Sources */,
 				8FCE8C2E18F17DAE00E8C3D8 /* DDMathStringToken.m in Sources */,
 				8FCE8C3418F17DAE00E8C3D8 /* DDParserTypes.m in Sources */,
 				8FCE8C1E18F17DAE00E8C3D8 /* _DDOperatorInfo.m in Sources */,
@@ -525,6 +542,7 @@
 				8FCE8C5018F2F98C00E8C3D8 /* Pyramid.m in Sources */,
 				8FCE8BDB18F17D7200E8C3D8 /* Circle.m in Sources */,
 				8FCE8BB418F17D4C00E8C3D8 /* DetailViewController.m in Sources */,
+				8F9C1FBB18FB165E003D6DFA /* Animator.m in Sources */,
 				8FCE8C1618F17DAE00E8C3D8 /* _DDFunctionUtilities.m in Sources */,
 				8FCE8BDA18F17D7200E8C3D8 /* Calculator.m in Sources */,
 				8FCE8C2018F17DAE00E8C3D8 /* _DDOperatorTerm.m in Sources */,

@@ -7,12 +7,35 @@
 //
 
 #import "AppDelegate.h"
+#import "NavigationControllerDelegate.h"
+#import "BackgroundView.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    self.window.tintColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor colorWithRed:46.0/255.0 green:120.0/255.0 blue:208.0/255 alpha:1];
+    
+    BackgroundView *view = [[BackgroundView alloc] initWithFrame:self.window.frame];
+    [self.window insertSubview:view atIndex:0];
+    
+    [[UINavigationBar appearance] setAlpha:0];
+    [[UITableView appearance] setBackgroundColor:[UIColor clearColor]];
+    [[UITableViewCell appearance] setBackgroundColor:[UIColor clearColor]];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+    [[UILabel appearance] setTextColor:[UIColor whiteColor]];
+    [[UITableView appearance] setSeparatorColor:[UIColor clearColor]];
+    
+    
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    
+    [navigationController.navigationBar setBackgroundImage:[UIImage new]
+                             forBarMetrics:UIBarMetricsDefault];
+    navigationController.navigationBar.shadowImage = [UIImage new];
+    navigationController.navigationBar.translucent = YES;
     
     return YES;
 }
