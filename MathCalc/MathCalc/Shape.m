@@ -186,7 +186,12 @@
 {
     [self.definedAttributes removeObject:attribute];
     [self.undefinedAttributes removeObject:attribute];
-    [array insertObject:attribute atIndex:0];
+    
+    if (array == self.definedAttributes) {
+        [array addObject:attribute];
+    } else {
+        [array insertObject:attribute atIndex:0];
+    }
 }
 
 - (NSMutableArray *)definedAttributes

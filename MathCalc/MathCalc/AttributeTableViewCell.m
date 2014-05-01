@@ -19,6 +19,9 @@
     // Initialization code
     self.textField.delegate = self;
     [self.textField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+    
+    self.selectedBackgroundView = [[UIView alloc] init];
+    self.selectedBackgroundView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.1];
 }
 
 - (void)setDelegate:(id<AttributeTableViewCellDelegate>)delegate

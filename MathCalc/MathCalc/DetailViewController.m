@@ -42,6 +42,9 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     [self configureView];
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Reload" style:UIBarButtonItemStylePlain target:self.tableView action:@selector(reloadData)];
+    self.navigationItem.rightBarButtonItems = @[self.navigationItem.rightBarButtonItem, item ];
 }
 
 - (void)didReceiveMemoryWarning
