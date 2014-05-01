@@ -19,6 +19,13 @@
     self.window.tintColor = [UIColor whiteColor];
     self.window.backgroundColor = [UIColor colorWithRed:46.0/255.0 green:120.0/255.0 blue:208.0/255 alpha:1];
     
+    [self updateInterface];
+    
+    return YES;
+}
+
+- (void)updateInterface
+{
     BackgroundView *view = [[BackgroundView alloc] initWithFrame:self.window.frame];
     [self.window insertSubview:view atIndex:0];
     
@@ -33,11 +40,9 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     
     [navigationController.navigationBar setBackgroundImage:[UIImage new]
-                             forBarMetrics:UIBarMetricsDefault];
+                                             forBarMetrics:UIBarMetricsDefault];
     navigationController.navigationBar.shadowImage = [UIImage new];
     navigationController.navigationBar.translucent = YES;
-    
-    return YES;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
