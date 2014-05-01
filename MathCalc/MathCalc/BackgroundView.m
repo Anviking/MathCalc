@@ -23,7 +23,7 @@
         CGFloat multiplier = 1.4;
         gradientLayer.colors = @[(id)[[UIColor colorWithRed:multiplier * 46.0/255.0 green:multiplier * 120.0/255.0 blue:multiplier * 208.0/255 alpha:1] CGColor],
                                  (id)[[UIColor colorWithWhite:1.0f alpha:1.0f] CGColor]];
-        gradientLayer.locations = @[@0, @6.0f];
+        gradientLayer.locations = @[@0, @2.0f];
         [self.layer insertSublayer:gradientLayer atIndex:0];
         
         

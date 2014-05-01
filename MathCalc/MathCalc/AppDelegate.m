@@ -35,6 +35,7 @@
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
     [[UILabel appearance] setTextColor:[UIColor whiteColor]];
     [[UITableView appearance] setSeparatorColor:[UIColor clearColor]];
+    [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithWhite:1 alpha:0.1]];
     
     
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;

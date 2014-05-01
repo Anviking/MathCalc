@@ -14,7 +14,7 @@
 @end
 
 @implementation DetailViewController {
-    NSIndexPath *indexPathToDefine;
+    NSIndexPath *indexPathToDefine, *indexPathToUndefine;
 }
 
 #pragma mark - Managing the detail item
@@ -84,21 +84,18 @@
     [self configureCell:(AttributeTableViewCell *)cell atIndexPath:newIndexPath];
 }
 
-/*
+- (void)shape:(Shape *)shape willUndefineAttribute:(NSString *)attribute
+{
+    indexPathToUndefine = [self indexPathForObject:attribute];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPathToUndefine];
+    [self configureCell:(AttributeTableViewCell *)cell atIndexPath:indexPathToUndefine];
+}
+
 - (void)shape:(Shape *)shape didUndefineAttribute:(NSString *)attribute
 {
     NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:0 inSection:1];
     [self.tableView moveRowAtIndexPath:indexPathToUndefine toIndexPath:newIndexPath];
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPathToUndefine];
-    [self configureCell:(AttributeTableViewCell *)cell atIndexPath:indexPathToUndefine];
 }
- 
- - (void)shape:(Shape *)shape willUndefineAttribute:(NSString *)attribute
- {
- indexPathToUndefine = [self indexPathForObject:attribute];
- }
- 
-*/
 
 #pragma mark - Table View
 
@@ -157,6 +154,7 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     NSString *string = [self objectAtIndexPath:indexPath];
     
+
     [self.tableView beginUpdates];
     [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
     [self.shape defineAttribute:string];

@@ -224,6 +224,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FAC03A11912E0E3008211B9 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				8F9C1FB918FB165E003D6DFA /* Animator.h */,
+				8F9C1FBA18FB165E003D6DFA /* Animator.m */,
+				8F9C1FC218FBC5BE003D6DFA /* BackgroundView.h */,
+				8F9C1FC318FBC5BE003D6DFA /* BackgroundView.m */,
+				8F9C1FBF18FB16D3003D6DFA /* NavigationControllerDelegate.h */,
+				8F9C1FC018FB16D3003D6DFA /* NavigationControllerDelegate.m */,
+			);
+			name = Theme;
+			sourceTree = "<group>";
+		};
 		8FB2026C18F89E3500EBCB81 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,12 +289,7 @@
 				8FCE8BB318F17D4C00E8C3D8 /* DetailViewController.m */,
 				8F9C1FB618F9E7E2003D6DFA /* AttributeTableViewCell.h */,
 				8F9C1FB718F9E7E2003D6DFA /* AttributeTableViewCell.m */,
-				8F9C1FB918FB165E003D6DFA /* Animator.h */,
-				8F9C1FBA18FB165E003D6DFA /* Animator.m */,
-				8F9C1FC218FBC5BE003D6DFA /* BackgroundView.h */,
-				8F9C1FC318FBC5BE003D6DFA /* BackgroundView.m */,
-				8F9C1FBF18FB16D3003D6DFA /* NavigationControllerDelegate.h */,
-				8F9C1FC018FB16D3003D6DFA /* NavigationControllerDelegate.m */,
+				8FAC03A11912E0E3008211B9 /* Theme */,
 				8FCE8BDF18F17D8800E8C3D8 /* Calculation */,
 				8FCE8BDE18F17D8000E8C3D8 /* Shapes */,
 				8FB2026C18F89E3500EBCB81 /* New Group */,

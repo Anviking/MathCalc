@@ -141,7 +141,25 @@
         return;
     }
     
+    NSMutableArray *attributesToUndefine = [NSMutableArray array];
+    // Defined attributes that should not be concidered defined
+    // Delegate call for didUndefineAttribute will not be called until -willDefineAttribute has been
+    
+    for (NSString *attribute in self.definedAttributes) {
+        if ([self valueForKey:attribute] == nil) {
+            [attributesToUndefine addObject:attribute];
+            [delegateProxy shape:self willUndefineAttribute:attribute];
+        }
+    }
+    
     [delegateProxy shape:self willDefineAttribute:attribute];
+    
+    // Complete the undefinition of the invalidly defined attributes
+    for (NSString *attribute in attributesToUndefine) {
+        [self moveAttribute:attribute toArray:self.undefinedAttributes];
+        [delegateProxy shape:self didUndefineAttribute:attribute];
+    }
+    
     NSMutableArray *invalidAttributes = [self invalidAttributes];
     if (invalidAttributes.count > 0) {
         [self moveAttribute:attribute toArray:self.definedAttributes];
@@ -155,6 +173,10 @@
 
 - (void)undefineAttribute:(NSString *)attribute
 {
+    if ([self.undefinedAttributes containsObject:attribute]) {
+        return;
+    }
+    
     [delegateProxy shape:self willUndefineAttribute:attribute];
     [self moveAttribute:attribute toArray:self.undefinedAttributes];
     [delegateProxy shape:self didUndefineAttribute:attribute];
@@ -164,7 +186,7 @@
 {
     [self.definedAttributes removeObject:attribute];
     [self.undefinedAttributes removeObject:attribute];
-    [array addObject:attribute];
+    [array insertObject:attribute atIndex:0];
 }
 
 - (NSMutableArray *)definedAttributes
