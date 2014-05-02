@@ -35,9 +35,11 @@
     self.formatter = [[NSNumberFormatter alloc] init];
     [self.formatter setMaximumFractionDigits:4];
     
+    Shape *standardShape = [self standardShape];
+    
     NSMutableDictionary *dictionary = [NSMutableDictionary dictionary];
     for (NSString *key in [self.shapeClass attributes]) {
-        dictionary[key] = [[self standardShape] valueForKey:key] ?: @0;
+        dictionary[key] = [standardShape valueForKey:key] ?: @0;
     }
     
     self.standardValues = dictionary;

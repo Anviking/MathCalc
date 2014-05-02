@@ -31,17 +31,17 @@
 {
     Pyramid *pyramid = (Pyramid *)[self standardShape];
     
-    XCTAssertEqualObjects([self.formatter stringFromNumber:pyramid.base], @"20", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:pyramid.baseArea], @"400", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:pyramid.height], @"10", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:pyramid.surfaceArea], @"965.6854", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:pyramid.lateralSurfaceArea], @"565.6854", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:pyramid.volume], @"1333.3333", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:pyramid.slantHeight], @"14.1421", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:pyramid.lateralEdge], @"17.3205", @""); // Validate this value
-    //XCTAssertEqualObjects([self.formatter stringFromNumber:pyramid.lateralEdgeAngle], @"11.21", @"");
-    //XCTAssertEqualObjects([self.formatter stringFromNumber:pyramid.slantAngle], @"11.21", @"");
-    //XCTAssertEqualObjects([self.formatter stringFromNumber:pyramid.vertexAngle], @"11.21", @"");
+    XCTAssertEqualNumbers(pyramid.base, @20);
+    XCTAssertEqualNumbers(pyramid.baseArea, @400);
+    XCTAssertEqualNumbers(pyramid.height, @10);
+    XCTAssertEqualNumbers(pyramid.surfaceArea, @965.6854);
+    XCTAssertEqualNumbers(pyramid.lateralSurfaceArea, @565.6854);
+    XCTAssertEqualNumbers(pyramid.volume, @1333.3333);
+    XCTAssertEqualNumbers(pyramid.slantHeight, @14.1421);
+    XCTAssertEqualNumbers(pyramid.lateralEdge, @17.3205); // Validate this value
+    //XCTAssertEqualNumbers(pyramid.lateralEdgeAngle, @11.21);
+    //XCTAssertEqualNumbers(pyramid.slantAngle, @11.21);
+    //XCTAssertEqualNumbers(pyramid.vertexAngle, @11.21);
 }
 
 - (void)testAllCombinations

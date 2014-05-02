@@ -31,11 +31,11 @@
 {
     Sphere *sphere = (Sphere *)[self standardShape];
     
-    XCTAssertEqualObjects([self.formatter stringFromNumber:sphere.area], @"1256.6371", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:sphere.radius], @"10", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:sphere.diameter], @"20", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:sphere.circumference], @"62.8319", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:sphere.volume], @"4188.7902", @"");
+    XCTAssertEqualNumbers(sphere.area, @1256.6371);
+    XCTAssertEqualNumbers(sphere.radius, @10);
+    XCTAssertEqualNumbers(sphere.diameter, @20);
+    XCTAssertEqualNumbers(sphere.circumference, @62.8319);
+    XCTAssertEqualNumbers(sphere.volume, @4188.7902);
 }
 
 - (void)testAllCombinations

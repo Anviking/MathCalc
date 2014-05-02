@@ -73,12 +73,24 @@
     [delegateProxy shapeWillCalculate:self];
     NSMutableArray *formulas = [self formulas].mutableCopy;
     
+    [self defineAttributesIfNeeded];
     for (NSString *attribute in self.undefinedAttributes) {
         [self setValue:nil forKey:attribute];
     }
     
     [self calculateWithFormulas:formulas];
     [delegateProxy shapeDidCalculate:self];
+}
+
+- (void)defineAttributesIfNeeded
+{
+    if (!self.definedAttributes.count) {
+        for (NSString *attribute in [self.class attributes]) {
+            if ([[self valueForKey:attribute] floatValue] > 0) {
+                [self defineAttribute:attribute];
+            }
+        }
+    }
 }
 
 - (void)calculateWithFormulas:(NSArray *)formulas

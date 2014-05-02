@@ -189,15 +189,15 @@
 		8FCE8C3A18F18C4E00E8C3D8 /* CircleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CircleTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8FCE8C3C18F1ADAB00E8C3D8 /* RightTriangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RightTriangle.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		8FCE8C3D18F1ADAB00E8C3D8 /* RightTriangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RightTriangle.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		8FCE8C4018F1B62A00E8C3D8 /* RightTriangleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightTriangleTests.m; sourceTree = "<group>"; };
+		8FCE8C4018F1B62A00E8C3D8 /* RightTriangleTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RightTriangleTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8FCE8C4218F28C1500E8C3D8 /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = "<group>"; };
 		8FCE8C4318F28C1500E8C3D8 /* Sphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sphere.m; sourceTree = "<group>"; };
 		8FCE8C4818F28CD000E8C3D8 /* ShapeTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeTests.h; sourceTree = "<group>"; };
 		8FCE8C4918F28CD000E8C3D8 /* ShapeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeTests.m; sourceTree = "<group>"; };
-		8FCE8C4C18F2D76D00E8C3D8 /* SphereTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SphereTests.m; sourceTree = "<group>"; };
+		8FCE8C4C18F2D76D00E8C3D8 /* SphereTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SphereTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8FCE8C4E18F2F98C00E8C3D8 /* Pyramid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pyramid.h; sourceTree = "<group>"; };
 		8FCE8C4F18F2F98C00E8C3D8 /* Pyramid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pyramid.m; sourceTree = "<group>"; };
-		8FCE8C5118F2FD3300E8C3D8 /* PyramidTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PyramidTests.m; sourceTree = "<group>"; };
+		8FCE8C5118F2FD3300E8C3D8 /* PyramidTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = PyramidTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +227,7 @@
 		8FAC03A11912E0E3008211B9 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				8FB2026C18F89E3500EBCB81 /* New Group */,
 				8F9C1FB918FB165E003D6DFA /* Animator.h */,
 				8F9C1FBA18FB165E003D6DFA /* Animator.m */,
 				8F9C1FC218FBC5BE003D6DFA /* BackgroundView.h */,
@@ -292,7 +293,6 @@
 				8FAC03A11912E0E3008211B9 /* Theme */,
 				8FCE8BDF18F17D8800E8C3D8 /* Calculation */,
 				8FCE8BDE18F17D8000E8C3D8 /* Shapes */,
-				8FB2026C18F89E3500EBCB81 /* New Group */,
 				8FCE8BB518F17D4C00E8C3D8 /* Images.xcassets */,
 				8FCE8BA118F17D4C00E8C3D8 /* Supporting Files */,
 			);

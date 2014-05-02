@@ -29,22 +29,15 @@
 
 - (void)testStandardTriangle
 {
-    RightTriangle *triangle = [RightTriangle new];
-    triangle.base = @3;
-    triangle.height = @4;
+    RightTriangle *triangle = (RightTriangle *)[self standardShape];
     
-    [triangle defineAttribute:@"base"];
-    [triangle defineAttribute:@"height"];
-    
-    [triangle calculate];
-    
-    XCTAssertEqualObjects([self.formatter stringFromNumber:triangle.height], @"4", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:triangle.base], @"3", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:triangle.hypotenuse], @"5", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:triangle.area], @"6", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:triangle.circumference], @"12", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:triangle.angleA], @"53.1301", @"");
-    XCTAssertEqualObjects([self.formatter stringFromNumber:triangle.angleB], @"36.8699", @"");
+    XCTAssertEqualNumbers(triangle.height, @4);
+    XCTAssertEqualNumbers(triangle.base, @3);
+    XCTAssertEqualNumbers(triangle.hypotenuse, @5);
+    XCTAssertEqualNumbers(triangle.area, @6);
+    XCTAssertEqualNumbers(triangle.circumference, @12);
+    XCTAssertEqualNumbers(triangle.angleA, @53.1301);
+    XCTAssertEqualNumbers(triangle.angleB, @36.8699);
 }
 
 - (void)testAllCombinations
