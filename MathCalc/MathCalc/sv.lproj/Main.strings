@@ -1,0 +1,18 @@
+
+/* Class = "IBUIBarButtonItem"; title = "Reset"; ObjectID = "1C9-EQ-qFX"; */
+"1C9-EQ-qFX.title" = "Reset";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "2pz-XF-uhl"; */
+"2pz-XF-uhl.text" = "Title";
+
+/* Class = "IBUITextField"; text = "Detail"; ObjectID = "FH5-sf-dwA"; */
+"FH5-sf-dwA.text" = "Detail";
+
+/* Class = "IBUITableViewController"; title = "Master"; ObjectID = "pGg-6v-bdr"; */
+"pGg-6v-bdr.title" = "Master";
+
+/* Class = "IBUINavigationItem"; title = "Master"; ObjectID = "tQt-TN-PWz"; */
+"tQt-TN-PWz.title" = "Master";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "wor-jT-ct3"; */
+"wor-jT-ct3.text" = "Label";

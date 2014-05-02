@@ -15,10 +15,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    
-    self.window.tintColor = [UIColor whiteColor];
-    self.window.backgroundColor = [UIColor colorWithRed:46.0/255.0 green:120.0/255.0 blue:208.0/255 alpha:1];
-    
     [self updateInterface];
     
     return YES;
@@ -26,17 +22,25 @@
 
 - (void)updateInterface
 {
-    BackgroundView *view = [[BackgroundView alloc] initWithFrame:self.window.frame];
-    [self.window insertSubview:view atIndex:0];
+    //UIColor *color = [UIColor colorWithRed:46.0/255.0 green:120.0/255.0 blue:208.0/255 alpha:1];
+    UIColor *backgroundColor = [UIColor colorWithHue:0.4 saturation:0.6 brightness:0.8 alpha:1.0];
+    UIColor *tintColor = [UIColor whiteColor];
+    UIColor *textColor = [UIColor whiteColor];
     
-    [[UINavigationBar appearance] setAlpha:0];
+    self.window.tintColor = tintColor;
+    self.window.backgroundColor = backgroundColor;
+    
+    //BackgroundView *view = [[BackgroundView alloc] initWithFrame:self.window.frame];
+    //[self.window insertSubview:view atIndex:0];
+    
+    //[[UINavigationBar appearance] setAlpha:0];
     [[UITableView appearance] setBackgroundColor:[UIColor clearColor]];
     [[UITableViewCell appearance] setBackgroundColor:[UIColor clearColor]];
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
-    [[UILabel appearance] setTextColor:[UIColor whiteColor]];
+    [[UILabel appearance] setTextColor:textColor];
+    [[UILabel appearanceWhenContainedIn:[UINavigationBar class], nil] setTextColor:[UIColor blackColor]];
     [[UITableView appearance] setSeparatorColor:[UIColor clearColor]];
     [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithWhite:1 alpha:0.1]];
-    
     
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     
@@ -45,7 +49,7 @@
     navigationController.navigationBar.shadowImage = [UIImage new];
     navigationController.navigationBar.translucent = YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

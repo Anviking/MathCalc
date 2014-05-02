@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F88EC8F191404E600586014 /* PreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F88EC8E191404E600586014 /* PreviewView.m */; };
+		8F88EC92191407F900586014 /* BlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F88EC91191407F900586014 /* BlurView.m */; };
+		8F88EC961914129700586014 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F88EC941914129700586014 /* Localizable.strings */; };
 		8F9C1FB518F96E78003D6DFA /* JLDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FB418F96E78003D6DFA /* JLDelegateProxy.m */; };
 		8F9C1FB818F9E7E2003D6DFA /* AttributeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FB718F9E7E2003D6DFA /* AttributeTableViewCell.m */; };
 		8F9C1FBB18FB165E003D6DFA /* Animator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FBA18FB165E003D6DFA /* Animator.m */; };
@@ -98,6 +101,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F88EC8D191404E600586014 /* PreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewView.h; sourceTree = "<group>"; };
+		8F88EC8E191404E600586014 /* PreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewView.m; sourceTree = "<group>"; };
+		8F88EC90191407F900586014 /* BlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurView.h; sourceTree = "<group>"; };
+		8F88EC91191407F900586014 /* BlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlurView.m; sourceTree = "<group>"; };
+		8F88EC97191412A100586014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8F88EC9B1914135300586014 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8F88EC9C191415D400586014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8F9C1FB318F96E78003D6DFA /* JLDelegateProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLDelegateProxy.h; sourceTree = "<group>"; };
 		8F9C1FB418F96E78003D6DFA /* JLDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLDelegateProxy.m; sourceTree = "<group>"; };
 		8F9C1FB618F9E7E2003D6DFA /* AttributeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributeTableViewCell.h; sourceTree = "<group>"; };
@@ -116,7 +126,6 @@
 		8FCE8B9C18F17D4C00E8C3D8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8FCE8B9E18F17D4C00E8C3D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8FCE8BA218F17D4C00E8C3D8 /* MathCalc-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MathCalc-Info.plist"; sourceTree = "<group>"; };
-		8FCE8BA418F17D4C00E8C3D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8FCE8BA618F17D4C00E8C3D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8FCE8BA818F17D4C00E8C3D8 /* MathCalc-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MathCalc-Prefix.pch"; sourceTree = "<group>"; };
 		8FCE8BA918F17D4C00E8C3D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -224,14 +233,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F88EC931914083400586014 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F9C1FB618F9E7E2003D6DFA /* AttributeTableViewCell.h */,
+				8F9C1FB718F9E7E2003D6DFA /* AttributeTableViewCell.m */,
+				8F88EC8D191404E600586014 /* PreviewView.h */,
+				8F88EC8E191404E600586014 /* PreviewView.m */,
+				8F9C1FC218FBC5BE003D6DFA /* BackgroundView.h */,
+				8F9C1FC318FBC5BE003D6DFA /* BackgroundView.m */,
+				8F88EC90191407F900586014 /* BlurView.h */,
+				8F88EC91191407F900586014 /* BlurView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		8FAC03A11912E0E3008211B9 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
 				8FB2026C18F89E3500EBCB81 /* New Group */,
 				8F9C1FB918FB165E003D6DFA /* Animator.h */,
 				8F9C1FBA18FB165E003D6DFA /* Animator.m */,
-				8F9C1FC218FBC5BE003D6DFA /* BackgroundView.h */,
-				8F9C1FC318FBC5BE003D6DFA /* BackgroundView.m */,
 				8F9C1FBF18FB16D3003D6DFA /* NavigationControllerDelegate.h */,
 				8F9C1FC018FB16D3003D6DFA /* NavigationControllerDelegate.m */,
 			);
@@ -288,8 +310,7 @@
 				8FCE8BB018F17D4C00E8C3D8 /* MasterViewController.m */,
 				8FCE8BB218F17D4C00E8C3D8 /* DetailViewController.h */,
 				8FCE8BB318F17D4C00E8C3D8 /* DetailViewController.m */,
-				8F9C1FB618F9E7E2003D6DFA /* AttributeTableViewCell.h */,
-				8F9C1FB718F9E7E2003D6DFA /* AttributeTableViewCell.m */,
+				8F88EC931914083400586014 /* Views */,
 				8FAC03A11912E0E3008211B9 /* Theme */,
 				8FCE8BDF18F17D8800E8C3D8 /* Calculation */,
 				8FCE8BDE18F17D8000E8C3D8 /* Shapes */,
@@ -302,6 +323,7 @@
 		8FCE8BA118F17D4C00E8C3D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8F88EC941914129700586014 /* Localizable.strings */,
 				8FCE8BA218F17D4C00E8C3D8 /* MathCalc-Info.plist */,
 				8FCE8BA318F17D4C00E8C3D8 /* InfoPlist.strings */,
 				8FCE8BA618F17D4C00E8C3D8 /* main.m */,
@@ -478,6 +500,7 @@
 			knownRegions = (
 				en,
 				Base,
+				sv,
 			);
 			mainGroup = 8FCE8B8E18F17D4C00E8C3D8;
 			productRefGroup = 8FCE8B9818F17D4C00E8C3D8 /* Products */;
@@ -496,6 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FCE8BB618F17D4C00E8C3D8 /* Images.xcassets in Resources */,
+				8F88EC961914129700586014 /* Localizable.strings in Resources */,
 				8FCE8BA518F17D4C00E8C3D8 /* InfoPlist.strings in Resources */,
 				8FCE8BAE18F17D4C00E8C3D8 /* Main.storyboard in Resources */,
 			);
@@ -544,6 +568,7 @@
 				8FCE8C1418F17DAE00E8C3D8 /* _DDFunctionTerm.m in Sources */,
 				8F9C1FC118FB16D3003D6DFA /* NavigationControllerDelegate.m in Sources */,
 				8FCE8C2E18F17DAE00E8C3D8 /* DDMathStringToken.m in Sources */,
+				8F88EC8F191404E600586014 /* PreviewView.m in Sources */,
 				8FCE8C3418F17DAE00E8C3D8 /* DDParserTypes.m in Sources */,
 				8FCE8C1E18F17DAE00E8C3D8 /* _DDOperatorInfo.m in Sources */,
 				8FCE8C2418F17DAE00E8C3D8 /* _DDRewriteRule.m in Sources */,
@@ -552,6 +577,7 @@
 				8FCE8BB418F17D4C00E8C3D8 /* DetailViewController.m in Sources */,
 				8F9C1FBB18FB165E003D6DFA /* Animator.m in Sources */,
 				8FCE8C1618F17DAE00E8C3D8 /* _DDFunctionUtilities.m in Sources */,
+				8F88EC92191407F900586014 /* BlurView.m in Sources */,
 				8FCE8BDA18F17D7200E8C3D8 /* Calculator.m in Sources */,
 				8FCE8C2018F17DAE00E8C3D8 /* _DDOperatorTerm.m in Sources */,
 			);
@@ -605,10 +631,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8F88EC941914129700586014 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F88EC97191412A100586014 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		8FCE8BA318F17D4C00E8C3D8 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8FCE8BA418F17D4C00E8C3D8 /* en */,
+				8F88EC9C191415D400586014 /* Base */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -625,6 +659,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8FCE8BC618F17D4C00E8C3D8 /* en */,
+				8F88EC9B1914135300586014 /* sv */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

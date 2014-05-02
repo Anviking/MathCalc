@@ -9,8 +9,11 @@
 #import "DetailViewController.h"
 #import "Shape.h"
 #import "AttributeTableViewCell.h"
+#import "BlurView.h"
 
 @interface DetailViewController () <ShapeDelegate, AttributeTableViewCellDelegate>
+@property (nonatomic, strong) UILongPressGestureRecognizer *previewGestureRecognizer;
+@property (nonatomic, strong) UIView *previewView;
 @end
 
 @implementation DetailViewController {
@@ -45,6 +48,9 @@
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Reload" style:UIBarButtonItemStylePlain target:self.tableView action:@selector(reloadData)];
     self.navigationItem.rightBarButtonItems = @[self.navigationItem.rightBarButtonItem, item ];
+    
+    self.previewGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
+    [self.tableView addGestureRecognizer:self.previewGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -132,9 +138,9 @@
 
 - (void)configureCell:(AttributeTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *string = [self objectAtIndexPath:indexPath];
-    cell.textLabel.text = string;
-    NSString *value = [[self.shape valueForKeyPath:string] string];
+    NSString *attribute = [self objectAtIndexPath:indexPath];
+    cell.textLabel.text = NSLocalizedString(attribute, nil);
+    NSString *value = [[self.shape valueForKeyPath:attribute] string];
     cell.textField.text = value;
     
     if (indexPath.section == 1 && cell.textField.text.length > 0) {
@@ -225,6 +231,47 @@
 {
     NSMutableArray *array = [self arrayForObject:object];
     return [NSIndexPath indexPathForRow:[array indexOfObject:object] inSection:[self sectionForArray:array]];
+}
+
+#pragma mark - Preview
+
+- (UIView *)previewViewForAttribute
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    view.backgroundColor = [UIColor redColor];
+    return view;
+}
+
+- (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state == UIGestureRecognizerStateBegan)
+    {
+        UITableView *tableView = self.tableView;
+        CGPoint touchPoint = [gestureRecognizer locationInView:self.tableView];
+        NSIndexPath *row = [tableView indexPathForRowAtPoint:touchPoint];
+        if (row) {
+            UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
+            UIView *view = [[BlurView alloc] initWithFrame:window.bounds];
+            [window addSubview:view];
+            
+            /*
+            
+            view.translatesAutoresizingMaskIntoConstraints = NO;
+            
+            NSDictionary *views = NSDictionaryOfVariableBindings(view);
+            
+            [tableView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[view(100)]-|" options:0 metrics:nil views:views]];
+            [tableView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-100-[view(100)]" options:0 metrics:nil views:views]];
+             */
+            
+            self.previewView = view;
+            
+        }
+    }
+    if (gestureRecognizer.state == UIGestureRecognizerStateEnded)
+    {
+        [self.previewView removeFromSuperview];
+    }
 }
 
 

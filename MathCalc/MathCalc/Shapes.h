@@ -12,5 +12,6 @@
 #import "Circle.h"
 #import "Sphere.h"
 #import "RightTriangle.h"
+#import "Pyramid.h"
 
 #endif
