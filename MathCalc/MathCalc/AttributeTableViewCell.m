@@ -22,6 +22,9 @@
     
     self.selectedBackgroundView = [[UIView alloc] init];
     self.selectedBackgroundView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.1];
+    
+    self.textField.textColor = [UIColor whiteColor];
+    self.textLabel.textColor = [UIColor whiteColor];
 }
 
 - (void)setDelegate:(id<AttributeTableViewCellDelegate>)delegate

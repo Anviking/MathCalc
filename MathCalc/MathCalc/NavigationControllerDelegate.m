@@ -17,19 +17,23 @@
 
 @end
 
-@implementation NavigationControllerDelegate
+@implementation NavigationControllerDelegate {
+    CGFloat startScale;
+}
 
 - (void)awakeFromNib
 {
     UIPanGestureRecognizer* panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
     [self.navigationController.view addGestureRecognizer:panRecognizer];
     
+    UIPinchGestureRecognizer *pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinch:)];
+    [self.navigationController.view addGestureRecognizer:pinchRecognizer];
     self.animator = [Animator new];
 }
 
-- (void)pan:(UIPanGestureRecognizer*)recognizer
+- (void)pan:(UIPanGestureRecognizer *)recognizer
 {
-    UIView* view = self.navigationController.view;
+    UIView *view = self.navigationController.view;
     if (recognizer.state == UIGestureRecognizerStateBegan) {
         CGPoint location = [recognizer locationInView:view];
         if (location.x <  CGRectGetMidX(view.bounds) && self.navigationController.viewControllers.count > 1) { // left half
@@ -42,6 +46,24 @@
         [self.interactionController updateInteractiveTransition:d];
     } else if (recognizer.state == UIGestureRecognizerStateEnded) {
         if ([recognizer velocityInView:view].x > 0) {
+            [self.interactionController finishInteractiveTransition];
+        } else {
+            [self.interactionController cancelInteractiveTransition];
+        }
+        self.interactionController = nil;
+    }
+}
+
+- (void)pinch:(UIPinchGestureRecognizer *)recognizer
+{
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
+        startScale = recognizer.scale;
+        self.interactionController = [UIPercentDrivenInteractiveTransition new];
+        [self.navigationController popViewControllerAnimated:YES];
+    } else if (recognizer.state == UIGestureRecognizerStateChanged) {
+        [self.interactionController updateInteractiveTransition:0.5*(1/(recognizer.scale) - 1/startScale)];
+    } else if (recognizer.state == UIGestureRecognizerStateEnded) {
+        if ([recognizer velocity] < 0) {
             [self.interactionController finishInteractiveTransition];
         } else {
             [self.interactionController cancelInteractiveTransition];

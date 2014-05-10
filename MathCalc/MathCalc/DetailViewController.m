@@ -87,10 +87,11 @@
 
 - (void)shape:(Shape *)shape didDefineAttribute:(NSString *)attribute
 {
-    NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:shape.definedAttributes.count - 1 inSection:0];
+    NSIndexPath *newIndexPath = [self indexPathForObject:attribute];
     [self.tableView moveRowAtIndexPath:indexPathToDefine toIndexPath:newIndexPath];
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPathToDefine];
     [self configureCell:(AttributeTableViewCell *)cell atIndexPath:newIndexPath];
+    [self configureCell:(AttributeTableViewCell *)cell atIndexPath:indexPathToDefine];
 }
 
 - (void)shape:(Shape *)shape willUndefineAttribute:(NSString *)attribute
@@ -102,7 +103,7 @@
 
 - (void)shape:(Shape *)shape didUndefineAttribute:(NSString *)attribute
 {
-    NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:0 inSection:1];
+    NSIndexPath *newIndexPath = [self indexPathForObject:attribute];
     [self.tableView moveRowAtIndexPath:indexPathToUndefine toIndexPath:newIndexPath];
 }
 

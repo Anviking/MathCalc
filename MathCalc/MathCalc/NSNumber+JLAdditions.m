@@ -16,10 +16,12 @@ static NSNumberFormatter *scientificFormatter;
 {
     formatter = [[NSNumberFormatter alloc] init];
     [formatter setMaximumFractionDigits:4];
+    [formatter setMinimumIntegerDigits:1];
     
     scientificFormatter = [[NSNumberFormatter alloc] init];
     [scientificFormatter setNumberStyle:NSNumberFormatterScientificStyle];
     [scientificFormatter setMaximumFractionDigits:4];
+    [scientificFormatter setMinimumIntegerDigits:1];
 }
 
 + (NSNumberFormatter *)numberFormatter

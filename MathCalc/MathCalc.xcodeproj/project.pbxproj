@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F254527191627B9006D5091 /* mathTest.html in Resources */ = {isa = PBXBuildFile; fileRef = 8F254526191627B9006D5091 /* mathTest.html */; };
+		8F25452A1917C3E4006D5091 /* MathJax.js in Resources */ = {isa = PBXBuildFile; fileRef = 8F25452819162A98006D5091 /* MathJax.js */; };
 		8F88EC8F191404E600586014 /* PreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F88EC8E191404E600586014 /* PreviewView.m */; };
 		8F88EC92191407F900586014 /* BlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F88EC91191407F900586014 /* BlurView.m */; };
 		8F88EC961914129700586014 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F88EC941914129700586014 /* Localizable.strings */; };
+		8F88EC9F19141BB100586014 /* FormulaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F88EC9E19141BB100586014 /* FormulaViewController.m */; };
 		8F9C1FB518F96E78003D6DFA /* JLDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FB418F96E78003D6DFA /* JLDelegateProxy.m */; };
 		8F9C1FB818F9E7E2003D6DFA /* AttributeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FB718F9E7E2003D6DFA /* AttributeTableViewCell.m */; };
 		8F9C1FBB18FB165E003D6DFA /* Animator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FBA18FB165E003D6DFA /* Animator.m */; };
@@ -101,6 +104,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F254526191627B9006D5091 /* mathTest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mathTest.html; sourceTree = "<group>"; };
+		8F25452819162A98006D5091 /* MathJax.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = MathJax.js; sourceTree = "<group>"; };
 		8F88EC8D191404E600586014 /* PreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewView.h; sourceTree = "<group>"; };
 		8F88EC8E191404E600586014 /* PreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewView.m; sourceTree = "<group>"; };
 		8F88EC90191407F900586014 /* BlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurView.h; sourceTree = "<group>"; };
@@ -108,6 +113,8 @@
 		8F88EC97191412A100586014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8F88EC9B1914135300586014 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8F88EC9C191415D400586014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8F88EC9D19141BB100586014 /* FormulaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormulaViewController.h; sourceTree = "<group>"; };
+		8F88EC9E19141BB100586014 /* FormulaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormulaViewController.m; sourceTree = "<group>"; };
 		8F9C1FB318F96E78003D6DFA /* JLDelegateProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLDelegateProxy.h; sourceTree = "<group>"; };
 		8F9C1FB418F96E78003D6DFA /* JLDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLDelegateProxy.m; sourceTree = "<group>"; };
 		8F9C1FB618F9E7E2003D6DFA /* AttributeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributeTableViewCell.h; sourceTree = "<group>"; };
@@ -310,6 +317,8 @@
 				8FCE8BB018F17D4C00E8C3D8 /* MasterViewController.m */,
 				8FCE8BB218F17D4C00E8C3D8 /* DetailViewController.h */,
 				8FCE8BB318F17D4C00E8C3D8 /* DetailViewController.m */,
+				8F88EC9D19141BB100586014 /* FormulaViewController.h */,
+				8F88EC9E19141BB100586014 /* FormulaViewController.m */,
 				8F88EC931914083400586014 /* Views */,
 				8FAC03A11912E0E3008211B9 /* Theme */,
 				8FCE8BDF18F17D8800E8C3D8 /* Calculation */,
@@ -327,6 +336,8 @@
 				8FCE8BA218F17D4C00E8C3D8 /* MathCalc-Info.plist */,
 				8FCE8BA318F17D4C00E8C3D8 /* InfoPlist.strings */,
 				8FCE8BA618F17D4C00E8C3D8 /* main.m */,
+				8F254526191627B9006D5091 /* mathTest.html */,
+				8F25452819162A98006D5091 /* MathJax.js */,
 				8FCE8BA818F17D4C00E8C3D8 /* MathCalc-Prefix.pch */,
 				8F9C1FB318F96E78003D6DFA /* JLDelegateProxy.h */,
 				8F9C1FB418F96E78003D6DFA /* JLDelegateProxy.m */,
@@ -518,8 +529,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F25452A1917C3E4006D5091 /* MathJax.js in Resources */,
 				8FCE8BB618F17D4C00E8C3D8 /* Images.xcassets in Resources */,
 				8F88EC961914129700586014 /* Localizable.strings in Resources */,
+				8F254527191627B9006D5091 /* mathTest.html in Resources */,
 				8FCE8BA518F17D4C00E8C3D8 /* InfoPlist.strings in Resources */,
 				8FCE8BAE18F17D4C00E8C3D8 /* Main.storyboard in Resources */,
 			);
@@ -563,6 +576,7 @@
 				8FCE8C1218F17DAE00E8C3D8 /* _DDFunctionExpression.m in Sources */,
 				8FCE8BA718F17D4C00E8C3D8 /* main.m in Sources */,
 				8F9C1FB518F96E78003D6DFA /* JLDelegateProxy.m in Sources */,
+				8F88EC9F19141BB100586014 /* FormulaViewController.m in Sources */,
 				8F9C1FB818F9E7E2003D6DFA /* AttributeTableViewCell.m in Sources */,
 				8FCE8C2C18F17DAE00E8C3D8 /* DDMathEvaluator.m in Sources */,
 				8FCE8C1418F17DAE00E8C3D8 /* _DDFunctionTerm.m in Sources */,
@@ -699,6 +713,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -731,6 +749,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
