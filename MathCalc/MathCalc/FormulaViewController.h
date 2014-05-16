@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FormulaViewController : UITableViewController
+@interface FormulaViewController : UIViewController
+
+@property (nonatomic, strong) IBOutlet UIWebView *webView;
 
 @end

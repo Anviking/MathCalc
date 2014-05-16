@@ -12,9 +12,10 @@
     NSArray *_objects;
 }
 
-- (void)awakeFromNib
+- (void)loadView
 {
-    [super awakeFromNib];
+    self.webView = [[UIWebView alloc] init];
+    self.view = self.webView;
 }
 
 - (void)viewDidLoad
@@ -23,12 +24,11 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismissViewController)];
-    
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"mathTest" withExtension:@"html"];
-    NSDictionary *options = @{ NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType,
-                               NSCharacterEncodingDocumentAttribute : @(NSUTF8StringEncoding)};
-    NSAttributedString *string = [[NSAttributedString alloc] initWithFileURL:url options:options documentAttributes:NULL error:nil];
-    _objects = @[ string ];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSURL *url = [[NSBundle mainBundle] URLForResource:@"mathTest" withExtension:@"html"];
+        [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+    });
+
 }
 
 - (void)dismissViewController {
@@ -40,32 +40,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - Table View
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return _objects.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    
-    NSAttributedString *string = _objects[indexPath.row];
-    cell.textLabel.attributedText = string;
-    return cell;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 200;
-}
-
 
 @end
