@@ -27,6 +27,8 @@
     UIColor *tintColor = [UIColor whiteColor];
     UIColor *textColor = [UIColor whiteColor];
     
+    tintColor = backgroundColor;
+    
     self.window.tintColor = tintColor;
     self.window.backgroundColor = backgroundColor;
     
@@ -36,18 +38,21 @@
     //[[UINavigationBar appearance] setAlpha:0];
     [[UITableView appearance] setBackgroundColor:[UIColor clearColor]];
     [[UITableViewCell appearance] setBackgroundColor:[UIColor clearColor]];
-    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+//    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
     [[UILabel appearance] setTextColor:textColor];
     [[UILabel appearanceWhenContainedIn:[UINavigationBar class], nil] setTextColor:[UIColor blackColor]];
     [[UITableView appearance] setSeparatorColor:[UIColor clearColor]];
     [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithWhite:1 alpha:0.1]];
     
+    
+    /*
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     
     [navigationController.navigationBar setBackgroundImage:[UIImage new]
                                              forBarMetrics:UIBarMetricsDefault];
     navigationController.navigationBar.shadowImage = [UIImage new];
     navigationController.navigationBar.translucent = YES;
+     */
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
