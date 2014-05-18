@@ -129,7 +129,9 @@
         NSNumber *value = [formula evaluateWithVariables:[shape substitutionDictionaryWithAttributes:formula.variableAttributes]];
         NSString *newStringValue = [self.formatter stringFromNumber:value];
         NSString *oldStringValue = [self.formatter stringFromNumber:[shape valueForKey:attribute]];
-        XCTAssertEqualObjects(oldStringValue, newStringValue, @"\n    Formula: %@ = %@", formula.resultAttribute, formula.formulaString);
+        if (![newStringValue isEqualToString:oldStringValue]) {
+            XCTFail(@"Invalid formula: %@   –  %@ should be %@ but it is %@", formula, attribute, oldStringValue, newStringValue);
+        }
     }
 }
 

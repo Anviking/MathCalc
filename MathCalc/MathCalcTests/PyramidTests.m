@@ -39,9 +39,8 @@
     XCTAssertEqualNumbers(pyramid.volume, @1333.3333);
     XCTAssertEqualNumbers(pyramid.slantHeight, @14.1421);
     XCTAssertEqualNumbers(pyramid.lateralEdge, @17.3205); // Validate this value
-    //XCTAssertEqualNumbers(pyramid.lateralEdgeAngle, @11.21);
-    //XCTAssertEqualNumbers(pyramid.slantAngle, @11.21);
-    //XCTAssertEqualNumbers(pyramid.vertexAngle, @11.21);
+    XCTAssertEqualNumbers(pyramid.lateralEdgeAngle, @35.2644); // Validate
+    XCTAssertEqualNumbers(pyramid.slantAngle, @45); // Validate
 }
 
 - (void)testAllCombinations

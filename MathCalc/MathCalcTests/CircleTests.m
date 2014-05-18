@@ -32,10 +32,9 @@
     Circle *circle = (Circle *)[self standardShape];
     
     XCTAssertEqualObjects(@"10", [self.formatter stringFromNumber:@10], @"");
-//    XCTAssertEqualObjects([circle.area floatValue], , @"");
     XCTAssertNotNil(self.formatter, @"self.formatter should not be nil");
     XCTAssertEqualObjects([self.formatter stringFromNumber:circle.area], [self.formatter stringFromNumber:@10], @"");
-        XCTAssertEqualNumbers(@10, @10);
+    XCTAssertEqualNumbers(@10, @10);
     XCTAssertEqualNumbers([circle area], @10);
     XCTAssertEqualNumbers(circle.radius, @1.7841);
     XCTAssertEqualNumbers(circle.diameter, @3.5682);

@@ -20,5 +20,4 @@
 @property (nonatomic, strong) NSNumber *lateralEdge;
 @property (nonatomic, strong) NSNumber *slantAngle;
 @property (nonatomic, strong) NSNumber *lateralEdgeAngle;
-@property (nonatomic, strong) NSNumber *vertexAngle;
 @end

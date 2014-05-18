@@ -64,6 +64,10 @@
     return variables.copy;
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"%@ = %@", self.resultAttribute, self.formulaString];
+}
 
 
 @end
