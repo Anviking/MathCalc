@@ -78,7 +78,27 @@
                 }
             }
         }
+    } else if (dimensions == 3) {
+        for (NSString *attribute1 in attributes) {
+            for (NSString *attribute2 in attributes) {
+                for (NSString *attribute3 in attributes) {
+                    if (![attribute1 isEqual:attribute2] && ![attribute1 isEqual:attribute3] && ![attribute2 isEqual:attribute3]) {
+                        shape = [[self shapeClass] new];
+                        [shape setValue:[self standardValues][attribute1] forKey:attribute1];
+                        [shape setValue:[self standardValues][attribute2] forKey:attribute2];
+                        [shape setValue:[self standardValues][attribute3] forKey:attribute3];
+                        
+                        [shape calculate];
+                        
+                        if (![self validateShape:shape]) {
+                            [set addObject:[NSSet setWithArray:@[ attribute1, attribute2, attribute3]]];
+                        }
+                    }
+                }
+            }
+        }
     }
+    
     
     [set minusSet:[self setFomVisualStrings:[self knownInvalidCombinations]]];
     if (set.count != 0) {

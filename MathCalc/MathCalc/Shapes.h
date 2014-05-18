@@ -13,5 +13,6 @@
 #import "Sphere.h"
 #import "RightTriangle.h"
 #import "Pyramid.h"
+#import "Cuboid.h"
 
 #endif

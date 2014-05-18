@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8F254527191627B9006D5091 /* mathTest.html in Resources */ = {isa = PBXBuildFile; fileRef = 8F254526191627B9006D5091 /* mathTest.html */; };
 		8F25452A1917C3E4006D5091 /* MathJax.js in Resources */ = {isa = PBXBuildFile; fileRef = 8F25452819162A98006D5091 /* MathJax.js */; };
+		8F6A9EC51928C2ED00D2FD9D /* Cuboid.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9EC41928C2ED00D2FD9D /* Cuboid.m */; };
+		8F6A9EC71928C2FE00D2FD9D /* CuboidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9EC61928C2FE00D2FD9D /* CuboidTests.m */; };
 		8F88EC8F191404E600586014 /* PreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F88EC8E191404E600586014 /* PreviewView.m */; };
 		8F88EC92191407F900586014 /* BlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F88EC91191407F900586014 /* BlurView.m */; };
 		8F88EC961914129700586014 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F88EC941914129700586014 /* Localizable.strings */; };
@@ -106,6 +108,9 @@
 /* Begin PBXFileReference section */
 		8F254526191627B9006D5091 /* mathTest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mathTest.html; sourceTree = "<group>"; };
 		8F25452819162A98006D5091 /* MathJax.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = MathJax.js; sourceTree = "<group>"; };
+		8F6A9EC31928C2ED00D2FD9D /* Cuboid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cuboid.h; sourceTree = "<group>"; };
+		8F6A9EC41928C2ED00D2FD9D /* Cuboid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cuboid.m; sourceTree = "<group>"; };
+		8F6A9EC61928C2FE00D2FD9D /* CuboidTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CuboidTests.m; sourceTree = "<group>"; };
 		8F88EC8D191404E600586014 /* PreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewView.h; sourceTree = "<group>"; };
 		8F88EC8E191404E600586014 /* PreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewView.m; sourceTree = "<group>"; };
 		8F88EC90191407F900586014 /* BlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurView.h; sourceTree = "<group>"; };
@@ -356,6 +361,7 @@
 				8FCE8BC818F17D4C00E8C3D8 /* MathCalcTests.m */,
 				8FCE8C4C18F2D76D00E8C3D8 /* SphereTests.m */,
 				8FCE8C4018F1B62A00E8C3D8 /* RightTriangleTests.m */,
+				8F6A9EC61928C2FE00D2FD9D /* CuboidTests.m */,
 				8FCE8BC318F17D4C00E8C3D8 /* Supporting Files */,
 			);
 			path = MathCalcTests;
@@ -384,6 +390,8 @@
 				8FCE8C4F18F2F98C00E8C3D8 /* Pyramid.m */,
 				8FCE8BD818F17D7200E8C3D8 /* Shape.h */,
 				8FCE8BD918F17D7200E8C3D8 /* Shape.m */,
+				8F6A9EC31928C2ED00D2FD9D /* Cuboid.h */,
+				8F6A9EC41928C2ED00D2FD9D /* Cuboid.m */,
 			);
 			name = Shapes;
 			sourceTree = "<group>";
@@ -560,6 +568,7 @@
 				8FCE8BAB18F17D4C00E8C3D8 /* AppDelegate.m in Sources */,
 				8FCE8C1818F17DAE00E8C3D8 /* _DDGroupTerm.m in Sources */,
 				8FCE8C2A18F17DAE00E8C3D8 /* DDExpression.m in Sources */,
+				8F6A9EC51928C2ED00D2FD9D /* Cuboid.m in Sources */,
 				8FCE8C3818F17DAE00E8C3D8 /* NSString+DDMathParsing.m in Sources */,
 				8FCE8BB118F17D4C00E8C3D8 /* MasterViewController.m in Sources */,
 				8FCE8C1C18F17DAE00E8C3D8 /* _DDNumberTerm.m in Sources */,
@@ -608,6 +617,7 @@
 				8FCE8C2718F17DAE00E8C3D8 /* _DDVariableExpression.m in Sources */,
 				8FCE8C3118F17DAE00E8C3D8 /* DDMathStringTokenizer.m in Sources */,
 				8FCE8C3918F17DAE00E8C3D8 /* NSString+DDMathParsing.m in Sources */,
+				8F6A9EC71928C2FE00D2FD9D /* CuboidTests.m in Sources */,
 				8FCE8C1118F17DAE00E8C3D8 /* _DDFunctionContainer.m in Sources */,
 				8FCE8C4A18F28CD000E8C3D8 /* ShapeTests.m in Sources */,
 				8FCE8C2318F17DAE00E8C3D8 /* _DDParserTerm.m in Sources */,
