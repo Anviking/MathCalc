@@ -11,6 +11,8 @@
 		8F25452A1917C3E4006D5091 /* MathJax.js in Resources */ = {isa = PBXBuildFile; fileRef = 8F25452819162A98006D5091 /* MathJax.js */; };
 		8F6A9EC51928C2ED00D2FD9D /* Cuboid.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9EC41928C2ED00D2FD9D /* Cuboid.m */; };
 		8F6A9EC71928C2FE00D2FD9D /* CuboidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9EC61928C2FE00D2FD9D /* CuboidTests.m */; };
+		8F6A9ED11929463600D2FD9D /* Cone.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9ED01929463600D2FD9D /* Cone.m */; };
+		8F6A9ED31929464700D2FD9D /* ConeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9ED21929464700D2FD9D /* ConeTests.m */; };
 		8F88EC8F191404E600586014 /* PreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F88EC8E191404E600586014 /* PreviewView.m */; };
 		8F88EC92191407F900586014 /* BlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F88EC91191407F900586014 /* BlurView.m */; };
 		8F88EC961914129700586014 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F88EC941914129700586014 /* Localizable.strings */; };
@@ -111,6 +113,9 @@
 		8F6A9EC31928C2ED00D2FD9D /* Cuboid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cuboid.h; sourceTree = "<group>"; };
 		8F6A9EC41928C2ED00D2FD9D /* Cuboid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cuboid.m; sourceTree = "<group>"; };
 		8F6A9EC61928C2FE00D2FD9D /* CuboidTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CuboidTests.m; sourceTree = "<group>"; };
+		8F6A9ECF1929463600D2FD9D /* Cone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cone.h; sourceTree = "<group>"; };
+		8F6A9ED01929463600D2FD9D /* Cone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cone.m; sourceTree = "<group>"; };
+		8F6A9ED21929464700D2FD9D /* ConeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConeTests.m; sourceTree = "<group>"; };
 		8F88EC8D191404E600586014 /* PreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewView.h; sourceTree = "<group>"; };
 		8F88EC8E191404E600586014 /* PreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewView.m; sourceTree = "<group>"; };
 		8F88EC90191407F900586014 /* BlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlurView.h; sourceTree = "<group>"; };
@@ -362,6 +367,7 @@
 				8FCE8C4C18F2D76D00E8C3D8 /* SphereTests.m */,
 				8FCE8C4018F1B62A00E8C3D8 /* RightTriangleTests.m */,
 				8F6A9EC61928C2FE00D2FD9D /* CuboidTests.m */,
+				8F6A9ED21929464700D2FD9D /* ConeTests.m */,
 				8FCE8BC318F17D4C00E8C3D8 /* Supporting Files */,
 			);
 			path = MathCalcTests;
@@ -392,6 +398,8 @@
 				8FCE8BD918F17D7200E8C3D8 /* Shape.m */,
 				8F6A9EC31928C2ED00D2FD9D /* Cuboid.h */,
 				8F6A9EC41928C2ED00D2FD9D /* Cuboid.m */,
+				8F6A9ECF1929463600D2FD9D /* Cone.h */,
+				8F6A9ED01929463600D2FD9D /* Cone.m */,
 			);
 			name = Shapes;
 			sourceTree = "<group>";
@@ -565,6 +573,7 @@
 				8FCE8C1018F17DAE00E8C3D8 /* _DDFunctionContainer.m in Sources */,
 				8F9C1FC418FBC5BE003D6DFA /* BackgroundView.m in Sources */,
 				8FCE8C2218F17DAE00E8C3D8 /* _DDParserTerm.m in Sources */,
+				8F6A9ED11929463600D2FD9D /* Cone.m in Sources */,
 				8FCE8BAB18F17D4C00E8C3D8 /* AppDelegate.m in Sources */,
 				8FCE8C1818F17DAE00E8C3D8 /* _DDGroupTerm.m in Sources */,
 				8FCE8C2A18F17DAE00E8C3D8 /* DDExpression.m in Sources */,
@@ -640,6 +649,7 @@
 				8FCE8C3718F17DAE00E8C3D8 /* DDTypes.m in Sources */,
 				8FCE8C3B18F18C4E00E8C3D8 /* CircleTests.m in Sources */,
 				8FCE8C3318F17DAE00E8C3D8 /* DDParser.m in Sources */,
+				8F6A9ED31929464700D2FD9D /* ConeTests.m in Sources */,
 				8FCE8C2D18F17DAE00E8C3D8 /* DDMathEvaluator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,5 +14,6 @@
 #import "RightTriangle.h"
 #import "Pyramid.h"
 #import "Cuboid.h"
+#import "Cone.h"
 
 #endif
