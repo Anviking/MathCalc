@@ -25,8 +25,20 @@
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(dismissViewController)];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        NSError *error;
         NSURL *url = [[NSBundle mainBundle] URLForResource:@"mathTest" withExtension:@"html"];
-        [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+        NSString *format = [[NSString alloc] initWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error];
+        
+        NSAssert(!error, @"Error loading format string from disk");
+        
+        self.body = @"When $a \\ne 0$, there are two solutions to \\(ax^2 + bx + c = 0\\)";
+        
+        NSString *pathToMathJax = [[NSBundle mainBundle] pathForResource:@"MathJax" ofType:@"js"];
+        pathToMathJax = @"MathJax.js";
+        
+        NSString *string = [NSString stringWithFormat:format, pathToMathJax, self.body];
+        [self.webView loadHTMLString:string baseURL:[[NSBundle mainBundle] bundleURL]];
     });
 
 }

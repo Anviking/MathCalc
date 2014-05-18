@@ -17,34 +17,14 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        UIColor *backgroundColor = [UIColor colorWithHue:0.4 saturation:0.6 brightness:0.8 alpha:1.0];
         
         CAGradientLayer *gradientLayer = [CAGradientLayer layer];
         gradientLayer.frame = frame;
-        CGFloat multiplier = 1.4;
-        gradientLayer.colors = @[(id)[[UIColor colorWithRed:multiplier * 46.0/255.0 green:multiplier * 120.0/255.0 blue:multiplier * 208.0/255 alpha:1] CGColor],
+        gradientLayer.colors = @[(id)[backgroundColor CGColor],
                                  (id)[[UIColor colorWithWhite:1.0f alpha:1.0f] CGColor]];
         gradientLayer.locations = @[@0, @2.0f];
         [self.layer insertSublayer:gradientLayer atIndex:0];
-        
-        
-        // Set up the shape of the circle
-        int radius = 100;
-        CAShapeLayer *circle = [CAShapeLayer layer];
-        // Make a circular shape
-        circle.path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0, 0, 2.0*radius, 2.0*radius)
-                                                 cornerRadius:radius].CGPath;
-        // Center the shape in self.view
-        circle.position = CGPointMake(CGRectGetMidX(frame)-radius,
-                                      CGRectGetMidY(frame)-radius);
-        
-        // Configure the apperence of the circle
-        circle.fillColor = [UIColor colorWithWhite:1.0 alpha:0.5].CGColor;
-        
-        // Add to parent layer
-//        [self.layer addSublayer:circle];
-
-//        [self setup];
-
     }
     return self;
 }

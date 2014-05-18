@@ -10,6 +10,8 @@
 
 @interface FormulaViewController : UIViewController
 
+@property (nonatomic, strong) NSString *body;
+
 @property (nonatomic, strong) IBOutlet UIWebView *webView;
 
 @end

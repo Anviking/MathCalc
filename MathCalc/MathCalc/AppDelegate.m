@@ -15,8 +15,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [self updateInterface];
-    
+    //[self updateInterface];
+    [self updateInterface2];
     return YES;
 }
 
@@ -45,14 +45,33 @@
     [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithWhite:1 alpha:0.1]];
     
     
-    /*
+
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    
-    [navigationController.navigationBar setBackgroundImage:[UIImage new]
-                                             forBarMetrics:UIBarMetricsDefault];
     navigationController.navigationBar.shadowImage = [UIImage new];
-    navigationController.navigationBar.translucent = YES;
-     */
+}
+
+- (void)updateInterface2
+{
+    UIColor *backgroundColor = [UIColor colorWithHue:0.4 saturation:0.6 brightness:0.8 alpha:1.0];
+    UIColor *tintColor = [UIColor whiteColor];
+    UIColor *textColor = [UIColor whiteColor];
+
+    self.window.tintColor = tintColor;
+    
+    BackgroundView *view = [[BackgroundView alloc] initWithFrame:self.window.frame];
+    [self.window insertSubview:view atIndex:0];
+    
+    //[[UINavigationBar appearance] setAlpha:0];
+    [[UINavigationBar appearance] setBarTintColor:backgroundColor];
+    [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithWhite:1 alpha:0.1]];
+    
+    //[[UINavigationBar appearance] setAlpha:0];
+    [[UITableView appearance] setBackgroundColor:[UIColor clearColor]];
+    [[UITableViewCell appearance] setBackgroundColor:[UIColor clearColor]];
+    [[UILabel appearance] setTextColor:textColor];
+    [[UILabel appearanceWhenContainedIn:[UINavigationBar class], nil] setTextColor:[UIColor blackColor]];
+    [[UITableView appearance] setSeparatorColor:[UIColor clearColor]];
+    [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithWhite:1 alpha:0.1]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
