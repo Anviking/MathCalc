@@ -8,9 +8,7 @@
 
 #import "BackgroundView.h"
 
-@implementation BackgroundView {
-    UIToolbar *toolbar;
-}
+@implementation BackgroundView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -25,37 +23,34 @@
                                  (id)[[UIColor colorWithWhite:1.0f alpha:1.0f] CGColor]];
         gradientLayer.locations = @[@0, @2.0f];
         [self.layer insertSublayer:gradientLayer atIndex:0];
+        
+        self.overlay = [[UIView alloc] initWithFrame:self.bounds];
+        [self addSubview:self.overlay];
     }
     return self;
 }
 
-- (void)setup {
-    // If we don't clip to bounds the toolbar draws a thin shadow on top
-    [self setClipsToBounds:YES];
-    
-    if (!toolbar) {
-        toolbar = [[UIToolbar alloc] initWithFrame:[self bounds]];
-        [toolbar setTranslatesAutoresizingMaskIntoConstraints:NO];
-        [toolbar setBarStyle:UIBarStyleBlack];
-        [self addSubview:toolbar];
-        
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[toolbar]|"
-                                                                     options:0
-                                                                     metrics:0
-                                                                       views:NSDictionaryOfVariableBindings(toolbar)]];
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[toolbar]|"
-                                                                     options:0
-                                                                     metrics:0
-                                                                       views:NSDictionaryOfVariableBindings(toolbar)]];
-    }
+static BackgroundView *defaultView;
++ (void)setDefaultView:(BackgroundView *)view
+{
+    defaultView = view;
 }
 
-
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
++ (BackgroundView *)defaultView
 {
-    // Drawing code
+    if (!defaultView) {
+        defaultView = [[BackgroundView alloc] init];
+    }
+    return defaultView;
+}
+
+@end
+
+@implementation UIViewController (BackgroundView)
+
+- (UIColor *)backgroundViewOverlayColor
+{
+    return nil;
 }
 
 @end

@@ -59,6 +59,7 @@
     self.window.tintColor = tintColor;
     
     BackgroundView *view = [[BackgroundView alloc] initWithFrame:self.window.frame];
+    [BackgroundView setDefaultView:view];
     [self.window insertSubview:view atIndex:0];
     
     //[[UINavigationBar appearance] setAlpha:0];

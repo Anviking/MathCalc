@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "Shape.h"
+#import "BackgroundView.h"
 #import "AttributeTableViewCell.h"
 #import "BlurView.h"
 
@@ -31,6 +32,11 @@
         [self configureView];
         _shape.delegate = self;
     }
+}
+
+- (UIColor *)backgroundViewOverlayColor
+{
+    return [UIColor colorWithWhite:0.0 alpha:0.1];
 }
 
 - (void)configureView

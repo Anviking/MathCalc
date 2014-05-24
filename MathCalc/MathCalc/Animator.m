@@ -7,6 +7,7 @@
 //
 
 #import "Animator.h"
+#import "BackgroundView.h"
 
 @implementation Animator
 
@@ -25,11 +26,18 @@
     
     toViewController.view.transform = CGAffineTransformMakeScale(1 - scale, 1 - scale);
     toViewController.view.alpha = 0;
+    
+    UIView *overlay = [BackgroundView defaultView].overlay;
+    overlay.backgroundColor = [fromViewController backgroundViewOverlayColor];
+    
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
         toViewController.view.transform = CGAffineTransformMakeScale(1, 1);
         fromViewController.view.transform = CGAffineTransformMakeScale(1 + scale, 1 + scale);
         fromViewController.view.alpha = 0;
         toViewController.view.alpha = 1;
+        
+        overlay.backgroundColor = [toViewController backgroundViewOverlayColor];
+        
     } completion:^(BOOL finished) {
         fromViewController.view.transform = CGAffineTransformIdentity;
         toViewController.view.transform = CGAffineTransformIdentity;

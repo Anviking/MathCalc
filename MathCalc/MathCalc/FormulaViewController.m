@@ -8,9 +8,7 @@
 
 #import "FormulaViewController.h"
 
-@implementation FormulaViewController {
-    NSArray *_objects;
-}
+@implementation FormulaViewController
 
 - (void)loadView
 {
