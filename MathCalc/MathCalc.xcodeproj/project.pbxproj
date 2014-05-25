@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F254527191627B9006D5091 /* mathTest.html in Resources */ = {isa = PBXBuildFile; fileRef = 8F254526191627B9006D5091 /* mathTest.html */; };
-		8F25452A1917C3E4006D5091 /* MathJax.js in Resources */ = {isa = PBXBuildFile; fileRef = 8F25452819162A98006D5091 /* MathJax.js */; };
+		8F61415D193121830066BA74 /* math.html in Resources */ = {isa = PBXBuildFile; fileRef = 8F61415C193121830066BA74 /* math.html */; };
 		8F6A9EC51928C2ED00D2FD9D /* Cuboid.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9EC41928C2ED00D2FD9D /* Cuboid.m */; };
 		8F6A9EC71928C2FE00D2FD9D /* CuboidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9EC61928C2FE00D2FD9D /* CuboidTests.m */; };
 		8F6A9ED11929463600D2FD9D /* Cone.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9ED01929463600D2FD9D /* Cone.m */; };
@@ -108,8 +107,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8F254526191627B9006D5091 /* mathTest.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = mathTest.html; sourceTree = "<group>"; };
-		8F25452819162A98006D5091 /* MathJax.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = MathJax.js; sourceTree = "<group>"; };
+		8F61415C193121830066BA74 /* math.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = math.html; sourceTree = "<group>"; };
 		8F6A9EC31928C2ED00D2FD9D /* Cuboid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cuboid.h; sourceTree = "<group>"; };
 		8F6A9EC41928C2ED00D2FD9D /* Cuboid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cuboid.m; sourceTree = "<group>"; };
 		8F6A9EC61928C2FE00D2FD9D /* CuboidTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CuboidTests.m; sourceTree = "<group>"; };
@@ -342,12 +340,11 @@
 		8FCE8BA118F17D4C00E8C3D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8F61415C193121830066BA74 /* math.html */,
 				8F88EC941914129700586014 /* Localizable.strings */,
 				8FCE8BA218F17D4C00E8C3D8 /* MathCalc-Info.plist */,
 				8FCE8BA318F17D4C00E8C3D8 /* InfoPlist.strings */,
 				8FCE8BA618F17D4C00E8C3D8 /* main.m */,
-				8F254526191627B9006D5091 /* mathTest.html */,
-				8F25452819162A98006D5091 /* MathJax.js */,
 				8FCE8BA818F17D4C00E8C3D8 /* MathCalc-Prefix.pch */,
 				8F9C1FB318F96E78003D6DFA /* JLDelegateProxy.h */,
 				8F9C1FB418F96E78003D6DFA /* JLDelegateProxy.m */,
@@ -545,10 +542,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F25452A1917C3E4006D5091 /* MathJax.js in Resources */,
+				8F61415D193121830066BA74 /* math.html in Resources */,
 				8FCE8BB618F17D4C00E8C3D8 /* Images.xcassets in Resources */,
 				8F88EC961914129700586014 /* Localizable.strings in Resources */,
-				8F254527191627B9006D5091 /* mathTest.html in Resources */,
 				8FCE8BA518F17D4C00E8C3D8 /* InfoPlist.strings in Resources */,
 				8FCE8BAE18F17D4C00E8C3D8 /* Main.storyboard in Resources */,
 			);

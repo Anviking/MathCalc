@@ -97,12 +97,6 @@
     [self.tableView moveRowAtIndexPath:indexPathToDefine toIndexPath:newIndexPath];
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPathToDefine];
     [self configureCell:(AttributeTableViewCell *)cell atIndexPath:newIndexPath];
-//    [self configureCell:(AttributeTableViewCell *)cell atIndexPath:indexPathToDefine];
-    cell.textLabel.text = @"H";
-    cell.textLabel.backgroundColor = [UIColor redColor];
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.textLabel.alpha = 1;
-    cell.textLabel.hidden = NO;
 }
 
 - (void)shape:(Shape *)shape willUndefineAttribute:(NSString *)attribute
@@ -151,7 +145,7 @@
 - (void)configureCell:(AttributeTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSString *attribute = [self objectAtIndexPath:indexPath];
-    cell.textLabel.text = NSLocalizedString(attribute, nil);
+    cell.attributeLabel.text = NSLocalizedString(attribute, nil);
     NSString *value = [[self.shape valueForKeyPath:attribute] string];
     cell.textField.text = value;
     

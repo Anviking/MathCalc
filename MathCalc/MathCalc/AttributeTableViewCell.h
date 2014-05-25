@@ -11,7 +11,7 @@
 @protocol AttributeTableViewCellDelegate;
 @interface AttributeTableViewCell : UITableViewCell <UITextFieldDelegate>
 
-@property (nonatomic, weak) IBOutlet UILabel *textLabel;
+@property (nonatomic, weak) IBOutlet UILabel *attributeLabel;
 @property (nonatomic, weak) IBOutlet UITextField *textField;
 @property (nonatomic, weak) IBOutlet id <AttributeTableViewCellDelegate> delegate;
 @end

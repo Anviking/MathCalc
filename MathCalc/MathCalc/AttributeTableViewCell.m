@@ -12,7 +12,6 @@
 @implementation AttributeTableViewCell {
     id <AttributeTableViewCellDelegate> delegateProxy;
 }
-@synthesize textLabel = __textLabel;
 
 - (void)awakeFromNib
 {
@@ -24,7 +23,8 @@
     self.selectedBackgroundView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.1];
     
     self.textField.textColor = [UIColor whiteColor];
-    self.textLabel.textColor = [UIColor whiteColor];
+    self.attributeLabel.textColor = [UIColor whiteColor];
+    self.attributeLabel.highlightedTextColor = [UIColor whiteColor];
 }
 
 - (void)setDelegate:(id<AttributeTableViewCellDelegate>)delegate
@@ -36,6 +36,11 @@
 - (void)prepareForReuse
 {
     self.userInteractionEnabled = YES;
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    [super setSelected:selected animated:animated];
 }
 
 #pragma mark - Text Field Delegate

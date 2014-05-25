@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "FormulaViewController.h"
 #import "Shapes.h"
 
 @interface MasterViewController () {
@@ -63,6 +64,15 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Shape *shape = _objects[indexPath.row];
         [[segue destinationViewController] setShape:shape];
+    } else {
+        NSMutableString *body = [NSMutableString new];
+        Pyramid *pyramid = [Pyramid new];
+        for (NSString *string in pyramid.formulaStrings) {
+            [body appendFormat:@"<p style=\"text-align:center\">\n`%@`\n</p>",[string stringByReplacingOccurrencesOfString:@"$" withString:@""]];
+        }
+            [body appendFormat:@"<p style=\"text-align:center\">`%@`</p>",@"x = sqrt(y+z)"];
+        [(FormulaViewController *)[[segue destinationViewController] viewControllers][0] setBody:body];
+        
     }
 }
 
