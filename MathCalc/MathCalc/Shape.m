@@ -27,6 +27,11 @@
     return nil;
 }
 
+- (void)redraw
+{
+    
+}
+
 - (NSArray *)formulas
 {
     if (!_formulas) {
@@ -80,6 +85,8 @@
     
     [self calculateWithFormulas:formulas];
     [delegateProxy shapeDidCalculate:self];
+    
+    [self redraw];
 }
 
 - (void)defineAttributesIfNeeded

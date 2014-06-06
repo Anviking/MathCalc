@@ -39,6 +39,8 @@
 
 - (NSDictionary *)substitutionDictionaryWithAttributes:(NSArray *)attributes;
 
+- (void)redraw;
+
 @end
 
 @protocol ShapeDelegate <NSObject>

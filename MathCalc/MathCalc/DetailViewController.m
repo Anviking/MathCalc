@@ -44,6 +44,24 @@
     // Update the user interface for the detail item.
     
     [self.tableView reloadData];
+    self.tableView.backgroundView = [UIView new];
+    
+    /*
+    [self.tableView.backgroundView.layer addSublayer:self.shape.shapeLayer];
+    
+    CAShapeLayer *layer = (CAShapeLayer *)self.shape.shapeLayer;
+    CIFilter *blur = [CIFilter filterWithName:@"CIGaussianBlur"];
+    [blur setDefaults];
+    layer.backgroundFilters = @[blur];
+
+    layer.shadowColor = [UIColor whiteColor].CGColor;
+    layer.shadowOpacity = 1;
+    layer.shadowPath = layer.path;
+    layer.fillColor = [UIColor colorWithWhite:1 alpha:1].CGColor;
+    layer.opacity = 0.2;
+    layer.shadowRadius = 5;
+    layer.shadowOffset = CGSizeMake(0, 0);
+    */
 }
 
 - (void)viewDidLoad
