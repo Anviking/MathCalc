@@ -15,11 +15,11 @@
 @interface DetailViewController () <ShapeDelegate, AttributeTableViewCellDelegate>
 @property (nonatomic, strong) UILongPressGestureRecognizer *previewGestureRecognizer;
 @property (nonatomic, strong) UIView *previewView;
+@property (nonatomic, strong) NSMutableArray *groupedAttributes;
+@property (nonatomic, strong) NSMutableDictionary *originalSections;
 @end
 
-@implementation DetailViewController {
-    NSIndexPath *indexPathToDefine, *indexPathToUndefine;
-}
+@implementation DetailViewController
 
 #pragma mark - Managing the detail item
 
@@ -45,36 +45,19 @@
     
     [self.tableView reloadData];
     self.tableView.backgroundView = [UIView new];
-    
-    /*
-    [self.tableView.backgroundView.layer addSublayer:self.shape.shapeLayer];
-    
-    CAShapeLayer *layer = (CAShapeLayer *)self.shape.shapeLayer;
-    CIFilter *blur = [CIFilter filterWithName:@"CIGaussianBlur"];
-    [blur setDefaults];
-    layer.backgroundFilters = @[blur];
-
-    layer.shadowColor = [UIColor whiteColor].CGColor;
-    layer.shadowOpacity = 1;
-    layer.shadowPath = layer.path;
-    layer.fillColor = [UIColor colorWithWhite:1 alpha:1].CGColor;
-    layer.opacity = 0.2;
-    layer.shadowRadius = 5;
-    layer.shadowOffset = CGSizeMake(0, 0);
-    */
+    self.groupedAttributes = [[self.shape class] groupedAttributes].mutableCopy;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     [self configureView];
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Reload" style:UIBarButtonItemStylePlain target:self.tableView action:@selector(reloadData)];
     self.navigationItem.rightBarButtonItems = @[self.navigationItem.rightBarButtonItem, item ];
     
-    self.previewGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
-    [self.tableView addGestureRecognizer:self.previewGestureRecognizer];
+    self.originalSections = [NSMutableDictionary dictionary];
 }
 
 - (void)didReceiveMemoryWarning
@@ -98,53 +81,21 @@
 
 - (void)shapeDidCalculate:(Shape *)shape
 {
-    indexPathToDefine = nil;
-    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationNone];
+    for (NSArray *group in self.groupedAttributes) {
+        for (NSString *attribute in group) {
+            NSIndexPath *indexPath = [self indexPathForObject:attribute];
+            AttributeTableViewCell *cell = (AttributeTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+            [self configureCell:cell atIndexPath:indexPath];
+        }
+    }
     [self.tableView endUpdates];
-}
-
-- (void)shape:(Shape *)shape willDefineAttribute:(NSString *)attribute
-{
-    indexPathToDefine = [self indexPathForObject:attribute];
-}
-
-
-- (void)shape:(Shape *)shape didDefineAttribute:(NSString *)attribute
-{
-    NSIndexPath *newIndexPath = [self indexPathForObject:attribute];
-    [self.tableView moveRowAtIndexPath:indexPathToDefine toIndexPath:newIndexPath];
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPathToDefine];
-    [self configureCell:(AttributeTableViewCell *)cell atIndexPath:newIndexPath];
-}
-
-- (void)shape:(Shape *)shape willUndefineAttribute:(NSString *)attribute
-{
-    indexPathToUndefine = [self indexPathForObject:attribute];
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPathToUndefine];
-    [self configureCell:(AttributeTableViewCell *)cell atIndexPath:indexPathToUndefine];
-}
-
-- (void)shape:(Shape *)shape didUndefineAttribute:(NSString *)attribute
-{
-    NSIndexPath *newIndexPath = [self indexPathForObject:attribute];
-    [self.tableView moveRowAtIndexPath:indexPathToUndefine toIndexPath:newIndexPath];
 }
 
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    if (section == 0) {
-        return NSLocalizedString(@"Defined Attributes", @"Defined Attributes");
-    } else if (section == 1) {
-        return NSLocalizedString(@"Undefined Attributes", @"Undefined Attributes");
-    }
-    return nil;
+    return self.groupedAttributes.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -172,6 +123,12 @@
     } else {
         cell.userInteractionEnabled = YES;
     }
+    
+    if ([self.shape.definedAttributes containsObject:attribute]) {
+        cell.defined = YES;
+    } else {
+        cell.defined = NO;
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -185,13 +142,7 @@
 - (void)attributeTableViewCellDidBeginEditing:(AttributeTableViewCell *)cell
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    NSString *string = [self objectAtIndexPath:indexPath];
-    
-
-    [self.tableView beginUpdates];
     [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
-    [self.shape defineAttribute:string];
-    [self.tableView endUpdates];
 }
 
 - (BOOL)attributeTableViewCellShouldBeginEditing:(AttributeTableViewCell *)cell
@@ -208,40 +159,29 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     NSString *attribute = [self objectAtIndexPath:indexPath];
     NSNumber *number = [[NSNumber numberFormatter] numberFromString:cell.textField.text];
+    [self.shape defineAttribute:attribute];
     [self.shape setValue:number forKey:attribute];
     [self.shape calculate];
 }
 
 #pragma mark - Helpers
 
-- (NSMutableArray *)arrayForSection:(NSInteger)section
+- (NSArray *)arrayForSection:(NSInteger)section
 {
-    if (section == 0) {
-        return self.shape.definedAttributes;
-    } else if (section == 1) {
-        return self.shape.undefinedAttributes;
-    }
-    return nil;
+    return self.groupedAttributes[section];
 }
 
-- (NSInteger)sectionForArray:(NSMutableArray *)array
+- (NSInteger)sectionForArray:(NSArray *)array
 {
-    if (array == self.shape.definedAttributes) {
-        return 0;
-    }
-    else if (array == self.shape.undefinedAttributes) {
-        return 1;
-    }
-    return 0;
+    return [self.groupedAttributes indexOfObject:array];
 }
 
-- (NSMutableArray *)arrayForObject:(id)object
+- (NSArray *)arrayForObject:(id)object
 {
-    if ([self.shape.definedAttributes containsObject:object]) {
-        return self.shape.definedAttributes;
-    }
-    else if ([self.shape.undefinedAttributes containsObject:object]) {
-        return self.shape.undefinedAttributes;
+    for (NSArray *array in self.groupedAttributes) {
+        if ([array containsObject:object]) {
+            return array;
+        }
     }
     return nil;
 }
@@ -253,49 +193,8 @@
 
 - (NSIndexPath *)indexPathForObject:(id)object
 {
-    NSMutableArray *array = [self arrayForObject:object];
+    NSArray *array = [self arrayForObject:object];
     return [NSIndexPath indexPathForRow:[array indexOfObject:object] inSection:[self sectionForArray:array]];
-}
-
-#pragma mark - Preview
-
-- (UIView *)previewViewForAttribute
-{
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    view.backgroundColor = [UIColor redColor];
-    return view;
-}
-
-- (void)handleGesture:(UIGestureRecognizer *)gestureRecognizer
-{
-    if (gestureRecognizer.state == UIGestureRecognizerStateBegan)
-    {
-        UITableView *tableView = self.tableView;
-        CGPoint touchPoint = [gestureRecognizer locationInView:self.tableView];
-        NSIndexPath *row = [tableView indexPathForRowAtPoint:touchPoint];
-        if (row) {
-            UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
-            UIView *view = [[BlurView alloc] initWithFrame:window.bounds];
-            [window addSubview:view];
-            
-            /*
-            
-            view.translatesAutoresizingMaskIntoConstraints = NO;
-            
-            NSDictionary *views = NSDictionaryOfVariableBindings(view);
-            
-            [tableView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[view(100)]-|" options:0 metrics:nil views:views]];
-            [tableView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-100-[view(100)]" options:0 metrics:nil views:views]];
-             */
-            
-            self.previewView = view;
-            
-        }
-    }
-    if (gestureRecognizer.state == UIGestureRecognizerStateEnded)
-    {
-        [self.previewView removeFromSuperview];
-    }
 }
 
 

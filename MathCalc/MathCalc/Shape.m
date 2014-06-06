@@ -42,7 +42,16 @@
 
 + (NSArray *)attributes
 {
-    return nil;
+    NSMutableArray *result = [NSMutableArray array];
+    for (NSArray *array in [self groupedAttributes]) {
+        [result addObjectsFromArray:array];
+    }
+    return result;
+}
+
++ (NSArray *)groupedAttributes
+{
+    return @[ [self attributes] ];
 }
 
 - (NSDictionary *)substitutionDictionaryWithAttributes:(NSArray *)attributes

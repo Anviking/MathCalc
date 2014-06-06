@@ -11,6 +11,7 @@
 
 @implementation AttributeTableViewCell {
     id <AttributeTableViewCellDelegate> delegateProxy;
+    CALayer *layer;
 }
 
 - (void)awakeFromNib
@@ -25,6 +26,14 @@
     self.textField.textColor = [UIColor whiteColor];
     self.attributeLabel.textColor = [UIColor whiteColor];
     self.attributeLabel.highlightedTextColor = [UIColor whiteColor];
+    
+    self.definitionIndicatorWidth = 5;
+    
+    layer = [CALayer layer];
+    layer.backgroundColor = self.tintColor.CGColor;
+    layer.hidden = YES;
+    
+    [self.contentView.layer addSublayer:layer];
 }
 
 - (void)setDelegate:(id<AttributeTableViewCellDelegate>)delegate
@@ -33,14 +42,34 @@
     delegateProxy = (id <AttributeTableViewCellDelegate>)[[JLDelegateProxy alloc] initWithDelegate:delegate];
 }
 
+
 - (void)prepareForReuse
 {
     self.userInteractionEnabled = YES;
+    self.defined = NO;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+- (void)setDefined:(BOOL)defined
 {
-    [super setSelected:selected animated:animated];
+    if (defined != _defined) {
+        CGFloat startX, endX;
+        
+        if (defined) {
+            startX = -self.definitionIndicatorWidth;
+            endX = 0;
+        } else {
+            startX = 0;
+            endX = -self.definitionIndicatorWidth;
+        }
+        
+        
+        layer.hidden = NO;
+        layer.frame = CGRectMake(startX, 0, self.definitionIndicatorWidth, self.bounds.size.height);
+        [UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:0.01 initialSpringVelocity:1 options:0 animations:^{
+            layer.frame = CGRectMake(endX, 0, self.definitionIndicatorWidth, self.bounds.size.height);
+        } completion:nil];
+    }
+    _defined = defined;
 }
 
 #pragma mark - Text Field Delegate

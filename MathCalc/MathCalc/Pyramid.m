@@ -19,18 +19,12 @@
     return self;
 }
 
-+ (NSArray *)attributes
++ (NSArray *)groupedAttributes
 {
-    return @[ @"base",
-              @"height",
-              @"baseArea",
-              @"surfaceArea",
-              @"lateralSurfaceArea",
-              @"volume",
-              @"slantHeight",
-              @"lateralEdge",
-              @"slantAngle",
-              @"lateralEdgeAngle" ];
+    return @[ @[ @"base", @"height", @"slantHeight", @"lateralEdge", ],
+              @[ @"baseArea", @"surfaceArea", @"lateralSurfaceArea" ],
+              @[ @"volume" ],
+              @[ @"slantAngle", @"lateralEdgeAngle" ]];
 }
 
 - (NSArray *)formulaStrings {

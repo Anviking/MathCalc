@@ -17,6 +17,7 @@
 
 - (void)reset;
 
++ (NSArray *)groupedAttributes;
 + (NSArray *)attributes;
 - (NSArray *)formulaStrings;
 
