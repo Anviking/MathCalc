@@ -14,43 +14,40 @@
 @end
 
 @implementation ConeTests
-//
-//- (void)testStandardShape
-//{
-//    Cuboid *cuboid = (Cuboid *)[self standardShape];
-//    
-//    XCTAssertEqualNumbers(cuboid.width, @10);
-//    XCTAssertEqualNumbers(cuboid.height, @100);
-//    XCTAssertEqualNumbers(cuboid.length, @30);
-//    XCTAssertEqualNumbers(cuboid.volume, @30000);
-//}
-//
-//- (void)testAllCombinations
-//{
-//    [self validateCombinationsWithDimensions:3];
-//}
-//
-//- (void)testFormulas
-//{
-//    [self validateFormulas];
-//}
-//
-//#pragma mark - Data
-//
-//- (Class)shapeClass
-//{
-//    return [Cuboid class];
-//}
-//
-//- (Shape *)standardShape
-//{
-//    Cuboid *cuboid = [Cuboid new];
-//    cuboid.width = @10.0f;
-//    cuboid.height = @100.0f;
-//    cuboid.length = @30.0f;
-//    
-//    [cuboid calculate];
-//    return cuboid;
-//}
-//
+
+- (void)testStandardShape
+{
+     Cone *cone = (Cone *)[self standardShape];
+    
+    XCTAssertEqualNumbers(cone.radius, @10);
+    XCTAssertEqualNumbers(cone.height, @50);
+}
+
+- (void)testAllCombinations
+{
+    [self validateCombinationsWithDimensions:2];
+}
+
+- (void)testFormulas
+{
+    [self validateFormulas];
+}
+
+#pragma mark - Data
+
+- (Class)shapeClass
+{
+    return [Cone class];
+}
+
+- (Shape *)standardShape
+{
+    Cone *cone = [Cone new];
+    cone.radius = @10.0f;
+    cone.height = @50.0f;
+    
+    [cone calculate];
+    return cone;
+}
+
 @end

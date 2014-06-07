@@ -62,13 +62,7 @@
                             <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Z7Q-2F-P6p">
-                            <connections>
-                                <segue destination="Z4n-5L-Ch3" kind="modal" id="Wto-Zf-diq"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Shapes" id="tQt-TN-PWz"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
