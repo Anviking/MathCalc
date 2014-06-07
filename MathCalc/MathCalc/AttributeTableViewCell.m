@@ -27,10 +27,11 @@
     self.attributeLabel.textColor = [UIColor whiteColor];
     self.attributeLabel.highlightedTextColor = [UIColor whiteColor];
     
+    
     self.definitionIndicatorWidth = 5;
     
     layer = [CALayer layer];
-    layer.backgroundColor = self.tintColor.CGColor;
+    layer.backgroundColor = self.attributeLabel.textColor.CGColor;
     layer.hidden = YES;
     
     [self.contentView.layer addSublayer:layer];
@@ -65,7 +66,7 @@
         
         layer.hidden = NO;
         layer.frame = CGRectMake(startX, 0, self.definitionIndicatorWidth, self.bounds.size.height);
-        [UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:0.01 initialSpringVelocity:1 options:0 animations:^{
+        [UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:0.00001 initialSpringVelocity:1 options:0 animations:^{
             layer.frame = CGRectMake(endX, 0, self.definitionIndicatorWidth, self.bounds.size.height);
         } completion:nil];
     }

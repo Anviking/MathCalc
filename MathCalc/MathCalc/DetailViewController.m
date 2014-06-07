@@ -36,7 +36,7 @@
 
 - (UIColor *)backgroundViewOverlayColor
 {
-    return [UIColor colorWithWhite:0.0 alpha:0.1];
+    return [UIColor colorWithWhite:0.0 alpha:0.2];
 }
 
 - (void)configureView
@@ -53,9 +53,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self configureView];
-    
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Reload" style:UIBarButtonItemStylePlain target:self.tableView action:@selector(reloadData)];
-    self.navigationItem.rightBarButtonItems = @[self.navigationItem.rightBarButtonItem, item ];
     
     self.originalSections = [NSMutableDictionary dictionary];
 }
@@ -115,13 +112,10 @@
 {
     NSString *attribute = [self objectAtIndexPath:indexPath];
     cell.attributeLabel.text = NSLocalizedString(attribute, nil);
-    NSString *value = [[self.shape valueForKeyPath:attribute] string];
-    cell.textField.text = value;
     
-    if (indexPath.section == 1 && cell.textField.text.length > 0) {
-        cell.userInteractionEnabled = NO;
-    } else {
-        cell.userInteractionEnabled = YES;
+    if (!self.editing) {
+        NSString *value = [[self.shape valueForKeyPath:attribute] string];
+        cell.textField.text = value;
     }
     
     if ([self.shape.definedAttributes containsObject:attribute]) {
@@ -147,11 +141,7 @@
 
 - (BOOL)attributeTableViewCellShouldBeginEditing:(AttributeTableViewCell *)cell
 {
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-    NSString *string = [self objectAtIndexPath:indexPath];
-    NSNumber *number = [self.shape valueForKey:string];
-    
-    return !(number && indexPath.section == 1);
+    return YES;
 }
 
 - (void)attributeTableViewCellDidChange:(AttributeTableViewCell *)cell
@@ -159,6 +149,7 @@
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     NSString *attribute = [self objectAtIndexPath:indexPath];
     NSNumber *number = [[NSNumber numberFormatter] numberFromString:cell.textField.text];
+    
     [self.shape defineAttribute:attribute];
     [self.shape setValue:number forKey:attribute];
     [self.shape calculate];

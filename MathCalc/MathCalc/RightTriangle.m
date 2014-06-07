@@ -22,15 +22,10 @@
     return self;
 }
 
-+ (NSArray *)attributes
++ (NSArray *)groupedAttributes
 {
-    return @[ @"height",
-              @"base",
-              @"hypotenuse",
-              @"circumference",
-              @"area",
-              @"angleA",
-              @"angleB" ];
+    return @[ @[ @"height", @"base", @"hypotenuse", @"circumference", @"area" ],
+              @[ @"angleA", @"angleB" ]];
 }
 
 - (NSArray *)formulaStrings

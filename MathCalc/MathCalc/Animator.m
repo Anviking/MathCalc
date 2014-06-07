@@ -22,9 +22,12 @@
     UIViewController* fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     [[transitionContext containerView] addSubview:toViewController.view];
     
-    CGFloat scale = self.reverse ? -0.3 : 0.3;
     
-    toViewController.view.transform = CGAffineTransformMakeScale(1 - scale, 1 - scale);
+    CGFloat scale = 3;
+    CGFloat perspective = 0.6;
+    scale = self.reverse ? 1/scale : scale;
+    
+    toViewController.view.transform = CGAffineTransformMakeScale(perspective/scale, perspective/scale);
     toViewController.view.alpha = 0;
     
     UIView *overlay = [BackgroundView defaultView].overlay;
@@ -32,7 +35,7 @@
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext] animations:^{
         toViewController.view.transform = CGAffineTransformMakeScale(1, 1);
-        fromViewController.view.transform = CGAffineTransformMakeScale(1 + scale, 1 + scale);
+        fromViewController.view.transform = CGAffineTransformMakeScale(scale, scale);
         fromViewController.view.alpha = 0;
         toViewController.view.alpha = 1;
         

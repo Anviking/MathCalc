@@ -92,7 +92,7 @@
         [self setValue:nil forKey:attribute];
     }
     
-    [self calculateWithFormulas:formulas];
+    [self calculateWithFormulas:formulas iteration:0];
     [delegateProxy shapeDidCalculate:self];
     
     [self redraw];
@@ -109,11 +109,15 @@
     }
 }
 
-- (void)calculateWithFormulas:(NSArray *)formulas
+- (void)calculateWithFormulas:(NSArray *)formulas iteration:(NSInteger)iteration
 {
+    if (iteration > self.formulas.count) {
+        return;
+    }
+    
     NSMutableArray *array = formulas.mutableCopy;
     for (Formula *formula in formulas) {
-        if (![self hasValueForAttribute:formula.resultAttribute]) {
+        if (![self hasValueForAttribute:formula.resultAttribute] && ![self.definedAttributes containsObject:formula.resultAttribute]) {
             // It is a formula we should evaluate
             if ([self hasValueForAttributes:formula.variableAttributes]) {
                 // We can evaluate it.
@@ -121,7 +125,7 @@
                 [array removeObject:formulas];
                 
                 // Start all over again
-                [self calculateWithFormulas:array];
+                [self calculateWithFormulas:array iteration:iteration + 1];
                 break;
             }
             else {
@@ -146,11 +150,7 @@
 
 - (BOOL)hasValueForAttribute:(NSString *)attribute
 {
-    NSNumber *number = [self valueForKey:attribute];
-    if (number && number.floatValue > 0.0) {
-        return YES;
-    }
-    return NO;
+    return (BOOL)([self valueForKey:attribute]);
 }
 
 - (BOOL)hasValueForAttributes:(NSArray *)attributes
@@ -254,6 +254,9 @@
 {
     NSString *attribute = formula.resultAttribute;
     NSNumber *value = [formula evaluateWithVariables:[self substitutionDictionaryWithAttributes:formula.variableAttributes]];
+    if (!isfinite([value doubleValue])) {
+        return;
+    }
     [delegateProxy shape:self willCalculateValue:value attribute:attribute];
     [self setValue:value forKey:attribute];
     [delegateProxy shape:self didCalculateValue:value attribute:attribute];

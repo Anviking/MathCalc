@@ -21,12 +21,7 @@
 
 + (NSArray *)attributes
 {
-    return @[ @"height",
-              @"width",
-              @"length",
-              @"spaceDiagonal",
-              @"volume",
-              @"surfaceArea" ];
+    return @[ @[ @"height", @"width", @"length" ], @[ @"spaceDiagonal", @"volume", @"surfaceArea" ]];
 }
 
 - (NSArray *)formulaStrings {
