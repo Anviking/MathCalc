@@ -19,6 +19,9 @@
     // Initialization code
     self.textField.delegate = self;
     [self.textField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+    VENCalculatorInputView *view = [VENCalculatorInputView new];
+    view.delegate = self;
+    self.textField.inputView = view;
     
     self.selectedBackgroundView = [[UIView alloc] init];
     self.selectedBackgroundView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.1];
@@ -71,6 +74,21 @@
         } completion:nil];
     }
     _defined = defined;
+}
+
+#pragma mark - 
+
+- (void)calculatorInputView:(VENCalculatorInputView *)inputView didTapKey:(NSString *)key {
+    NSLog(@"Just tapped key: %@", key);
+    
+    [self.textField insertText:key];
+    // Handle the input. Something like [myTextField insertText:key];
+}
+
+- (void)calculatorInputViewDidTapBackspace:(VENCalculatorInputView *)calculatorInputView {
+    NSLog(@"Just tapped backspace.");
+    [self.textField deleteBackward];
+    // Handle the backspace. Something like [myTextField deleteBackward];
 }
 
 #pragma mark - Text Field Delegate

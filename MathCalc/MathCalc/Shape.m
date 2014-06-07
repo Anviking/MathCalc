@@ -8,6 +8,7 @@
 
 #import "Shape.h"
 #import "JLDelegateProxy.h"
+#import "DDMathEvaluator.h"
 
 @implementation Shape {
     id <ShapeDelegate> delegateProxy;
@@ -147,6 +148,15 @@
 }
 
 #pragma mark - Helpers
+
+- (void)setStringValue:(NSString *)string forAttribute:(NSString *)attribute
+{
+    NSLocale *locale = [NSLocale currentLocale];
+    NSString *decimalSymbol = [locale objectForKey:NSLocaleDecimalSeparator];
+    string = [string stringByReplacingOccurrencesOfString:decimalSymbol withString:@"."];
+    NSNumber *number = [[DDMathEvaluator sharedMathEvaluator] evaluateString:string withSubstitutions:nil];
+    [self setValue:number forKey:attribute];
+}
 
 - (BOOL)hasValueForAttribute:(NSString *)attribute
 {

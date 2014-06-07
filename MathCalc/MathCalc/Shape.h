@@ -17,6 +17,8 @@
 
 - (void)reset;
 
+- (void)setStringValue:(NSString *)string forAttribute:(NSString *)attribute;
+
 + (NSArray *)groupedAttributes;
 + (NSArray *)attributes;
 - (NSArray *)formulaStrings;

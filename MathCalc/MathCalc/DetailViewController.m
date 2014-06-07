@@ -113,7 +113,7 @@
     NSString *attribute = [self objectAtIndexPath:indexPath];
     cell.attributeLabel.text = NSLocalizedString(attribute, nil);
     
-    if (!self.editing) {
+    if (!cell.textField.editing) {
         NSString *value = [[self.shape valueForKeyPath:attribute] string];
         cell.textField.text = value;
     }
@@ -148,10 +148,9 @@
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     NSString *attribute = [self objectAtIndexPath:indexPath];
-    NSNumber *number = [[NSNumber numberFormatter] numberFromString:cell.textField.text];
     
     [self.shape defineAttribute:attribute];
-    [self.shape setValue:number forKey:attribute];
+    [self.shape setStringValue:cell.textField.text forAttribute:attribute];
     [self.shape calculate];
 }
 

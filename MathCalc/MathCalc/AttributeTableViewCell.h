@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VENCalculatorInputView.h"
 
 @protocol AttributeTableViewCellDelegate;
-@interface AttributeTableViewCell : UITableViewCell <UITextFieldDelegate>
+@interface AttributeTableViewCell : UITableViewCell <UITextFieldDelegate, VENCalculatorInputViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UILabel *attributeLabel;
 @property (nonatomic, weak) IBOutlet UITextField *textField;
