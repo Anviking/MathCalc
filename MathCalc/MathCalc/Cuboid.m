@@ -19,7 +19,7 @@
     return self;
 }
 
-+ (NSArray *)attributes
++ (NSArray *)groupedAttributes
 {
     return @[ @[ @"height", @"width", @"length" ], @[ @"spaceDiagonal", @"volume", @"surfaceArea" ]];
 }
