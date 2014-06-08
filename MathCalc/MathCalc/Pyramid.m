@@ -55,6 +55,8 @@
               @"$base = 2 * sqrt(pow($lateralEdge, 2) - pow($slantHeight, 2))",
               @"$slantHeight = sqrt(pow($lateralEdge, 2) - pow($base/2, 2))",
               
+              @"$base = sqrt(2)*sqrt(pow($lateralEdge, 2) - pow($height, 2))",
+              
               // Slant Angle
               @"$slantAngle = asin($height/$slantHeight)",
               @"$slantAngle = acos($base/2/$slantHeight)",

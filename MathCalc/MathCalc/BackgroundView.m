@@ -26,8 +26,17 @@
         
         self.overlay = [[UIView alloc] initWithFrame:self.bounds];
         [self addSubview:self.overlay];
+        
+        self.gradientLayer = gradientLayer;
     }
     return self;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    
+    self.gradientLayer.frame = self.bounds;
 }
 
 static BackgroundView *defaultView;

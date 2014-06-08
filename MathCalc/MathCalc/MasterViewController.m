@@ -55,6 +55,8 @@
 
     Shape *object = _objects[indexPath.row];
     cell.textLabel.text = [object name];
+    cell.imageView.image = [UIImage imageNamed:object.name.lowercaseString];
+    cell.imageView.contentMode = UIViewContentModeCenter;
     return cell;
 }
 

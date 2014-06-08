@@ -27,9 +27,39 @@
 }
 
 - (NSArray *)formulaStrings {
-    return @[ // Volume
+    return @[
+             // Volume
              @"$volume = $baseArea * $height / 3",
-             @"$baseArea = pi*$radius**2"];
+             @"$baseArea = 3 * $volume / $height",
+             @"$height = 3 * $volume / $baseArea",
+             
+             // Base Area
+             @"$baseArea = pi*$radius**2",
+             @"$radius = sqrt($baseArea/pi)",
+             
+             // Circumference
+             @"$circumference = $diameter * pi",
+             @"$diameter = $circumference / pi",
+             
+             // Diameter
+             @"$diameter = 2*$radius",
+             @"$radius = $diameter / 2",
+             
+             // Side
+             @"$side = sqrt(pow($height,2) + pow($radius,2))",
+             @"$height = sqrt(pow($side,2) - pow($radius,2))",
+             @"$radius = sqrt(pow($side,2) - pow($height,2))",
+             
+             // Mantle Area
+             @"$mantleArea = $radius * $side * pi",
+             @"$radius = $mantleArea / ($side * pi)",
+             @"$side = $mantleArea / ($radius * pi)",
+             
+             // Total Area
+             @"$surfaceArea = $mantleArea + $baseArea",
+             @"$mantleArea = $surfaceArea - $baseArea",
+             @"$baseArea = $surfaceArea - $mantleArea"
+             ];
 }
 
 @end

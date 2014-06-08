@@ -14,6 +14,7 @@
 + (void)setDefaultView:(BackgroundView *)view;
 
 @property (nonatomic, strong) UIView *overlay;
+@property (nonatomic, strong) CAGradientLayer *gradientLayer;
 @end
 
 @interface UIViewController (BackgroundView)

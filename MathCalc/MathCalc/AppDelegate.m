@@ -60,6 +60,7 @@
     
     BackgroundView *view = [[BackgroundView alloc] initWithFrame:self.window.frame];
     [BackgroundView setDefaultView:view];
+    view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [self.window insertSubview:view atIndex:0];
     
     //[[UINavigationBar appearance] setAlpha:0];
