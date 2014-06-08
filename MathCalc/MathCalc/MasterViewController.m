@@ -28,7 +28,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    _objects = @[ [Circle new], [RightTriangle new], [Sphere new], [Pyramid new], [Cuboid new] ].mutableCopy;
+    _objects = @[ [Circle new], [RightTriangle new], [Sphere new], [Pyramid new], [Cone new], [Cuboid new] ].mutableCopy;
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,8 +55,7 @@
 
     Shape *object = _objects[indexPath.row];
     cell.textLabel.text = [object name];
-    cell.imageView.image = [UIImage imageNamed:object.name.lowercaseString];
-    cell.imageView.contentMode = UIViewContentModeCenter;
+//    cell.imageView.image = [UIImage imageNamed:object.name.lowercaseString];
     return cell;
 }
 

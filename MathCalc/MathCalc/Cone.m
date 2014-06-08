@@ -21,7 +21,7 @@
 
 + (NSArray *)groupedAttributes
 {
-    return @[ @[ @"height", @"radius", @"diameter", @"side", @"circumference" ],
+    return @[ @[ @"height", @"radius", @"diameter", @"slantHeight", @"circumference" ],
               @[ @"baseArea", @"mantleArea", @"surfaceArea" ],
               @[ @"volume"]];
 }
@@ -45,15 +45,15 @@
              @"$diameter = 2*$radius",
              @"$radius = $diameter / 2",
              
-             // Side
-             @"$side = sqrt(pow($height,2) + pow($radius,2))",
-             @"$height = sqrt(pow($side,2) - pow($radius,2))",
-             @"$radius = sqrt(pow($side,2) - pow($height,2))",
+             // slantHeight
+             @"$slantHeight = sqrt(pow($height,2) + pow($radius,2))",
+             @"$height = sqrt(pow($slantHeight,2) - pow($radius,2))",
+             @"$radius = sqrt(pow($slantHeight,2) - pow($height,2))",
              
              // Mantle Area
-             @"$mantleArea = $radius * $side * pi",
-             @"$radius = $mantleArea / ($side * pi)",
-             @"$side = $mantleArea / ($radius * pi)",
+             @"$mantleArea = $radius * $slantHeight * pi",
+             @"$radius = $mantleArea / ($slantHeight * pi)",
+             @"$slantHeight = $mantleArea / ($radius * pi)",
              
              // Total Area
              @"$surfaceArea = $mantleArea + $baseArea",

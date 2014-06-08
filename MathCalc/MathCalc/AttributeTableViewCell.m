@@ -14,14 +14,17 @@
     CALayer *layer;
 }
 
+static VENCalculatorInputView *inputView;
++ (void)initialize {
+    inputView = [VENCalculatorInputView new];
+}
+
 - (void)awakeFromNib
 {
     // Initialization code
     self.textField.delegate = self;
     [self.textField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
-    VENCalculatorInputView *view = [VENCalculatorInputView new];
-    view.delegate = self;
-    self.textField.inputView = view;
+    self.textField.inputView = inputView;
     
     self.selectedBackgroundView = [[UIView alloc] init];
     self.selectedBackgroundView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.1];
@@ -95,7 +98,13 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    inputView.delegate = self;
     [delegateProxy attributeTableViewCellDidBeginEditing:self];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    inputView.delegate = nil;
 }
 
 - (void)textFieldDidChange:(UITextField *)textField

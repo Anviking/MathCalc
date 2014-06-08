@@ -15,12 +15,12 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        UIColor *backgroundColor = [UIColor colorWithHue:0.4 saturation:0.6 brightness:0.8 alpha:1.0];
+        UIColor *backgroundColor = [UIColor colorWithHue:0.4 saturation:0.6 brightness:0.7 alpha:1.0];
         
         CAGradientLayer *gradientLayer = [CAGradientLayer layer];
         gradientLayer.frame = frame;
         gradientLayer.colors = @[(id)[backgroundColor CGColor],
-                                 (id)[[UIColor colorWithWhite:1.0f alpha:1.0f] CGColor]];
+                                 (id)[[UIColor colorWithHue:0.5 saturation:0.3 brightness:0.95 alpha:1.0] CGColor]];
         gradientLayer.locations = @[@0, @2.0f];
         [self.layer insertSublayer:gradientLayer atIndex:0];
         

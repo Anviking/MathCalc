@@ -16,7 +16,7 @@
 @property (nonatomic, strong) NSNumber *baseArea;
 @property (nonatomic, strong) NSNumber *mantleArea;
 @property (nonatomic, strong) NSNumber *surfaceArea;
-@property (nonatomic, strong) NSNumber *side;
+@property (nonatomic, strong) NSNumber *slantHeight;
 @property (nonatomic, strong) NSNumber *height;
 @property (nonatomic, strong) NSNumber *volume;
 

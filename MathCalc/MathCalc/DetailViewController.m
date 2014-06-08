@@ -36,7 +36,7 @@
 
 - (UIColor *)backgroundViewOverlayColor
 {
-    return [UIColor colorWithWhite:0.0 alpha:0.2];
+    return nil;
 }
 
 - (void)configureView

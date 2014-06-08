@@ -19,6 +19,7 @@
     self = [super init];
     if (self) {
         self.name = NSStringFromClass(self.class);
+        self.formulas = [Formula formulasWithFormulasStrings:[self formulaStrings]];
     }
     return self;
 }
@@ -31,14 +32,6 @@
 - (void)redraw
 {
     
-}
-
-- (NSArray *)formulas
-{
-    if (!_formulas) {
-        _formulas = [Formula formulasWithFormulasStrings:[self formulaStrings]];
-    }
-    return _formulas;
 }
 
 + (NSArray *)attributes
