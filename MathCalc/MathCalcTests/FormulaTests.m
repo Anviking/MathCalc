@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "Formula.h"
+#import "DDMathParser.h"
 
 @interface FormulaTests : XCTestCase
 
@@ -33,6 +34,15 @@
     NSArray *expectedVariables = @[@"base", @"circumference"];
     XCTAssertEqualObjects(formula.resultAttribute, @"area", @"");
     XCTAssertEqualObjects(formula.variableAttributes, expectedVariables, @"Objects are not equal: %@, %@", formula.variableAttributes, expectedVariables);
+}
+
+- (void)testABS {
+    XCTAssertEqualObjects([@"abs(-2)" numberByEvaluatingString], @2, @"");
+    XCTAssertEqualObjects([@"abs(2)" numberByEvaluatingString], @2, @"");
+    XCTAssertNotEqualObjects([@"abs(-3)" numberByEvaluatingString], @2, @"");
+    
+    XCTAssertEqualObjects([@"243 pow(1333,2)-64 pow((14.14),6)" numberByEvaluatingString], @33.9625, @"");
+
 }
 
 

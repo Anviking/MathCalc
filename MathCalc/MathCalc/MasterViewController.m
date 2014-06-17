@@ -9,7 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import "FormulaViewController.h"
-#import "Shapes.h"
+#import "MathCore.h"
 
 @interface MasterViewController () {
     NSArray *_objects;

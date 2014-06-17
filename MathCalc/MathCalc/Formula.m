@@ -8,12 +8,24 @@
 
 #import "Formula.h"
 #import "DDMathEvaluator.h"
+#import "DDExpression.h"
 
 @implementation Formula
 
 + (void)initialize
 {
     [[DDMathEvaluator sharedMathEvaluator] setAngleMeasurementMode:DDAngleMeasurementModeDegrees];
+    
+    DDMathFunction function = ^ DDExpression* (NSArray *args, NSDictionary *variables, DDMathEvaluator *evaluator, NSError **error) {
+        if ([args count] != 1) {
+            //fill in *error and return nil
+        }
+        NSNumber *n = [[DDMathEvaluator sharedMathEvaluator] evaluateString:args[0] withSubstitutions:variables];
+        NSNumber *result = [NSNumber numberWithDouble:ABS([n doubleValue])];
+        return [DDExpression numberExpressionWithNumber:result];
+    };
+    
+    [[DDMathEvaluator sharedMathEvaluator] registerFunction:function forName:@"abs"];
 }
 
 + (NSArray *)formulasWithFormulasStrings:(NSArray *)array

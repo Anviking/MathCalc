@@ -35,6 +35,7 @@
     XCTAssertEqualNumbers(cuboid.height, @100);
     XCTAssertEqualNumbers(cuboid.length, @30);
     XCTAssertEqualNumbers(cuboid.volume, @30000);
+    XCTAssertEqualNumbers(cuboid.surfaceArea, @8600);
 }
 
 - (void)testAllCombinations
@@ -45,6 +46,11 @@
 - (void)testFormulas
 {
     [self validateFormulas];
+}
+
+- (NSArray *)knownInvalidCombinations
+{
+    return @[ @"volume and surfaceArea and spaceDiagonal" ];
 }
 
 #pragma mark - Data

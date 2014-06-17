@@ -98,6 +98,7 @@ static VENCalculatorInputView *inputView;
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
+    // inputView is static
     inputView.delegate = self;
     [delegateProxy attributeTableViewCellDidBeginEditing:self];
 }

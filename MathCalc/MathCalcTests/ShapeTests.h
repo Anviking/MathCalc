@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "Shape.h"
+@import MathCore;
 
 #define XCTAssertEqualNumbers(a1, a2, format...) \
 ({ \

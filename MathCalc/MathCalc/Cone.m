@@ -34,7 +34,7 @@
              @"$height = 3 * $volume / $baseArea",
              
              // Base Area
-             @"$baseArea = pi*$radius**2",
+             @"$baseArea = pi*pow($radius, 2)",
              @"$radius = sqrt($baseArea/pi)",
              
              // Circumference
@@ -55,6 +55,10 @@
              @"$radius = $mantleArea / ($slantHeight * pi)",
              @"$slantHeight = $mantleArea / ($radius * pi)",
              
+             @"$radius = (sqrt(sqrt(4*pow($mantleArea, 2)+pow(pi,2)*pow($height, 4))/pi-pow($height, 2))) / sqrt(2)",
+             @"$radius = $surfaceArea/(sqrt(pi) sqrt(2*$surfaceArea+pi*pow($height, 2)))",
+             @"$radius = -(pi*$slantHeight-sqrt(pi)*sqrt(4*$surfaceArea+pi*pow($slantHeight, 2)))/(2*pi)",
+ 
              // Total Area
              @"$surfaceArea = $mantleArea + $baseArea",
              @"$mantleArea = $surfaceArea - $baseArea",

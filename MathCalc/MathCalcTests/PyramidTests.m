@@ -52,7 +52,7 @@
 {
     [self validateFormulas];
 }
-
+  
 #pragma mark - Data
 
 - (Class)shapeClass

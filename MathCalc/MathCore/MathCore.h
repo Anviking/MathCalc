@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-#import "Shapes.h"
 #import "Circle.h"
+#import "Sphere.h"
+#import "RightTriangle.h"
+#import "Pyramid.h"
+#import "Cuboid.h"
+#import "Cone.h"
+#import "Cylinder.h"
 
 //! Project version number for MathCore.
 FOUNDATION_EXPORT double MathCoreVersionNumber;

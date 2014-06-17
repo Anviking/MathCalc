@@ -21,6 +21,8 @@
     
     XCTAssertEqualNumbers(cone.radius, @10);
     XCTAssertEqualNumbers(cone.height, @50);
+    XCTAssertEqualNumbers(cone.slantHeight, @50.9902); // Not verified
+    XCTAssertEqualNumbers(cone.volume, @5235.9878); // Not Verified
 }
 
 - (void)testAllCombinations
@@ -31,6 +33,21 @@
 - (void)testFormulas
 {
     [self validateFormulas];
+}
+
+- (NSArray *)knownInvalidCombinations
+{
+    return @[ @"volume and surfaceArea",
+              @"diameter and circumference",
+              @"diameter and baseArea",
+              @"area and hypotenuse",
+              @"diameter and radius",
+              @"volume and slantHeight",
+              @"radius and circumference",
+              @"colume and mantleArea",
+              @"baseArea and circumference",
+              @"radius and baseArea",
+              @"volume and mantleArea"];
 }
 
 #pragma mark - Data
