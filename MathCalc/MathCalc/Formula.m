@@ -26,6 +26,7 @@
     };
     
     [[DDMathEvaluator sharedMathEvaluator] registerFunction:function forName:@"abs"];
+
 }
 
 + (NSArray *)formulasWithFormulasStrings:(NSArray *)array

@@ -41,7 +41,7 @@
 //    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
     [[UILabel appearance] setTextColor:textColor];
     [[UILabel appearanceWhenContainedIn:[UINavigationBar class], nil] setTextColor:[UIColor blackColor]];
-    [[UITableView appearance] setSeparatorColor:[UIColor clearColor]];
+    [[UITableView appearance] setSeparatorColor:[UIColor colorWithWhite:0 alpha:0.1]];
     [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithWhite:1 alpha:0.1]];
     
     
@@ -72,7 +72,7 @@
     [[UITableViewCell appearance] setBackgroundColor:[UIColor clearColor]];
     [[UILabel appearance] setTextColor:textColor];
     [[UILabel appearanceWhenContainedIn:[UINavigationBar class], nil] setTextColor:[UIColor blackColor]];
-    [[UITableView appearance] setSeparatorColor:[UIColor clearColor]];
+    [[UITableView appearance] setSeparatorColor:[UIColor colorWithWhite:0 alpha:0.1]];
     [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithWhite:1 alpha:0.1]];
 }
 

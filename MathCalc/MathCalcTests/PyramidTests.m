@@ -52,6 +52,16 @@
 {
     [self validateFormulas];
 }
+
+- (NSArray *)knownInvalidCombinations
+{
+    return @[ @"slantAngle and lateralEdgeAngle",
+              @"slantHeight and volume",
+              @"volume and lateralEdge",
+              @"base and baseArea",
+              @"volume and lateralSurfaceArea",
+              @"lateralSurfaceArea and lateralEdgeAngle" ];
+}
   
 #pragma mark - Data
 

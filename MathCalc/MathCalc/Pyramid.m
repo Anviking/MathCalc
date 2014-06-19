@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        self.name = @"Pyramid";
+        self.name = @"Square Pyramid";
     }
     return self;
 }
@@ -92,7 +92,13 @@
               @"$base = sqrt($surfaceArea+pow($slantHeight,2))-$slantHeight",
               @"$height = sqrt(2) sin($lateralEdgeAngle) sqrt(pow($slantHeight,2)/(pow(sin($lateralEdgeAngle),2)+1))",
               @"$base = sqrt(2 pow($lateralEdge,2)-sqrt(4 pow($lateralEdge,4)-pow($lateralSurfaceArea,2)))",
-              @"$height = -((1-sqrt(3)) pow(abs(sqrt(3) sqrt(243 pow($volume,2)-64 pow($slantHeight,6))-27 $volume),(1/3)))/(4 pow(3,(2/3)))-((1+ sqrt(3)) pow($slantHeight,2))/(pow(3,(1/3)) pow(abs(sqrt(3) sqrt(243 pow($volume,2)-64 pow($slantHeight,6))-27 $volume),(1/3)))"];
+              
+              @"$slantHeight = $lateralEdge/sqrt(pow(cos($slantAngle),2)+1)"
+              
+              /* FUCK ->
+              @"$height = -((1-sqrt(3)) pow(abs(sqrt(3) sqrt(abs(243 pow($volume,2)-64 pow($slantHeight,6)))-27 $volume),(1/3)))/(4 pow(3,(2/3)))-((1+ sqrt(3)) pow($slantHeight,2))/(pow(3,(1/3)) pow(abs(sqrt(3) sqrt(abs(243 pow($volume,2)-64 pow($slantHeight,6)))-27 $volume),(1/3)))",
+              @"$height = -((1+sqrt(3)) pow(abs(sqrt(3) sqrt(abs(243 pow($volume,2)-64 pow($slantHeight,6)))-27 $volume),(1/3)))/(4 pow(3,(2/3)))-((1- sqrt(3)) pow($slantHeight,2))/(pow(3,(1/3)) pow(abs(sqrt(3) sqrt(abs(243 pow($volume,2)-64 pow($slantHeight,6)))-27 $volume),(1/3)))",
+              @"$height = 0.6*(pow(abs(sqrt(3) sqrt(abs(243 pow($volume,2)-64 pow($slantHeight,6)))-27 $volume),(1/3)))/(2 pow(3,(2/3)))+(2*pow($slantHeight,2))/(pow(3,(1/3)) pow(abs(sqrt(3) sqrt(abs(243 pow($volume,2)-64 pow($slantHeight,6)))-27 $volume),(1/3)))" */ ];
 }
 
 @end

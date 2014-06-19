@@ -15,6 +15,7 @@
 #import "Cuboid.h"
 #import "Cone.h"
 #import "Cylinder.h"
+#import "Triangle.h"
 
 //! Project version number for MathCore.
 FOUNDATION_EXPORT double MathCoreVersionNumber;

@@ -28,7 +28,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    _objects = @[ [Circle new], [RightTriangle new], [Sphere new], [Pyramid new], [Cone new], [Cuboid new] ].mutableCopy;
+    _objects = @[ [Circle new], [Triangle new], [RightTriangle new], [Sphere new], [Pyramid new], [Cone new], [Cuboid new] ].mutableCopy;
 }
 
 - (void)didReceiveMemoryWarning
