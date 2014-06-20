@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
@@ -83,7 +84,7 @@
             </objects>
             <point key="canvasLocation" x="464" y="-696"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings View Controller - Units-->
         <scene sceneID="aIw-nF-7Pr">
             <objects>
                 <tableViewController id="rQr-8t-flq" customClass="SettingsViewController" sceneMemberID="viewController">
@@ -113,7 +114,7 @@
                             <outlet property="delegate" destination="rQr-8t-flq" id="VMs-EY-NNE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="B0R-02-HqU"/>
+                    <navigationItem key="navigationItem" title="Units" id="B0R-02-HqU"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mdc-Mw-bnR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
