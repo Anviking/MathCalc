@@ -15,65 +15,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    //[self updateInterface];
-    [self updateInterface2];
+    self.tintColor = [UIColor colorWithHue:0.4 saturation:0.6 brightness:0.8 alpha:1.0];
+    
+    self.window.tintColor = [UIColor whiteColor];
+    [[UINavigationBar appearance] setBarTintColor:self.tintColor];
+    
     return YES;
-}
-
-- (void)updateInterface
-{
-    //UIColor *color = [UIColor colorWithRed:46.0/255.0 green:120.0/255.0 blue:208.0/255 alpha:1];
-    UIColor *backgroundColor = [UIColor colorWithHue:0.4 saturation:0.6 brightness:0.8 alpha:1.0];
-    UIColor *tintColor = [UIColor whiteColor];
-    UIColor *textColor = [UIColor whiteColor];
-    
-    tintColor = backgroundColor;
-    
-    self.window.tintColor = tintColor;
-    self.window.backgroundColor = backgroundColor;
-    
-    //BackgroundView *view = [[BackgroundView alloc] initWithFrame:self.window.frame];
-    //[self.window insertSubview:view atIndex:0];
-    
-    //[[UINavigationBar appearance] setAlpha:0];
-    [[UITableView appearance] setBackgroundColor:[UIColor clearColor]];
-    [[UITableViewCell appearance] setBackgroundColor:[UIColor clearColor]];
-//    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
-    [[UILabel appearance] setTextColor:textColor];
-    [[UILabel appearanceWhenContainedIn:[UINavigationBar class], nil] setTextColor:[UIColor blackColor]];
-    [[UITableView appearance] setSeparatorColor:[UIColor colorWithWhite:0 alpha:0.1]];
-    [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithWhite:1 alpha:0.1]];
-    
-    
-
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    navigationController.navigationBar.shadowImage = [UIImage new];
-}
-
-- (void)updateInterface2
-{
-    UIColor *backgroundColor = [UIColor colorWithHue:0.4 saturation:0.6 brightness:0.8 alpha:1.0];
-    UIColor *tintColor = [UIColor whiteColor];
-    UIColor *textColor = [UIColor whiteColor];
-
-    self.window.tintColor = tintColor;
-    
-    BackgroundView *view = [[BackgroundView alloc] initWithFrame:self.window.frame];
-    [BackgroundView setDefaultView:view];
-    view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    [self.window insertSubview:view atIndex:0];
-    
-    //[[UINavigationBar appearance] setAlpha:0];
-    [[UINavigationBar appearance] setBarTintColor:backgroundColor];
-    [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithWhite:1 alpha:0.1]];
-    
-    //[[UINavigationBar appearance] setAlpha:0];
-    [[UITableView appearance] setBackgroundColor:[UIColor clearColor]];
-    [[UITableViewCell appearance] setBackgroundColor:[UIColor clearColor]];
-    [[UILabel appearance] setTextColor:textColor];
-    [[UILabel appearanceWhenContainedIn:[UINavigationBar class], nil] setTextColor:[UIColor blackColor]];
-    [[UITableView appearance] setSeparatorColor:[UIColor colorWithWhite:0 alpha:0.1]];
-    [[UITableViewHeaderFooterView appearance] setTintColor:[UIColor colorWithWhite:1 alpha:0.1]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -102,5 +49,19 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+#pragma mark - Convenience
+
++ (AppDelegate *)delegate
+{
+    return [UIApplication sharedApplication].delegate;
+}
+
++ (UIColor *)tintColor
+{
+    return [AppDelegate delegate].tintColor;
+}
+
+
 
 @end

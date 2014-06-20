@@ -82,4 +82,22 @@
               ];
 }
 
+- (Class)formatterClassForAttribute:(NSString *)attribute
+{
+    if ([[[self class] attributes] containsObject:attribute]) {
+        if ([attribute containsString:@"side"]) {
+            return [LengthFormatter class];
+        } else if ([attribute containsString:@"angle"]){
+            return [AngleFormatter class];
+        } else if ([attribute isEqualToString:@"perimeter"]){
+            return [LengthFormatter class];
+        } else if ([attribute isEqualToString:@"area"]){
+            return [AreaFormatter class];
+        } else {
+            NSAssert(NO, @"");
+        }
+    }
+    return Nil;
+}
+
 @end

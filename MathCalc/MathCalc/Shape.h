@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Formula.h"
+#import "UnitFormatter.h"
 
 @protocol ShapeDelegate;
 @interface Shape : NSObject
@@ -22,6 +23,8 @@
 + (NSArray *)groupedAttributes;
 + (NSArray *)attributes;
 - (NSArray *)formulaStrings;
+
+- (Class)formatterClassForAttribute:(NSString *)attribute;
 
 - (void)evaluateFormula:(Formula *)formula;
 

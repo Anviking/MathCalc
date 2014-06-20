@@ -144,10 +144,7 @@
 
 - (void)setStringValue:(NSString *)string forAttribute:(NSString *)attribute
 {
-    NSLocale *locale = [NSLocale currentLocale];
-    NSString *decimalSymbol = [locale objectForKey:NSLocaleDecimalSeparator];
-    string = [string stringByReplacingOccurrencesOfString:decimalSymbol withString:@"."];
-    NSNumber *number = [[DDMathEvaluator sharedMathEvaluator] evaluateString:string withSubstitutions:nil];
+    NSNumber *number = [[self formatterClassForAttribute:attribute] numberFromString:string];
     [self setValue:number forKey:attribute];
 }
 

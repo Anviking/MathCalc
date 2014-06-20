@@ -13,9 +13,23 @@
 		8F0C22AD194376FE0084A695 /* VENCalculatorInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0C22A6194376FE0084A695 /* VENCalculatorInputView.m */; };
 		8F0C22AE194376FE0084A695 /* VENCalculatorInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0C22A7194376FE0084A695 /* VENCalculatorInputView.xib */; };
 		8F0C22AF194376FE0084A695 /* VENMoneyCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0C22A9194376FE0084A695 /* VENMoneyCalculator.m */; };
+		8F1067361954CB6B00B73FEA /* UnitFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3676051954BE8A00314113 /* UnitFormatter.m */; };
+		8F1067371954CB6B00B73FEA /* LengthFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3676081954C3C900314113 /* LengthFormatter.m */; };
+		8F1067381954CB6F00B73FEA /* UnitFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F3676041954BE8A00314113 /* UnitFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F1067391954CB6F00B73FEA /* LengthFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F3676071954C3C900314113 /* LengthFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F10673A1954CC2E00B73FEA /* NSNumber+JLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FB2026D18F89E4F00EBCB81 /* NSNumber+JLAdditions.h */; };
+		8F10673B1954CC3400B73FEA /* NSNumber+JLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2026E18F89E4F00EBCB81 /* NSNumber+JLAdditions.m */; };
+		8F10673D1954CD3E00B73FEA /* UnitFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10673C1954CD3E00B73FEA /* UnitFormatterTests.m */; };
+		8F1067401954D14B00B73FEA /* AreaFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F10673E1954D14B00B73FEA /* AreaFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F1067411954D14B00B73FEA /* AreaFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10673F1954D14B00B73FEA /* AreaFormatter.m */; };
+		8F1067441954D15500B73FEA /* VolumeFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1067421954D15500B73FEA /* VolumeFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F1067451954D15500B73FEA /* VolumeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1067431954D15500B73FEA /* VolumeFormatter.m */; };
+		8F1067481954D15F00B73FEA /* AngleFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1067461954D15F00B73FEA /* AngleFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8F1067491954D15F00B73FEA /* AngleFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1067471954D15F00B73FEA /* AngleFormatter.m */; };
 		8F2851EA19462602008A70BB /* Cylinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F2851E819462602008A70BB /* Cylinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F2851EB19462602008A70BB /* Cylinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2851E919462602008A70BB /* Cylinder.m */; };
 		8F2851ED1946269E008A70BB /* CylinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2851EC1946269E008A70BB /* CylinderTests.m */; };
+		8F3676031954BDB900314113 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3676021954BDB900314113 /* SettingsViewController.m */; };
 		8F61415D193121830066BA74 /* math.html in Resources */ = {isa = PBXBuildFile; fileRef = 8F61415C193121830066BA74 /* math.html */; };
 		8F620D9019425AA800D96758 /* MathCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F620D8F19425AA800D96758 /* MathCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F620D9619425AA900D96758 /* MathCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F620D8B19425AA800D96758 /* MathCore.framework */; };
@@ -92,10 +106,7 @@
 		8F88EC961914129700586014 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F88EC941914129700586014 /* Localizable.strings */; };
 		8F88EC9F19141BB100586014 /* FormulaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F88EC9E19141BB100586014 /* FormulaViewController.m */; };
 		8F9C1FB818F9E7E2003D6DFA /* AttributeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FB718F9E7E2003D6DFA /* AttributeTableViewCell.m */; };
-		8F9C1FBB18FB165E003D6DFA /* Animator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FBA18FB165E003D6DFA /* Animator.m */; };
-		8F9C1FC118FB16D3003D6DFA /* NavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FC018FB16D3003D6DFA /* NavigationControllerDelegate.m */; };
 		8F9C1FC418FBC5BE003D6DFA /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FC318FBC5BE003D6DFA /* BackgroundView.m */; };
-		8FB2026F18F89E4F00EBCB81 /* NSNumber+JLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2026E18F89E4F00EBCB81 /* NSNumber+JLAdditions.m */; };
 		8FB880761953483C006EE8AA /* Triangle.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FB880741953483C006EE8AA /* Triangle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8FB880771953483C006EE8AA /* Triangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB880751953483C006EE8AA /* Triangle.m */; };
 		8FB8807919534C5E006EE8AA /* TriangleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB8807819534C5E006EE8AA /* TriangleTests.m */; };
@@ -194,9 +205,22 @@
 		8F0C22A7194376FE0084A695 /* VENCalculatorInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VENCalculatorInputView.xib; sourceTree = "<group>"; };
 		8F0C22A8194376FE0084A695 /* VENMoneyCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VENMoneyCalculator.h; sourceTree = "<group>"; };
 		8F0C22A9194376FE0084A695 /* VENMoneyCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VENMoneyCalculator.m; sourceTree = "<group>"; };
+		8F10673C1954CD3E00B73FEA /* UnitFormatterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitFormatterTests.m; sourceTree = "<group>"; };
+		8F10673E1954D14B00B73FEA /* AreaFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaFormatter.h; sourceTree = "<group>"; };
+		8F10673F1954D14B00B73FEA /* AreaFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaFormatter.m; sourceTree = "<group>"; };
+		8F1067421954D15500B73FEA /* VolumeFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeFormatter.h; sourceTree = "<group>"; };
+		8F1067431954D15500B73FEA /* VolumeFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumeFormatter.m; sourceTree = "<group>"; };
+		8F1067461954D15F00B73FEA /* AngleFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AngleFormatter.h; sourceTree = "<group>"; };
+		8F1067471954D15F00B73FEA /* AngleFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AngleFormatter.m; sourceTree = "<group>"; };
 		8F2851E819462602008A70BB /* Cylinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cylinder.h; sourceTree = "<group>"; };
 		8F2851E919462602008A70BB /* Cylinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cylinder.m; sourceTree = "<group>"; };
 		8F2851EC1946269E008A70BB /* CylinderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CylinderTests.m; sourceTree = "<group>"; };
+		8F3676011954BDB900314113 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		8F3676021954BDB900314113 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		8F3676041954BE8A00314113 /* UnitFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnitFormatter.h; sourceTree = "<group>"; };
+		8F3676051954BE8A00314113 /* UnitFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitFormatter.m; sourceTree = "<group>"; };
+		8F3676071954C3C900314113 /* LengthFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LengthFormatter.h; sourceTree = "<group>"; };
+		8F3676081954C3C900314113 /* LengthFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LengthFormatter.m; sourceTree = "<group>"; };
 		8F61415C193121830066BA74 /* math.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = math.html; sourceTree = "<group>"; };
 		8F620D8B19425AA800D96758 /* MathCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MathCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F620D8E19425AA800D96758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -223,10 +247,6 @@
 		8F9C1FB418F96E78003D6DFA /* JLDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JLDelegateProxy.m; path = ../MathCalc/JLDelegateProxy.m; sourceTree = "<group>"; };
 		8F9C1FB618F9E7E2003D6DFA /* AttributeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributeTableViewCell.h; sourceTree = "<group>"; };
 		8F9C1FB718F9E7E2003D6DFA /* AttributeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeTableViewCell.m; sourceTree = "<group>"; };
-		8F9C1FB918FB165E003D6DFA /* Animator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animator.h; sourceTree = "<group>"; };
-		8F9C1FBA18FB165E003D6DFA /* Animator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animator.m; sourceTree = "<group>"; };
-		8F9C1FBF18FB16D3003D6DFA /* NavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDelegate.h; sourceTree = "<group>"; };
-		8F9C1FC018FB16D3003D6DFA /* NavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDelegate.m; sourceTree = "<group>"; };
 		8F9C1FC218FBC5BE003D6DFA /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
 		8F9C1FC318FBC5BE003D6DFA /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
 		8FB2026D18F89E4F00EBCB81 /* NSNumber+JLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JLAdditions.h"; sourceTree = "<group>"; };
@@ -450,17 +470,6 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		8FAC03A11912E0E3008211B9 /* Theme */ = {
-			isa = PBXGroup;
-			children = (
-				8F9C1FB918FB165E003D6DFA /* Animator.h */,
-				8F9C1FBA18FB165E003D6DFA /* Animator.m */,
-				8F9C1FBF18FB16D3003D6DFA /* NavigationControllerDelegate.h */,
-				8F9C1FC018FB16D3003D6DFA /* NavigationControllerDelegate.m */,
-			);
-			name = Theme;
-			sourceTree = "<group>";
-		};
 		8FCE8B8E18F17D4C00E8C3D8 = {
 			isa = PBXGroup;
 			children = (
@@ -506,10 +515,11 @@
 				8FCE8BB018F17D4C00E8C3D8 /* MasterViewController.m */,
 				8FCE8BB218F17D4C00E8C3D8 /* DetailViewController.h */,
 				8FCE8BB318F17D4C00E8C3D8 /* DetailViewController.m */,
+				8F3676011954BDB900314113 /* SettingsViewController.h */,
+				8F3676021954BDB900314113 /* SettingsViewController.m */,
 				8F88EC9D19141BB100586014 /* FormulaViewController.h */,
 				8F88EC9E19141BB100586014 /* FormulaViewController.m */,
 				8F88EC931914083400586014 /* Views */,
-				8FAC03A11912E0E3008211B9 /* Theme */,
 				8FCE8BB518F17D4C00E8C3D8 /* Images.xcassets */,
 				8FCE8BA118F17D4C00E8C3D8 /* Supporting Files */,
 			);
@@ -519,8 +529,6 @@
 		8FCE8BA118F17D4C00E8C3D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8FB2026D18F89E4F00EBCB81 /* NSNumber+JLAdditions.h */,
-				8FB2026E18F89E4F00EBCB81 /* NSNumber+JLAdditions.m */,
 				8F61415C193121830066BA74 /* math.html */,
 				8F88EC941914129700586014 /* Localizable.strings */,
 				8FCE8BA218F17D4C00E8C3D8 /* MathCalc-Info.plist */,
@@ -535,6 +543,7 @@
 			isa = PBXGroup;
 			children = (
 				8FCE8C5118F2FD3300E8C3D8 /* PyramidTests.m */,
+				8F10673C1954CD3E00B73FEA /* UnitFormatterTests.m */,
 				8FCE8C4818F28CD000E8C3D8 /* ShapeTests.h */,
 				8FCE8C4918F28CD000E8C3D8 /* ShapeTests.m */,
 				8FCE8BE018F17D9700E8C3D8 /* FormulaTests.m */,
@@ -589,6 +598,18 @@
 		8FCE8BDF18F17D8800E8C3D8 /* Calculation */ = {
 			isa = PBXGroup;
 			children = (
+				8FB2026D18F89E4F00EBCB81 /* NSNumber+JLAdditions.h */,
+				8FB2026E18F89E4F00EBCB81 /* NSNumber+JLAdditions.m */,
+				8F3676041954BE8A00314113 /* UnitFormatter.h */,
+				8F3676051954BE8A00314113 /* UnitFormatter.m */,
+				8F3676071954C3C900314113 /* LengthFormatter.h */,
+				8F3676081954C3C900314113 /* LengthFormatter.m */,
+				8F10673E1954D14B00B73FEA /* AreaFormatter.h */,
+				8F10673F1954D14B00B73FEA /* AreaFormatter.m */,
+				8F1067421954D15500B73FEA /* VolumeFormatter.h */,
+				8F1067431954D15500B73FEA /* VolumeFormatter.m */,
+				8F1067461954D15F00B73FEA /* AngleFormatter.h */,
+				8F1067471954D15F00B73FEA /* AngleFormatter.m */,
 				8FCE8BD218F17D7200E8C3D8 /* Calculator.h */,
 				8FCE8BD318F17D7200E8C3D8 /* Calculator.m */,
 				8FCE8BD618F17D7200E8C3D8 /* Formula.h */,
@@ -659,12 +680,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F620DC819425B9500D96758 /* _DDGroupTerm.h in Headers */,
+				8F1067401954D14B00B73FEA /* AreaFormatter.h in Headers */,
 				8F620DE119425B9500D96758 /* DDMathStringToken.h in Headers */,
 				8F620DD619425B9500D96758 /* _DDVariableExpression.h in Headers */,
 				8F620DC619425B9500D96758 /* _DDFunctionUtilities.h in Headers */,
 				8F620DBD19425AEC00D96758 /* Shape.h in Headers */,
 				8F620DE019425B9500D96758 /* DDMathParserMacros.h in Headers */,
 				8F620DDC19425B9500D96758 /* DDMathEvaluator+Private.h in Headers */,
+				8F1067481954D15F00B73FEA /* AngleFormatter.h in Headers */,
 				8F620DD819425B9500D96758 /* _DDVariableTerm.h in Headers */,
 				8F620DB619425AEC00D96758 /* Calculator.h in Headers */,
 				8F620DB719425AEC00D96758 /* Formula.h in Headers */,
@@ -672,6 +695,7 @@
 				8F620DCC19425B9500D96758 /* _DDNumberTerm.h in Headers */,
 				8F2851EA19462602008A70BB /* Cylinder.h in Headers */,
 				8F620DCA19425B9500D96758 /* _DDNumberExpression.h in Headers */,
+				8F10673A1954CC2E00B73FEA /* NSNumber+JLAdditions.h in Headers */,
 				8F620DBF19425AEC00D96758 /* Cone.h in Headers */,
 				8F620DDD19425B9500D96758 /* DDMathEvaluator.h in Headers */,
 				8F620DD219425B9500D96758 /* _DDParserTerm.h in Headers */,
@@ -681,6 +705,7 @@
 				8F620DC219425B9500D96758 /* _DDFunctionExpression.h in Headers */,
 				8F620DD419425B9500D96758 /* _DDRewriteRule.h in Headers */,
 				8F620DE319425B9500D96758 /* DDMathStringTokenizer.h in Headers */,
+				8F1067441954D15500B73FEA /* VolumeFormatter.h in Headers */,
 				8F620DEB19425B9500D96758 /* NSString+DDMathParsing.h in Headers */,
 				8F620DE919425B9500D96758 /* DDTypes.h in Headers */,
 				8F620DD019425B9500D96758 /* _DDOperatorTerm.h in Headers */,
@@ -691,10 +716,12 @@
 				8F620DCE19425B9500D96758 /* _DDOperatorInfo.h in Headers */,
 				8F620DBE19425AEC00D96758 /* Cuboid.h in Headers */,
 				8F620DC019425B9500D96758 /* _DDFunctionContainer.h in Headers */,
+				8F1067381954CB6F00B73FEA /* UnitFormatter.h in Headers */,
 				8F620DC419425B9500D96758 /* _DDFunctionTerm.h in Headers */,
 				8F620DBC19425AEC00D96758 /* Pyramid.h in Headers */,
 				8F620D9019425AA800D96758 /* MathCore.h in Headers */,
 				8F620DBA19425AEC00D96758 /* Sphere.h in Headers */,
+				8F1067391954CB6F00B73FEA /* LengthFormatter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -884,19 +911,25 @@
 				8F620DCF19425B9500D96758 /* _DDOperatorInfo.m in Sources */,
 				8F620DB119425ADD00D96758 /* RightTriangle.m in Sources */,
 				8F620DC519425B9500D96758 /* _DDFunctionTerm.m in Sources */,
+				8F10673B1954CC3400B73FEA /* NSNumber+JLAdditions.m in Sources */,
 				8F620DD719425B9500D96758 /* _DDVariableExpression.m in Sources */,
 				8F620DDE19425B9500D96758 /* DDMathEvaluator.m in Sources */,
 				8F620DD319425B9500D96758 /* _DDParserTerm.m in Sources */,
+				8F1067371954CB6B00B73FEA /* LengthFormatter.m in Sources */,
 				8F620DC319425B9500D96758 /* _DDFunctionExpression.m in Sources */,
+				8F1067491954D15F00B73FEA /* AngleFormatter.m in Sources */,
 				8FB880771953483C006EE8AA /* Triangle.m in Sources */,
 				8FCBC0C319425CED00A28021 /* JLDelegateProxy.m in Sources */,
 				8F620DE419425B9500D96758 /* DDMathStringTokenizer.m in Sources */,
 				8F620DB319425ADD00D96758 /* Shape.m in Sources */,
 				8F620DE219425B9500D96758 /* DDMathStringToken.m in Sources */,
+				8F1067451954D15500B73FEA /* VolumeFormatter.m in Sources */,
+				8F1067361954CB6B00B73FEA /* UnitFormatter.m in Sources */,
 				8F620DD919425B9500D96758 /* _DDVariableTerm.m in Sources */,
 				8F620DC719425B9500D96758 /* _DDFunctionUtilities.m in Sources */,
 				8F620DC919425B9500D96758 /* _DDGroupTerm.m in Sources */,
 				8F620DEA19425B9500D96758 /* DDTypes.m in Sources */,
+				8F1067411954D14B00B73FEA /* AreaFormatter.m in Sources */,
 				8F2851EB19462602008A70BB /* Cylinder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -918,16 +951,14 @@
 				8FCE8BAB18F17D4C00E8C3D8 /* AppDelegate.m in Sources */,
 				8F0C22AF194376FE0084A695 /* VENMoneyCalculator.m in Sources */,
 				8FCE8BB118F17D4C00E8C3D8 /* MasterViewController.m in Sources */,
-				8FB2026F18F89E4F00EBCB81 /* NSNumber+JLAdditions.m in Sources */,
 				8FCE8BA718F17D4C00E8C3D8 /* main.m in Sources */,
 				8F88EC9F19141BB100586014 /* FormulaViewController.m in Sources */,
 				8F9C1FB818F9E7E2003D6DFA /* AttributeTableViewCell.m in Sources */,
-				8F9C1FC118FB16D3003D6DFA /* NavigationControllerDelegate.m in Sources */,
 				8F88EC8F191404E600586014 /* PreviewView.m in Sources */,
 				8FCE8BB418F17D4C00E8C3D8 /* DetailViewController.m in Sources */,
 				8F0C22AC194376FE0084A695 /* VENCalculatorInputTextField.m in Sources */,
-				8F9C1FBB18FB165E003D6DFA /* Animator.m in Sources */,
 				8F88EC92191407F900586014 /* BlurView.m in Sources */,
+				8F3676031954BDB900314113 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -937,6 +968,7 @@
 			files = (
 				8FB8807919534C5E006EE8AA /* TriangleTests.m in Sources */,
 				8FCE8C5218F2FD3300E8C3D8 /* PyramidTests.m in Sources */,
+				8F10673D1954CD3E00B73FEA /* UnitFormatterTests.m in Sources */,
 				8F6A9EC71928C2FE00D2FD9D /* CuboidTests.m in Sources */,
 				8F2851ED1946269E008A70BB /* CylinderTests.m in Sources */,
 				8FCE8C4A18F28CD000E8C3D8 /* ShapeTests.m in Sources */,

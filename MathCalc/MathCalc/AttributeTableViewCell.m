@@ -26,18 +26,10 @@ static VENCalculatorInputView *inputView;
     [self.textField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     self.textField.inputView = inputView;
     
-    self.selectedBackgroundView = [[UIView alloc] init];
-    self.selectedBackgroundView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.1];
-    
-    self.textField.textColor = [UIColor whiteColor];
-    self.attributeLabel.textColor = [UIColor whiteColor];
-    self.attributeLabel.highlightedTextColor = [UIColor whiteColor];
-    
-    
     self.definitionIndicatorWidth = 5;
     
     layer = [CALayer layer];
-    layer.backgroundColor = self.attributeLabel.textColor.CGColor;
+    layer.backgroundColor = [AppDelegate tintColor].CGColor;
     layer.hidden = YES;
     
     [self.contentView.layer addSublayer:layer];
@@ -54,6 +46,7 @@ static VENCalculatorInputView *inputView;
 {
     self.userInteractionEnabled = YES;
     self.defined = NO;
+    self.unitLabel.text = nil;
 }
 
 - (void)setDefined:(BOOL)defined

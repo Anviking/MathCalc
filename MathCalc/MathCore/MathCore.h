@@ -16,6 +16,11 @@
 #import "Cone.h"
 #import "Cylinder.h"
 #import "Triangle.h"
+#import "UnitFormatter.h"
+#import "LengthFormatter.h"
+#import "AreaFormatter.h"
+#import "VolumeFormatter.h"
+#import "AngleFormatter.h"
 
 //! Project version number for MathCore.
 FOUNDATION_EXPORT double MathCoreVersionNumber;

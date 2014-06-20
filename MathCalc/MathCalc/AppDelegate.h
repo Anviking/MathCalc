@@ -11,5 +11,9 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong) UIColor *tintColor;
+
++ (AppDelegate *)delegate;
++ (UIColor *)tintColor;
 
 @end

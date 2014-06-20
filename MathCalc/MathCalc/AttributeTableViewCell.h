@@ -14,6 +14,7 @@
 
 @property (nonatomic, weak) IBOutlet UILabel *attributeLabel;
 @property (nonatomic, weak) IBOutlet UITextField *textField;
+@property (nonatomic, weak) IBOutlet UILabel *unitLabel;
 @property (nonatomic, weak) IBOutlet id <AttributeTableViewCellDelegate> delegate;
 @property (nonatomic) CGFloat definitionIndicatorWidth;
 @property (nonatomic) BOOL defined;

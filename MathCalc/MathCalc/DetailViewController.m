@@ -113,8 +113,11 @@
     NSString *attribute = [self objectAtIndexPath:indexPath];
     cell.attributeLabel.text = NSLocalizedString(attribute, nil);
     
+    UnitFormatter *formatter = [[self.shape formatterClassForAttribute:attribute] defaultFormatter];
+    cell.unitLabel.text = formatter.unit;
+    
     if (!cell.textField.editing) {
-        NSString *value = [[self.shape valueForKeyPath:attribute] string];
+        NSString *value = [formatter stringFromNumber:[self.shape valueForKeyPath:attribute]];
         cell.textField.text = value;
     }
     
