@@ -30,7 +30,7 @@
 
 - (void)testAllCombinations
 {
-    [self validateCombinationsWithDimensions:3];
+    [self validateCombinations];
 }
 
 - (void)testFormulas

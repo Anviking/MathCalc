@@ -7,8 +7,6 @@
 //
 
 #import "Circle.h"
-#import "AreaFormatter.h"
-#import "LengthFormatter.h"
 
 @implementation Circle
 
@@ -17,6 +15,7 @@
     self = [super init];
     if (self) {
         self.name = @"Circle";
+        self.minimumNumberOfAttributesRequired = 1;
     }
     return self;
 }
@@ -37,18 +36,6 @@
               @"$radius = $diameter / 2",
               @"$radius = sqrt($area / pi)",
               @"$radius = ($circumference /pi) / 2"];
-}
-
-- (Class)formatterClassForAttribute:(NSString *)attribute
-{
-    if ([[[self class] attributes] containsObject:attribute]) {
-        if ([attribute isEqualToString:@"area"]) {
-            return [AreaFormatter class];
-        } else {
-            return [LengthFormatter class];
-        }
-    }
-    return Nil;
 }
 
 @end

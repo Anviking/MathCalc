@@ -57,7 +57,7 @@
 
 - (void)testAllCombinations
 {
-    [self validateCombinationsWithDimensions:1];
+    [self validateCombinations];
 }
 
 - (void)testFormulas

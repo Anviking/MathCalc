@@ -55,6 +55,15 @@
     [self configureView];
     
     self.originalSections = [NSMutableDictionary dictionary];
+    
+    NSInteger i = self.shape.minimumNumberOfAttributesRequired;
+    if (i == 1) {
+        self.detailDescriptionLabel.text = @"Define one property";
+    } else {
+        self.detailDescriptionLabel.text = [NSString stringWithFormat:@"Define %li different properties", (long)self.shape.minimumNumberOfAttributesRequired];
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

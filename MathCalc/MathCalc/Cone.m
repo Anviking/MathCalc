@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
         self.name = @"Cone";
+        self.minimumNumberOfAttributesRequired = 2;
     }
     return self;
 }

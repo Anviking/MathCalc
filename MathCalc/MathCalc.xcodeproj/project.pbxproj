@@ -36,7 +36,6 @@
 		8F620D9D19425AA900D96758 /* MathCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F620D9C19425AA900D96758 /* MathCoreTests.m */; };
 		8F620DA019425AA900D96758 /* MathCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F620D8B19425AA800D96758 /* MathCore.framework */; };
 		8F620DA119425AA900D96758 /* MathCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F620D8B19425AA800D96758 /* MathCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		8F620DAD19425ADD00D96758 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BD318F17D7200E8C3D8 /* Calculator.m */; };
 		8F620DAE19425ADD00D96758 /* Formula.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BD718F17D7200E8C3D8 /* Formula.m */; };
 		8F620DAF19425ADD00D96758 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BD518F17D7200E8C3D8 /* Circle.m */; };
 		8F620DB019425ADD00D96758 /* Sphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C4318F28C1500E8C3D8 /* Sphere.m */; };
@@ -45,7 +44,6 @@
 		8F620DB319425ADD00D96758 /* Shape.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BD918F17D7200E8C3D8 /* Shape.m */; };
 		8F620DB419425ADD00D96758 /* Cuboid.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9EC41928C2ED00D2FD9D /* Cuboid.m */; };
 		8F620DB519425ADD00D96758 /* Cone.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9ED01929463600D2FD9D /* Cone.m */; };
-		8F620DB619425AEC00D96758 /* Calculator.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BD218F17D7200E8C3D8 /* Calculator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F620DB719425AEC00D96758 /* Formula.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BD618F17D7200E8C3D8 /* Formula.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F620DB919425AEC00D96758 /* Circle.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BD418F17D7200E8C3D8 /* Circle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F620DBA19425AEC00D96758 /* Sphere.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8C4218F28C1500E8C3D8 /* Sphere.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -274,8 +272,6 @@
 		8FCE8BC418F17D4C00E8C3D8 /* MathCalcTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MathCalcTests-Info.plist"; sourceTree = "<group>"; };
 		8FCE8BC618F17D4C00E8C3D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8FCE8BC818F17D4C00E8C3D8 /* MathCalcTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathCalcTests.m; sourceTree = "<group>"; };
-		8FCE8BD218F17D7200E8C3D8 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
-		8FCE8BD318F17D7200E8C3D8 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 		8FCE8BD418F17D7200E8C3D8 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Circle.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		8FCE8BD518F17D7200E8C3D8 /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Circle.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8FCE8BD618F17D7200E8C3D8 /* Formula.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Formula.h; sourceTree = "<group>"; };
@@ -551,9 +547,9 @@
 				8FCE8BC818F17D4C00E8C3D8 /* MathCalcTests.m */,
 				8FCE8C4C18F2D76D00E8C3D8 /* SphereTests.m */,
 				8FCE8C4018F1B62A00E8C3D8 /* RightTriangleTests.m */,
+				8F6A9ED21929464700D2FD9D /* ConeTests.m */,
 				8F6A9EC61928C2FE00D2FD9D /* CuboidTests.m */,
 				8F2851EC1946269E008A70BB /* CylinderTests.m */,
-				8F6A9ED21929464700D2FD9D /* ConeTests.m */,
 				8FB8807819534C5E006EE8AA /* TriangleTests.m */,
 				8FCE8BC318F17D4C00E8C3D8 /* Supporting Files */,
 			);
@@ -572,6 +568,8 @@
 		8FCE8BDE18F17D8000E8C3D8 /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
+				8FCE8BD818F17D7200E8C3D8 /* Shape.h */,
+				8FCE8BD918F17D7200E8C3D8 /* Shape.m */,
 				8FCE8BD418F17D7200E8C3D8 /* Circle.h */,
 				8FCE8BD518F17D7200E8C3D8 /* Circle.m */,
 				8FCE8C4218F28C1500E8C3D8 /* Sphere.h */,
@@ -580,8 +578,6 @@
 				8FCE8C3D18F1ADAB00E8C3D8 /* RightTriangle.m */,
 				8FCE8C4E18F2F98C00E8C3D8 /* Pyramid.h */,
 				8FCE8C4F18F2F98C00E8C3D8 /* Pyramid.m */,
-				8FCE8BD818F17D7200E8C3D8 /* Shape.h */,
-				8FCE8BD918F17D7200E8C3D8 /* Shape.m */,
 				8F6A9EC31928C2ED00D2FD9D /* Cuboid.h */,
 				8F6A9EC41928C2ED00D2FD9D /* Cuboid.m */,
 				8F6A9ECF1929463600D2FD9D /* Cone.h */,
@@ -610,8 +606,6 @@
 				8F1067431954D15500B73FEA /* VolumeFormatter.m */,
 				8F1067461954D15F00B73FEA /* AngleFormatter.h */,
 				8F1067471954D15F00B73FEA /* AngleFormatter.m */,
-				8FCE8BD218F17D7200E8C3D8 /* Calculator.h */,
-				8FCE8BD318F17D7200E8C3D8 /* Calculator.m */,
 				8FCE8BD618F17D7200E8C3D8 /* Formula.h */,
 				8FCE8BD718F17D7200E8C3D8 /* Formula.m */,
 			);
@@ -689,7 +683,6 @@
 				8F620DDC19425B9500D96758 /* DDMathEvaluator+Private.h in Headers */,
 				8F1067481954D15F00B73FEA /* AngleFormatter.h in Headers */,
 				8F620DD819425B9500D96758 /* _DDVariableTerm.h in Headers */,
-				8F620DB619425AEC00D96758 /* Calculator.h in Headers */,
 				8F620DB719425AEC00D96758 /* Formula.h in Headers */,
 				8FCBC0C219425CED00A28021 /* JLDelegateProxy.h in Headers */,
 				8F620DCC19425B9500D96758 /* _DDNumberTerm.h in Headers */,
@@ -907,7 +900,6 @@
 				8F620DB519425ADD00D96758 /* Cone.m in Sources */,
 				8F620DCB19425B9500D96758 /* _DDNumberExpression.m in Sources */,
 				8F620DB019425ADD00D96758 /* Sphere.m in Sources */,
-				8F620DAD19425ADD00D96758 /* Calculator.m in Sources */,
 				8F620DCF19425B9500D96758 /* _DDOperatorInfo.m in Sources */,
 				8F620DB119425ADD00D96758 /* RightTriangle.m in Sources */,
 				8F620DC519425B9500D96758 /* _DDFunctionTerm.m in Sources */,

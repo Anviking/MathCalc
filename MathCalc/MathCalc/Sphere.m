@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
         self.name = @"Sphere";
+        self.minimumNumberOfAttributesRequired = 1;
     }
     return self;
 }
@@ -38,5 +39,6 @@
               @"$radius = pow((3*$volume/(4*pi)),(1/3))",
               @"$radius = ($circumference /pi) / 2" ];
 }
+
 
 @end

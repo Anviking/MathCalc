@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
         self.name = @"Cuboid";
+        self.minimumNumberOfAttributesRequired = 3;
     }
     return self;
 }

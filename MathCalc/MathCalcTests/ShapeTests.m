@@ -45,11 +45,12 @@
     self.standardValues = dictionary;
 }
 
-- (void)validateCombinationsWithDimensions:(NSInteger)dimensions
+- (void)validateCombinations
 {
     NSMutableSet *set = [NSMutableSet set];
     Shape *shape = [[self shapeClass] new];
     NSArray *attributes = [self.shapeClass attributes];
+    NSInteger dimensions = shape.minimumNumberOfAttributesRequired;
     
     if (dimensions == 1) {
         for (NSString *attribute1 in attributes) {

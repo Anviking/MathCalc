@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
         self.name = @"Square Pyramid";
+        self.minimumNumberOfAttributesRequired = 3;
     }
     return self;
 }

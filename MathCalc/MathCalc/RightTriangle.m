@@ -18,6 +18,7 @@
     self = [super init];
     if (self) {
         self.name = @"Right Triangle";
+        self.minimumNumberOfAttributesRequired = 2;
     }
     return self;
 }

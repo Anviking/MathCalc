@@ -142,6 +142,24 @@
 
 #pragma mark - Helpers
 
+- (Class)formatterClassForAttribute:(NSString *)attribute
+{
+    if ([[[self class] attributes] containsObject:attribute]) {
+        attribute = attribute.lowercaseString;
+        if ([attribute containsString:@"angle"]){
+            return [AngleFormatter class];
+        } else if ([attribute containsString:@"area"]){
+            return [AreaFormatter class];
+        } else if ([attribute isEqualToString:@"volume"]) {
+            return [VolumeFormatter class];
+        } else {
+            return [LengthFormatter class];
+        }
+    }
+    return Nil;
+}
+
+
 - (void)setStringValue:(NSString *)string forAttribute:(NSString *)attribute
 {
     NSNumber *number = [[self formatterClassForAttribute:attribute] numberFromString:string];

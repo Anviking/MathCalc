@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 anviking. All rights reserved.
 //
 
-#import <MathCore/MathCore.h>
+#import "Shape.h"
 
 @interface Triangle : Shape
 

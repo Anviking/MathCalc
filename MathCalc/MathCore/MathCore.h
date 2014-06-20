@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "Circle.h"
+#import <MathCore/Circle.h>
 #import "Sphere.h"
 #import "RightTriangle.h"
 #import "Pyramid.h"

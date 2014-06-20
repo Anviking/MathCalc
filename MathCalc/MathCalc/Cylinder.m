@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
         self.name = @"Cylinder";
+        self.minimumNumberOfAttributesRequired = 2;
     }
     return self;
 }

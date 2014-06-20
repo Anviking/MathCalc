@@ -6,9 +6,11 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "Formula.h"
-#import "UnitFormatter.h"
+#import "AreaFormatter.h"
+#import "LengthFormatter.h"
+#import "VolumeFormatter.h"
+#import "AngleFormatter.h"
 
 @protocol ShapeDelegate;
 @interface Shape : NSObject
@@ -39,6 +41,7 @@
 //Basic generic information about the shape
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) NSArray *formulas;
+@property (nonatomic) NSInteger minimumNumberOfAttributesRequired;
 
 /// Delegate
 @property (nonatomic, assign) id <ShapeDelegate> delegate;

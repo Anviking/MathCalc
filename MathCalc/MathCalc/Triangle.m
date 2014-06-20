@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
         self.name = @"Triangle";
+        self.minimumNumberOfAttributesRequired = 3;
     }
     return self;
 }
@@ -80,24 +81,6 @@
               @"$sideC = sqrt(pow(csc($angleA),2) (pow($sideA,2) pow(sin($angleA),2)-sqrt(pow(sin($angleA),2) (pow($sideA,4) pow(sin($angleA),2)+8 pow($sideA,2) $area sin($angleA) cos($angleA)+16 pow($area,2) pow(cos($angleA),2)-16 pow($area,2)))+4 $area sin($angleA) cos($angleA)))/sqrt(2)",
               
               ];
-}
-
-- (Class)formatterClassForAttribute:(NSString *)attribute
-{
-    if ([[[self class] attributes] containsObject:attribute]) {
-        if ([attribute containsString:@"side"]) {
-            return [LengthFormatter class];
-        } else if ([attribute containsString:@"angle"]){
-            return [AngleFormatter class];
-        } else if ([attribute isEqualToString:@"perimeter"]){
-            return [LengthFormatter class];
-        } else if ([attribute isEqualToString:@"area"]){
-            return [AreaFormatter class];
-        } else {
-            NSAssert(NO, @"");
-        }
-    }
-    return Nil;
 }
 
 @end

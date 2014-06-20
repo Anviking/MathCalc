@@ -26,7 +26,7 @@
 
 - (void)testAllCombinations
 {
-    [self validateCombinationsWithDimensions:2];
+    [self validateCombinations];
 }
 
 - (void)testFormulas
