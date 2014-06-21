@@ -13,10 +13,11 @@
 #import "AngleFormatter.h"
 
 @protocol ShapeDelegate;
-@interface Shape : UIView
+@interface Shape : NSObject
+
++ (instancetype)defaultShape;
 
 - (void)calculate;
-- (void)calculateAttributes;
 
 - (void)reset;
 
@@ -42,6 +43,8 @@
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) NSArray *formulas;
 @property (nonatomic) NSInteger minimumNumberOfAttributesRequired;
+
+- (void)save; // Saves defaultShape to NSUserDefaults
 
 /// Delegate
 @property (nonatomic, assign) id <ShapeDelegate> delegate;

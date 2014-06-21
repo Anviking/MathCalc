@@ -10,4 +10,5 @@
 
 @interface MasterViewController : UITableViewController
 
+@property (nonatomic, strong) NSArray *array;
 @end

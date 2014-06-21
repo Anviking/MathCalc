@@ -62,9 +62,6 @@
     } else {
         self.detailDescriptionLabel.text = [NSString stringWithFormat:@"Define %li different properties", (long)self.shape.minimumNumberOfAttributesRequired];
     }
-    
-    self.shape.frame = CGRectMake(0, 0, 44, 44);
-    self.navigationItem.titleView = self.shape;
 }
 
 - (void)didReceiveMemoryWarning

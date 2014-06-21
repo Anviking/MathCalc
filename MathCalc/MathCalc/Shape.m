@@ -14,25 +14,56 @@
     id <ShapeDelegate> delegateProxy;
 }
 
++ (instancetype)defaultShape
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSData *encodedObject = [defaults objectForKey:NSStringFromClass(self)];
+    Shape *object = [NSKeyedUnarchiver unarchiveObjectWithData:encodedObject];
+    if (!object) {
+        object = [self new];
+    }
+    return object;
+}
+
+- (void)save
+{
+    NSData *encodedObject = [NSKeyedArchiver archivedDataWithRootObject:self];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:encodedObject forKey:NSStringFromClass(self.class)];
+    [defaults synchronize];
+}
+
 - (id)init
 {
     self = [super init];
     if (self) {
         self.name = NSStringFromClass(self.class);
         self.formulas = [Formula formulasWithFormulasStrings:[self formulaStrings]];
-        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)decoder {
+    self = [self init];
+    if (self) {
+        for (NSString *attribute in [[self class] attributes]) {
+            [self setValue:[decoder decodeObjectForKey:attribute] forKey:attribute];
+        }
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+    for (NSString *attribute in [[self class] attributes]) {
+        [encoder encodeObject:[self valueForKey:attribute] forKey:attribute];
+    }
+}
+
+
+
 - (NSArray *)formulaStrings
 {
     return nil;
-}
-
-- (void)redraw
-{
-    [self setNeedsDisplay];
 }
 
 + (NSArray *)attributes
@@ -73,6 +104,8 @@
     for (NSString *attribute in [self.class attributes]) {
         [self setValue:nil forKey:attribute];
     }
+    
+    [self save];
 }
 
 #pragma mark - Calculate
@@ -89,8 +122,6 @@
     
     [self calculateWithFormulas:formulas iteration:0];
     [delegateProxy shapeDidCalculate:self];
-    
-    [self redraw];
 }
 
 - (void)defineAttributesIfNeeded

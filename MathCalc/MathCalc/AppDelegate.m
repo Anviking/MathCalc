@@ -8,8 +8,11 @@
 
 #import "AppDelegate.h"
 #import "NavigationControllerDelegate.h"
+#import "MasterViewController.h"
 #import "BackgroundView.h"
 
+
+@import MathCore;
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -35,6 +38,14 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    UINavigationController *navigationController = self.window.rootViewController;
+    MasterViewController *viewController = navigationController.viewControllers.firstObject;
+    for (NSArray *array in viewController.array) {
+        for (Shape *shape in array) {
+            [shape save];
+        }
+    }
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application

@@ -11,9 +11,8 @@
 #import "FormulaViewController.h"
 #import "MathCore.h"
 
-@interface MasterViewController () {
-    NSArray *array;
-}
+@interface MasterViewController ()
+
 @end
 
 @implementation MasterViewController
@@ -28,8 +27,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    array = @[ @[[Circle new], [Triangle new], [RightTriangle new] ],
-               @[[Sphere new], [Pyramid new], [Cone new], [Cuboid new] ]
+    self.array = @[ @[[Circle defaultShape], [Triangle defaultShape], [RightTriangle defaultShape] ],
+               @[[Sphere defaultShape], [Pyramid defaultShape], [Cone defaultShape], [Cuboid defaultShape] ]
                ].mutableCopy;
 }
 
@@ -52,19 +51,19 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return array.count;
+    return self.array.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [array[section] count];
+    return [self.array[section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    Shape *object = array[indexPath.section][indexPath.row];
+    Shape *object = self.array[indexPath.section][indexPath.row];
     cell.textLabel.text = [object name];
   //  cell.imageView.image = [UIImage imageNamed:object.name.lowercaseString];
   
@@ -75,7 +74,7 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Shape *shape = array[indexPath.section][indexPath.row];
+        Shape *shape = self.array[indexPath.section][indexPath.row];
         [[segue destinationViewController] setShape:shape];
     } else {
         
