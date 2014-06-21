@@ -12,7 +12,7 @@
 
 + (NSArray *)formatterUnits
 {
-    return @[ @"", @"m²", @"dm²", @"cm²", @"mm²"];
+    return @[ @"", @"m²", @"dm²", @"cm²", @"mm²", @"ft²"];
 }
 
 + (NSDictionary *)formatterUnitFactors
@@ -21,7 +21,8 @@
               @"m²" : @1,
               @"dm²" : @100,
               @"cm²" : @10000,
-              @"mm²": @1000000 };
+              @"mm²": @1000000,
+              @"ft²" : @10.7639104};
 }
 
 @end

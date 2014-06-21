@@ -12,7 +12,7 @@
 
 + (NSArray *)formatterUnits
 {
-    return @[@"", @"m", @"dm", @"cm", @"mm"];
+    return @[@"", @"m", @"dm", @"cm", @"mm", @"ft"];
 }
 
 + (NSDictionary *)formatterUnitFactors
@@ -21,7 +21,8 @@
               @"m" : @1,
               @"dm" : @10,
               @"cm" : @100,
-              @"mm": @1000 };
+              @"mm": @1000,
+              @"ft" : @3.2808399 };
 }
 
 @end

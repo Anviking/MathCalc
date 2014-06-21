@@ -13,7 +13,7 @@
 #import "AngleFormatter.h"
 
 @protocol ShapeDelegate;
-@interface Shape : NSObject
+@interface Shape : UIView
 
 - (void)calculate;
 - (void)calculateAttributes;
@@ -47,8 +47,6 @@
 @property (nonatomic, assign) id <ShapeDelegate> delegate;
 
 - (NSDictionary *)substitutionDictionaryWithAttributes:(NSArray *)attributes;
-
-- (void)redraw;
 
 @end
 

@@ -20,6 +20,7 @@
     if (self) {
         self.name = NSStringFromClass(self.class);
         self.formulas = [Formula formulasWithFormulasStrings:[self formulaStrings]];
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -31,7 +32,7 @@
 
 - (void)redraw
 {
-    
+    [self setNeedsDisplay];
 }
 
 + (NSArray *)attributes
@@ -196,6 +197,12 @@
             [attributesToUndefine addObject:attribute];
             [delegateProxy shape:self willUndefineAttribute:attribute];
         }
+    }
+    
+    if (self.definedAttributes.count == self.minimumNumberOfAttributesRequired) {
+        NSString *attribute = self.definedAttributes.lastObject;
+        [attributesToUndefine addObject:attribute];
+        [delegateProxy shape:self willUndefineAttribute:attribute];
     }
     
     [delegateProxy shape:self willDefineAttribute:attribute];

@@ -83,4 +83,54 @@
               ];
 }
 
+/*
+-(void)drawRect:(CGRect)rect
+{
+    rect = CGRectInset(rect, 5, 5);
+    CGFloat a = self.sideA.floatValue;
+    CGFloat b = self.sideA.floatValue;
+    CGFloat c = self.sideA.floatValue;
+    
+    CGFloat angleA = self.angleA.floatValue;
+    CGFloat angleB = 180-self.angleB.floatValue;
+    CGFloat angleC = angleB + self.angleC.floatValue;
+    
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    CGContextClearRect(ctx, self.bounds);
+
+    if (a*b*c*angleA*angleB*angleC > 0) {
+        
+        CGPoint A = CGPointMake(CGRectGetMinX(rect), CGRectGetMaxX(rect));
+        CGPoint B = pointOffsetFromPoint(A, c, 0.0);
+        CGPoint C = pointOffsetFromPoint(B, a, angleB);
+        
+        CGFloat width = MAX(B.x, C.x) - A.x;
+        CGFloat height = A.y - C.y;
+        CGFloat scale = rect.size.width / MAX(width, height);
+        
+        B = pointOffsetFromPoint(A, c * scale, 0.0);
+        C = pointOffsetFromPoint(B, a * scale, angleB);
+        CGPoint D = pointOffsetFromPoint(C, b * scale, angleC);
+        
+        CGContextBeginPath(ctx);
+        CGContextMoveToPoint(ctx, A.x, A.y);
+        CGContextAddLineToPoint(ctx, B.x, B.y);
+        CGContextAddLineToPoint(ctx, C.x, C.y);
+        CGContextAddLineToPoint(ctx, D.x, D.y);
+        //CGContextClosePath(ctx);
+        
+        CGContextSetRGBStrokeColor(ctx, 1.0, 1.0, 1.0, 1.0);
+        CGContextSetLineWidth(ctx, 2.0);
+        CGContextStrokePath(ctx);
+    }
+}
+*/
+CGPoint pointOffsetFromPoint(CGPoint point, CGFloat offset, CGFloat degrees)
+{
+    CGFloat radians = degrees * M_PI / 180.0;
+    CGFloat deltaX = cosf(radians) * offset;
+    CGFloat deltaY = -sinf(radians) * offset;
+    return CGPointMake(point.x + deltaX, point.y + deltaY);
+}
+
 @end

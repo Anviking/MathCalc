@@ -19,6 +19,8 @@
     
     self.window.tintColor = [UIColor whiteColor];
     [[UINavigationBar appearance] setBarTintColor:self.tintColor];
+    [[UITextField appearance] setTintColor:self.tintColor];
+
     
     return YES;
 }
