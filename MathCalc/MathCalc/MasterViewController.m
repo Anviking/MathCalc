@@ -27,8 +27,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.tableView.estimatedRowHeight = 44;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     self.array = @[ @[[Circle defaultShape], [Triangle defaultShape], [RightTriangle defaultShape] ],
-               @[[Sphere defaultShape], [Pyramid defaultShape], [Cone defaultShape], [Cuboid defaultShape] ]
+               @[[Sphere defaultShape], [Pyramid defaultShape], [Cylinder defaultShape], [Cone defaultShape], [Cuboid defaultShape] ]
                ].mutableCopy;
 }
 
@@ -64,7 +67,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     Shape *object = self.array[indexPath.section][indexPath.row];
-    cell.textLabel.text = [object name];
+    cell.textLabel.text = NSLocalizedString([object name], @"");
+    cell.textLabel.numberOfLines = 0;
   //  cell.imageView.image = [UIImage imageNamed:object.name.lowercaseString];
   
     return cell;

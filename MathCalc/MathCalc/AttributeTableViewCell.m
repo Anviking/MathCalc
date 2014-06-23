@@ -11,7 +11,6 @@
 
 @implementation AttributeTableViewCell {
     id <AttributeTableViewCellDelegate> delegateProxy;
-    CALayer *layer;
 }
 
 static VENCalculatorInputView *inputView;
@@ -28,11 +27,9 @@ static VENCalculatorInputView *inputView;
     
     self.definitionIndicatorWidth = 5;
     
-    layer = [CALayer layer];
-    layer.backgroundColor = [AppDelegate tintColor].CGColor;
-    layer.hidden = YES;
+    self.colorView.backgroundColor = [AppDelegate tintColor];
     
-    [self.contentView.layer addSublayer:layer];
+    [self prepareForReuse];
 }
 
 - (void)setDelegate:(id<AttributeTableViewCellDelegate>)delegate
@@ -41,32 +38,40 @@ static VENCalculatorInputView *inputView;
     delegateProxy = (id <AttributeTableViewCellDelegate>)[[JLDelegateProxy alloc] initWithDelegate:delegate];
 }
 
-
 - (void)prepareForReuse
 {
     self.userInteractionEnabled = YES;
     self.defined = NO;
     self.unitLabel.text = nil;
+    self.descriptionTextLabel.text = nil;
+    self.colorView.hidden = YES;
+    self.colorViewWidthConstraint.constant = -10;
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    [super setSelected:selected animated:animated];
+    self.colorView.backgroundColor = [AppDelegate tintColor];
 }
 
 - (void)setDefined:(BOOL)defined
 {
     if (defined != _defined) {
-        CGFloat startX, endX;
+        CGFloat endX;
         
         if (defined) {
-            startX = -self.definitionIndicatorWidth;
-            endX = 0;
+            endX = -10 + self.definitionIndicatorWidth;
         } else {
-            startX = 0;
-            endX = -self.definitionIndicatorWidth;
+            endX = -10;
         }
         
         
-        layer.hidden = NO;
-        layer.frame = CGRectMake(startX, 0, self.definitionIndicatorWidth, self.bounds.size.height);
-        [UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:0.00001 initialSpringVelocity:1 options:0 animations:^{
-            layer.frame = CGRectMake(endX, 0, self.definitionIndicatorWidth, self.bounds.size.height);
+        self.colorView.hidden = NO;
+        [self.contentView layoutIfNeeded];
+        self.colorViewWidthConstraint.constant = endX;
+
+        [UIView animateWithDuration:0.3 delay:0 usingSpringWithDamping:0.5 initialSpringVelocity:1 options:0 animations:^{
+            [self.contentView layoutIfNeeded];
         } completion:nil];
     }
     _defined = defined;

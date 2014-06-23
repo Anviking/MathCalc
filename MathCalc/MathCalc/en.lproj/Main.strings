@@ -1,12 +1,12 @@
 
 /* Class = "IBUIBarButtonItem"; title = "Reset"; ObjectID = "1C9-EQ-qFX"; */
-"1C9-EQ-qFX.title" = "Återställ";
+"1C9-EQ-qFX.title" = "Reset";
 
 /* Class = "IBUINavigationItem"; title = "Units"; ObjectID = "B0R-02-HqU"; */
-"B0R-02-HqU.title" = "Enheter";
+"B0R-02-HqU.title" = "Units";
 
 /* Class = "IBUIBarButtonItem"; title = "Units"; ObjectID = "qmI-Cu-mXT"; */
-"qmI-Cu-mXT.title" = "Enheter";
+"qmI-Cu-mXT.title" = "Units";
 
 /* Class = "IBUINavigationItem"; title = "Shapes"; ObjectID = "tQt-TN-PWz"; */
-"tQt-TN-PWz.title" = "Figurer";
+"tQt-TN-PWz.title" = "Shapes";

@@ -20,6 +20,15 @@
     return self;
 }
 
+- (NSString *)descriptionForAttribute:(NSString *)attribute
+{
+    NSArray *array = @[@"sideA", @"sideB", @"sideC", @"angleA", @"angleB", @"angleC" ];
+    if ([array containsObject:attribute]) {
+        return NSLocalizedString([attribute stringByAppendingString:@".description"], @"");
+    }
+    return nil;
+}
+
 + (NSArray *)groupedAttributes
 {
     return @[ @[ @"sideA", @"sideB", @"sideC" ],

@@ -17,6 +17,7 @@
 @property (nonatomic, strong) UIView *previewView;
 @property (nonatomic, strong) NSMutableArray *groupedAttributes;
 @property (nonatomic, strong) NSMutableDictionary *originalSections;
+@property (nonatomic, strong) NSIndexPath *editingIndexPath;
 @end
 
 @implementation DetailViewController
@@ -57,10 +58,19 @@
     self.originalSections = [NSMutableDictionary dictionary];
     
     NSInteger i = self.shape.minimumNumberOfAttributesRequired;
-    if (i == 1) {
-        self.detailDescriptionLabel.text = @"Define one property";
-    } else {
-        self.detailDescriptionLabel.text = [NSString stringWithFormat:@"Define %li different properties", (long)self.shape.minimumNumberOfAttributesRequired];
+    
+    switch (i) {
+        case 1:
+            self.detailDescriptionLabel.text = NSLocalizedString(@"Define one property", @"");
+            break;
+        case 2:
+            self.detailDescriptionLabel.text = NSLocalizedString(@"Define two different properties", @"");
+            break;
+        case 3:
+            self.detailDescriptionLabel.text = NSLocalizedString(@"Define three different properties", @"");
+            break;
+        default:
+            break;
     }
 }
 
@@ -118,6 +128,10 @@
 - (void)configureCell:(AttributeTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     NSString *attribute = [self objectAtIndexPath:indexPath];
+    NSString *description = [self descriptionForAttribute:attribute];
+    if (description && [indexPath isEqual:self.editingIndexPath]) {
+         cell.descriptionTextLabel.text = description;
+    }
     cell.attributeLabel.text = NSLocalizedString(attribute, nil);
     
     UnitFormatter *formatter = [[self.shape formatterClassForAttribute:attribute] defaultFormatter];
@@ -146,8 +160,22 @@
 - (void)attributeTableViewCellDidBeginEditing:(AttributeTableViewCell *)cell
 {
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    self.editingIndexPath = indexPath;
     [self.tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
+    
+    [self configureCell:cell atIndexPath:indexPath];
+    
+    [self.tableView beginUpdates]; // This will cause an animated update of
+    [self.tableView endUpdates];
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        for (AttributeTableViewCell *cell in self.tableView.visibleCells) {
+            cell.descriptionTextLabel.alpha = 0;
+        }
+        cell.descriptionTextLabel.alpha = 1;
+    }];
 }
+
 
 - (BOOL)attributeTableViewCellShouldBeginEditing:(AttributeTableViewCell *)cell
 {
@@ -195,6 +223,30 @@
 {
     NSArray *array = [self arrayForObject:object];
     return [NSIndexPath indexPathForRow:[array indexOfObject:object] inSection:[self sectionForArray:array]];
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *attribute = [self objectAtIndexPath:indexPath];
+    NSString *description = [self descriptionForAttribute:attribute];
+    
+    if ([indexPath isEqual:self.editingIndexPath] && description) {
+        return 60;
+    }
+    return 44;
+}
+
+#pragma mark - Description
+
+- (NSString *)descriptionForAttribute:(NSString *)attribute
+{
+    NSString *key = [NSString stringWithFormat:@"%@.%@.description", NSStringFromClass(self.shape.class), attribute];
+    NSString *value = NSLocalizedString(key, @"");
+    if ([[self.shape.class attributes] containsObject:attribute] && ![key isEqualToString:value]) {
+        return value;
+    }
+    return nil;
 }
 
 

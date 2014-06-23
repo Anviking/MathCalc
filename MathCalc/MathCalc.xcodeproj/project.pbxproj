@@ -247,6 +247,9 @@
 		8F9C1FB718F9E7E2003D6DFA /* AttributeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeTableViewCell.m; sourceTree = "<group>"; };
 		8F9C1FC218FBC5BE003D6DFA /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
 		8F9C1FC318FBC5BE003D6DFA /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
+		8FA9234219588FF400B9456F /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8FA923441958925000B9456F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		8FA923461958933000B9456F /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Main.strings; sourceTree = "<group>"; };
 		8FB2026D18F89E4F00EBCB81 /* NSNumber+JLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+JLAdditions.h"; sourceTree = "<group>"; };
 		8FB2026E18F89E4F00EBCB81 /* NSNumber+JLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+JLAdditions.m"; sourceTree = "<group>"; };
 		8FB880741953483C006EE8AA /* Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Triangle.h; sourceTree = "<group>"; };
@@ -1013,6 +1016,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8F88EC97191412A100586014 /* Base */,
+				8FA9234219588FF400B9456F /* sv */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1029,6 +1033,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				8FCE8BAD18F17D4C00E8C3D8 /* Base */,
+				8FA923441958925000B9456F /* en */,
+				8FA923461958933000B9456F /* sv */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

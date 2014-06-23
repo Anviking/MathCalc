@@ -23,6 +23,16 @@
     return self;
 }
 
+- (NSString *)descriptionForAttribute:(NSString *)attribute
+{
+    NSArray *array = @[@"angleA", @"angleB"];
+    if ([array containsObject:attribute]) {
+        NSString *string = [NSString stringWithFormat:@"rightTriangle.%@.description", attribute];
+        return NSLocalizedString(string, @"");
+    }
+    return nil;
+}
+
 + (NSArray *)groupedAttributes
 {
     return @[ @[ @"height", @"base", @"hypotenuse", @"perimeter", @"area" ],

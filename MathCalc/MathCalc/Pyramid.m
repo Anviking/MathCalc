@@ -15,10 +15,12 @@
     self = [super init];
     if (self) {
         self.name = @"Square Pyramid";
-        self.minimumNumberOfAttributesRequired = 3;
+        self.minimumNumberOfAttributesRequired = 2;
     }
     return self;
 }
+
+
 
 + (NSArray *)groupedAttributes
 {
