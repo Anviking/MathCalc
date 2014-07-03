@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.21" systemVersion="14A261i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.13"/>
     </dependencies>
     <scenes>
@@ -143,26 +144,26 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wor-jT-ct3">
-                                            <rect key="frame" x="14" y="13.5" width="48" height="20"/>
+                                            <rect key="frame" x="14" y="13" width="48" height="20"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <size key="shadowOffset" width="1" height="1"/>
                                         </label>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Detail" textAlignment="right" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="FH5-sf-dwA">
-                                            <rect key="frame" x="70" y="15" width="213" height="20"/>
+                                            <rect key="frame" x="70" y="14" width="213" height="20"/>
                                             <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                         </textField>
                                         <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAm-Dd-7fQ">
-                                            <rect key="frame" x="285" y="19" width="19" height="15"/>
+                                            <rect key="frame" x="285" y="18" width="19" height="15"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                             <color key="textColor" red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angle opposite something" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vUd-gh-vfu">
-                                            <rect key="frame" x="14" y="34.5" width="290" height="17"/>
+                                        <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angle opposite something" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" preferredMaxLayoutWidth="290" translatesAutoresizingMaskIntoConstraints="NO" id="vUd-gh-vfu">
+                                            <rect key="frame" x="14" y="34" width="290" height="17"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -209,10 +210,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Z3Q-Zx-7U1">
-                        <barButtonItem key="rightBarButtonItem" title="Reset" id="1C9-EQ-qFX">
-                            <connections>
-                                <action selector="reset:" destination="cMe-Ob-0jm" id="adf-sj-zWH"/>
-                            </connections>
+                        <barButtonItem key="rightBarButtonItem" title="Help" id="WGB-X0-8wj">
+                            <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

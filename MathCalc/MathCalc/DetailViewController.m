@@ -59,6 +59,10 @@
     
     NSInteger i = self.shape.minimumNumberOfAttributesRequired;
     
+    UIBarButtonItem *help = self.navigationItem.rightBarButtonItem;
+    UIBarButtonItem *reset = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Reset", @"") style:UIBarButtonItemStylePlain target:self action:@selector(reset:)];
+    self.navigationItem.rightBarButtonItems = @[ reset, help ];
+    
     switch (i) {
         case 1:
             self.detailDescriptionLabel.text = NSLocalizedString(@"Define one property", @"");
@@ -130,7 +134,7 @@
     NSString *attribute = [self objectAtIndexPath:indexPath];
     NSString *description = [self descriptionForAttribute:attribute];
     if (description && [indexPath isEqual:self.editingIndexPath]) {
-         cell.descriptionTextLabel.text = description;
+        cell.descriptionTextLabel.text = description;
     }
     cell.attributeLabel.text = NSLocalizedString(attribute, nil);
     
@@ -232,7 +236,9 @@
     NSString *description = [self descriptionForAttribute:attribute];
     
     if ([indexPath isEqual:self.editingIndexPath] && description) {
-        return 60;
+        UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];
+        CGFloat height = [description boundingRectWithSize:CGSizeMake(self.tableView.bounds.size.width - 16, 200) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{ NSFontAttributeName : font } context:nil].size.height;
+        return 44 + height;
     }
     return 44;
 }

@@ -200,7 +200,8 @@
 
 - (BOOL)hasValueForAttribute:(NSString *)attribute
 {
-    return (BOOL)([self valueForKey:attribute]);
+    NSNumber *number = [self valueForKey:attribute];
+    return (BOOL)number && number.doubleValue > 0;
 }
 
 - (BOOL)hasValueForAttributes:(NSArray *)attributes
@@ -215,9 +216,13 @@
 
 - (void)defineAttribute:(NSString *)attribute
 {
+    if (!attribute) return;
+
     if ([self.definedAttributes containsObject:attribute]) {
         return;
     }
+    
+    [delegateProxy shape:self willDefineAttribute:attribute];
     
     NSMutableArray *attributesToUndefine = [NSMutableArray array];
     // Defined attributes that should not be concidered defined
@@ -230,33 +235,27 @@
         }
     }
     
-    if (self.definedAttributes.count == self.minimumNumberOfAttributesRequired) {
-        NSString *attribute = self.definedAttributes.lastObject;
-        [attributesToUndefine addObject:attribute];
-        [delegateProxy shape:self willUndefineAttribute:attribute];
-    }
-    
-    [delegateProxy shape:self willDefineAttribute:attribute];
-    
     // Complete the undefinition of the invalidly defined attributes
     for (NSString *attribute in attributesToUndefine) {
         [self moveAttribute:attribute toArray:self.undefinedAttributes];
         [delegateProxy shape:self didUndefineAttribute:attribute];
     }
     
-    NSMutableArray *invalidAttributes = [self invalidAttributes];
-    if (invalidAttributes.count > 0) {
-        [self moveAttribute:attribute toArray:self.definedAttributes];
+    if (self.definedAttributes.count == self.minimumNumberOfAttributesRequired) {
+        NSString *attribute = self.definedAttributes.lastObject;
+        [delegateProxy shape:self willUndefineAttribute:attribute];
+        [self moveAttribute:attribute toArray:self.undefinedAttributes];
+        [delegateProxy shape:self didUndefineAttribute:attribute];
     }
-    else if (invalidAttributes.count == 0) {
-        [self undefineAttribute:self.definedAttributes.lastObject];
-        [self moveAttribute:attribute toArray:self.definedAttributes];
-    }
+    
+    [self moveAttribute:attribute toArray:self.definedAttributes];
     [delegateProxy shape:self didDefineAttribute:attribute];
 }
 
 - (void)undefineAttribute:(NSString *)attribute
 {
+    if (!attribute) return;
+    
     if ([self.undefinedAttributes containsObject:attribute]) {
         return;
     }
@@ -268,6 +267,8 @@
 
 - (void)moveAttribute:(NSString *)attribute toArray:(NSMutableArray *)array
 {
+    if (!attribute) return;
+
     [self.definedAttributes removeObject:attribute];
     [self.undefinedAttributes removeObject:attribute];
     

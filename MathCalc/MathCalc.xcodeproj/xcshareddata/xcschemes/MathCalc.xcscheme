@@ -67,6 +67,12 @@
             ReferencedContainer = "container:MathCalc.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "-NSDoubleLocalizedStrings YES"
+            isEnabled = "NO">
+         </CommandLineArgument>
+      </CommandLineArguments>
       <AdditionalOptions>
          <AdditionalOption
             key = "NSZombieEnabled"
