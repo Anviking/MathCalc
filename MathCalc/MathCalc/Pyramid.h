@@ -10,7 +10,7 @@
 
 @interface Pyramid : Shape
 
-@property (nonatomic, strong) NSNumber *base;
+@property (nonatomic, strong) NSNumber *baseEdgeLength;
 @property (nonatomic, strong) NSNumber *height;
 @property (nonatomic, strong) NSNumber *baseArea;
 @property (nonatomic, strong) NSNumber *lateralSurfaceArea;
