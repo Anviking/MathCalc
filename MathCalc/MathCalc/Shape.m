@@ -66,6 +66,11 @@
     return nil;
 }
 
++ (NSArray *)helpImageTitles
+{
+    return nil;
+}
+
 + (NSArray *)attributes
 {
     NSMutableArray *result = [NSMutableArray array];

@@ -33,6 +33,11 @@
     return nil;
 }
 
++ (NSArray *)helpImageTitles
+{
+    return [self attributes];
+}
+
 + (NSArray *)groupedAttributes
 {
     return @[ @[ @"height", @"base", @"hypotenuse", @"perimeter", @"area" ],

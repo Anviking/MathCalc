@@ -8,7 +8,6 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
-#import "FormulaViewController.h"
 #import "MathCore.h"
 
 @interface MasterViewController ()

@@ -26,23 +26,12 @@
 		8F1067451954D15500B73FEA /* VolumeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1067431954D15500B73FEA /* VolumeFormatter.m */; };
 		8F1067481954D15F00B73FEA /* AngleFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1067461954D15F00B73FEA /* AngleFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F1067491954D15F00B73FEA /* AngleFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1067471954D15F00B73FEA /* AngleFormatter.m */; };
+		8F1640CC1965E26D0006AED1 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1640CB1965E26D0006AED1 /* HelpViewController.m */; };
+		8F1640E71965E7870006AED1 /* Help in Resources */ = {isa = PBXBuildFile; fileRef = 8F1640E61965E7870006AED1 /* Help */; };
 		8F2851EA19462602008A70BB /* Cylinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F2851E819462602008A70BB /* Cylinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F2851EB19462602008A70BB /* Cylinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2851E919462602008A70BB /* Cylinder.m */; };
 		8F2851ED1946269E008A70BB /* CylinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2851EC1946269E008A70BB /* CylinderTests.m */; };
 		8F3676031954BDB900314113 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3676021954BDB900314113 /* SettingsViewController.m */; };
-		8F50D4301965D96100AD586D /* Pyramid.base.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F50D4241965D96100AD586D /* Pyramid.base.png */; };
-		8F50D4311965D96100AD586D /* Pyramid.base@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F50D4251965D96100AD586D /* Pyramid.base@2x.png */; };
-		8F50D4321965D96100AD586D /* Pyramid.baseArea.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F50D4261965D96100AD586D /* Pyramid.baseArea.png */; };
-		8F50D4331965D96100AD586D /* Pyramid.baseArea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F50D4271965D96100AD586D /* Pyramid.baseArea@2x.png */; };
-		8F50D4341965D96100AD586D /* Pyramid.height.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F50D4281965D96100AD586D /* Pyramid.height.png */; };
-		8F50D4351965D96100AD586D /* Pyramid.height@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F50D4291965D96100AD586D /* Pyramid.height@2x.png */; };
-		8F50D4361965D96100AD586D /* Pyramid.lateralEdge.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F50D42A1965D96100AD586D /* Pyramid.lateralEdge.png */; };
-		8F50D4371965D96100AD586D /* Pyramid.lateralEdge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F50D42B1965D96100AD586D /* Pyramid.lateralEdge@2x.png */; };
-		8F50D4381965D96100AD586D /* Pyramid.mantleArea.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F50D42C1965D96100AD586D /* Pyramid.mantleArea.png */; };
-		8F50D4391965D96100AD586D /* Pyramid.mantleArea@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F50D42D1965D96100AD586D /* Pyramid.mantleArea@2x.png */; };
-		8F50D43A1965D96100AD586D /* Pyramid.slantHeight.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F50D42E1965D96100AD586D /* Pyramid.slantHeight.png */; };
-		8F50D43B1965D96100AD586D /* Pyramid.slantHeight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8F50D42F1965D96100AD586D /* Pyramid.slantHeight@2x.png */; };
-		8F61415D193121830066BA74 /* math.html in Resources */ = {isa = PBXBuildFile; fileRef = 8F61415C193121830066BA74 /* math.html */; };
 		8F620D9019425AA800D96758 /* MathCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F620D8F19425AA800D96758 /* MathCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F620D9619425AA900D96758 /* MathCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F620D8B19425AA800D96758 /* MathCore.framework */; };
 		8F620D9D19425AA900D96758 /* MathCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F620D9C19425AA900D96758 /* MathCoreTests.m */; };
@@ -114,7 +103,6 @@
 		8F88EC8F191404E600586014 /* PreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F88EC8E191404E600586014 /* PreviewView.m */; };
 		8F88EC92191407F900586014 /* BlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F88EC91191407F900586014 /* BlurView.m */; };
 		8F88EC961914129700586014 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F88EC941914129700586014 /* Localizable.strings */; };
-		8F88EC9F19141BB100586014 /* FormulaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F88EC9E19141BB100586014 /* FormulaViewController.m */; };
 		8F9C1FB818F9E7E2003D6DFA /* AttributeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FB718F9E7E2003D6DFA /* AttributeTableViewCell.m */; };
 		8F9C1FC418FBC5BE003D6DFA /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FC318FBC5BE003D6DFA /* BackgroundView.m */; };
 		8FB880761953483C006EE8AA /* Triangle.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FB880741953483C006EE8AA /* Triangle.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -222,6 +210,9 @@
 		8F1067431954D15500B73FEA /* VolumeFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VolumeFormatter.m; sourceTree = "<group>"; };
 		8F1067461954D15F00B73FEA /* AngleFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AngleFormatter.h; sourceTree = "<group>"; };
 		8F1067471954D15F00B73FEA /* AngleFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AngleFormatter.m; sourceTree = "<group>"; };
+		8F1640CA1965E26D0006AED1 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		8F1640CB1965E26D0006AED1 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		8F1640E61965E7870006AED1 /* Help */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Help; path = ../../Artwork/Help; sourceTree = "<group>"; };
 		8F2851E819462602008A70BB /* Cylinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cylinder.h; sourceTree = "<group>"; };
 		8F2851E919462602008A70BB /* Cylinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cylinder.m; sourceTree = "<group>"; };
 		8F2851EC1946269E008A70BB /* CylinderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CylinderTests.m; sourceTree = "<group>"; };
@@ -231,19 +222,6 @@
 		8F3676051954BE8A00314113 /* UnitFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitFormatter.m; sourceTree = "<group>"; };
 		8F3676071954C3C900314113 /* LengthFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LengthFormatter.h; sourceTree = "<group>"; };
 		8F3676081954C3C900314113 /* LengthFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LengthFormatter.m; sourceTree = "<group>"; };
-		8F50D4241965D96100AD586D /* Pyramid.base.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pyramid.base.png; sourceTree = "<group>"; };
-		8F50D4251965D96100AD586D /* Pyramid.base@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pyramid.base@2x.png"; sourceTree = "<group>"; };
-		8F50D4261965D96100AD586D /* Pyramid.baseArea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pyramid.baseArea.png; sourceTree = "<group>"; };
-		8F50D4271965D96100AD586D /* Pyramid.baseArea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pyramid.baseArea@2x.png"; sourceTree = "<group>"; };
-		8F50D4281965D96100AD586D /* Pyramid.height.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pyramid.height.png; sourceTree = "<group>"; };
-		8F50D4291965D96100AD586D /* Pyramid.height@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pyramid.height@2x.png"; sourceTree = "<group>"; };
-		8F50D42A1965D96100AD586D /* Pyramid.lateralEdge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pyramid.lateralEdge.png; sourceTree = "<group>"; };
-		8F50D42B1965D96100AD586D /* Pyramid.lateralEdge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pyramid.lateralEdge@2x.png"; sourceTree = "<group>"; };
-		8F50D42C1965D96100AD586D /* Pyramid.mantleArea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pyramid.mantleArea.png; sourceTree = "<group>"; };
-		8F50D42D1965D96100AD586D /* Pyramid.mantleArea@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pyramid.mantleArea@2x.png"; sourceTree = "<group>"; };
-		8F50D42E1965D96100AD586D /* Pyramid.slantHeight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pyramid.slantHeight.png; sourceTree = "<group>"; };
-		8F50D42F1965D96100AD586D /* Pyramid.slantHeight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pyramid.slantHeight@2x.png"; sourceTree = "<group>"; };
-		8F61415C193121830066BA74 /* math.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = math.html; sourceTree = "<group>"; };
 		8F620D8B19425AA800D96758 /* MathCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MathCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F620D8E19425AA800D96758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F620D8F19425AA800D96758 /* MathCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathCore.h; sourceTree = "<group>"; };
@@ -263,8 +241,6 @@
 		8F88EC97191412A100586014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8F88EC9B1914135300586014 /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8F88EC9C191415D400586014 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8F88EC9D19141BB100586014 /* FormulaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormulaViewController.h; sourceTree = "<group>"; };
-		8F88EC9E19141BB100586014 /* FormulaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormulaViewController.m; sourceTree = "<group>"; };
 		8F9C1FB318F96E78003D6DFA /* JLDelegateProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JLDelegateProxy.h; path = ../MathCalc/JLDelegateProxy.h; sourceTree = "<group>"; };
 		8F9C1FB418F96E78003D6DFA /* JLDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JLDelegateProxy.m; path = ../MathCalc/JLDelegateProxy.m; sourceTree = "<group>"; };
 		8F9C1FB618F9E7E2003D6DFA /* AttributeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributeTableViewCell.h; sourceTree = "<group>"; };
@@ -431,26 +407,6 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		8F50D4231965D96100AD586D /* Pyramid */ = {
-			isa = PBXGroup;
-			children = (
-				8F50D4241965D96100AD586D /* Pyramid.base.png */,
-				8F50D4251965D96100AD586D /* Pyramid.base@2x.png */,
-				8F50D4261965D96100AD586D /* Pyramid.baseArea.png */,
-				8F50D4271965D96100AD586D /* Pyramid.baseArea@2x.png */,
-				8F50D4281965D96100AD586D /* Pyramid.height.png */,
-				8F50D4291965D96100AD586D /* Pyramid.height@2x.png */,
-				8F50D42A1965D96100AD586D /* Pyramid.lateralEdge.png */,
-				8F50D42B1965D96100AD586D /* Pyramid.lateralEdge@2x.png */,
-				8F50D42C1965D96100AD586D /* Pyramid.mantleArea.png */,
-				8F50D42D1965D96100AD586D /* Pyramid.mantleArea@2x.png */,
-				8F50D42E1965D96100AD586D /* Pyramid.slantHeight.png */,
-				8F50D42F1965D96100AD586D /* Pyramid.slantHeight@2x.png */,
-			);
-			name = Pyramid;
-			path = ../../Artwork/Pyramid;
-			sourceTree = "<group>";
-		};
 		8F620D8C19425AA800D96758 /* MathCore */ = {
 			isa = PBXGroup;
 			children = (
@@ -558,10 +514,10 @@
 				8FCE8BB018F17D4C00E8C3D8 /* MasterViewController.m */,
 				8FCE8BB218F17D4C00E8C3D8 /* DetailViewController.h */,
 				8FCE8BB318F17D4C00E8C3D8 /* DetailViewController.m */,
+				8F1640CA1965E26D0006AED1 /* HelpViewController.h */,
+				8F1640CB1965E26D0006AED1 /* HelpViewController.m */,
 				8F3676011954BDB900314113 /* SettingsViewController.h */,
 				8F3676021954BDB900314113 /* SettingsViewController.m */,
-				8F88EC9D19141BB100586014 /* FormulaViewController.h */,
-				8F88EC9E19141BB100586014 /* FormulaViewController.m */,
 				8F88EC931914083400586014 /* Views */,
 				8FCE8BB518F17D4C00E8C3D8 /* Images.xcassets */,
 				8FCE8BA118F17D4C00E8C3D8 /* Supporting Files */,
@@ -572,8 +528,7 @@
 		8FCE8BA118F17D4C00E8C3D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8F50D4231965D96100AD586D /* Pyramid */,
-				8F61415C193121830066BA74 /* math.html */,
+				8F1640E61965E7870006AED1 /* Help */,
 				8F88EC941914129700586014 /* Localizable.strings */,
 				8FCE8BA218F17D4C00E8C3D8 /* MathCalc-Info.plist */,
 				8FCE8BA318F17D4C00E8C3D8 /* InfoPlist.strings */,
@@ -907,26 +862,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F50D43A1965D96100AD586D /* Pyramid.slantHeight.png in Resources */,
+				8F1640E71965E7870006AED1 /* Help in Resources */,
 				8F0C22AB194376FE0084A695 /* VENCalculatorIconBackspace@2x.png in Resources */,
 				8F0C22AE194376FE0084A695 /* VENCalculatorInputView.xib in Resources */,
-				8F61415D193121830066BA74 /* math.html in Resources */,
-				8F50D4311965D96100AD586D /* Pyramid.base@2x.png in Resources */,
-				8F50D4301965D96100AD586D /* Pyramid.base.png in Resources */,
-				8F50D4371965D96100AD586D /* Pyramid.lateralEdge@2x.png in Resources */,
 				8FCE8BB618F17D4C00E8C3D8 /* Images.xcassets in Resources */,
 				8F88EC961914129700586014 /* Localizable.strings in Resources */,
 				8FCE8BA518F17D4C00E8C3D8 /* InfoPlist.strings in Resources */,
-				8F50D43B1965D96100AD586D /* Pyramid.slantHeight@2x.png in Resources */,
-				8F50D4361965D96100AD586D /* Pyramid.lateralEdge.png in Resources */,
-				8F50D4331965D96100AD586D /* Pyramid.baseArea@2x.png in Resources */,
 				8F0C22AA194376FE0084A695 /* VENCalculatorIconBackspace.png in Resources */,
-				8F50D4391965D96100AD586D /* Pyramid.mantleArea@2x.png in Resources */,
-				8F50D4381965D96100AD586D /* Pyramid.mantleArea.png in Resources */,
-				8F50D4341965D96100AD586D /* Pyramid.height.png in Resources */,
-				8F50D4321965D96100AD586D /* Pyramid.baseArea.png in Resources */,
 				8FCE8BAE18F17D4C00E8C3D8 /* Main.storyboard in Resources */,
-				8F50D4351965D96100AD586D /* Pyramid.height@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1004,11 +947,11 @@
 				8F0C22AF194376FE0084A695 /* VENMoneyCalculator.m in Sources */,
 				8FCE8BB118F17D4C00E8C3D8 /* MasterViewController.m in Sources */,
 				8FCE8BA718F17D4C00E8C3D8 /* main.m in Sources */,
-				8F88EC9F19141BB100586014 /* FormulaViewController.m in Sources */,
 				8F9C1FB818F9E7E2003D6DFA /* AttributeTableViewCell.m in Sources */,
 				8F88EC8F191404E600586014 /* PreviewView.m in Sources */,
 				8FCE8BB418F17D4C00E8C3D8 /* DetailViewController.m in Sources */,
 				8F0C22AC194376FE0084A695 /* VENCalculatorInputTextField.m in Sources */,
+				8F1640CC1965E26D0006AED1 /* HelpViewController.m in Sources */,
 				8F88EC92191407F900586014 /* BlurView.m in Sources */,
 				8F3676031954BDB900314113 /* SettingsViewController.m in Sources */,
 			);

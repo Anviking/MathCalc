@@ -68,7 +68,7 @@
     }
     
     if ([unit isEqualToString:@""]) {
-        unit = @"None";
+        unit = NSLocalizedString(@"None", @"");
     }
     
     cell.textLabel.text = unit;

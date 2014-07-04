@@ -10,6 +10,7 @@
 #import "Shape.h"
 #import "BackgroundView.h"
 #import "AttributeTableViewCell.h"
+#import "HelpViewController.h"
 #import "BlurView.h"
 
 @interface DetailViewController () <ShapeDelegate, AttributeTableViewCellDelegate>
@@ -61,7 +62,11 @@
     
     UIBarButtonItem *help = self.navigationItem.rightBarButtonItem;
     UIBarButtonItem *reset = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Reset", @"") style:UIBarButtonItemStylePlain target:self action:@selector(reset:)];
-    self.navigationItem.rightBarButtonItems = @[ reset, help ];
+    if ([self.shape.class helpImageTitles]) {
+        self.navigationItem.rightBarButtonItems = @[ reset, help ];
+    } else {
+        self.navigationItem.rightBarButtonItem = reset;
+    }
     
     switch (i) {
         case 1:
@@ -253,6 +258,16 @@
         return value;
     }
     return nil;
+}
+
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"help"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+        HelpViewController *viewController = navigationController.viewControllers.firstObject;
+        viewController.shape = self.shape;
+    }
 }
 
 

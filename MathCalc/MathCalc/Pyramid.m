@@ -20,7 +20,10 @@
     return self;
 }
 
-
++ (NSArray *)helpImageTitles
+{
+    return [self attributes];
+}
 
 + (NSArray *)groupedAttributes
 {

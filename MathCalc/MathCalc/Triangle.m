@@ -29,6 +29,11 @@
     return nil;
 }
 
++ (NSArray *)helpImageTitles
+{
+    return @[@"angles", @"sides"];
+}
+
 + (NSArray *)groupedAttributes
 {
     return @[ @[ @"sideA", @"sideB", @"sideC" ],

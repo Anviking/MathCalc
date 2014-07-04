@@ -44,6 +44,8 @@
 @property (nonatomic, strong) NSArray *formulas;
 @property (nonatomic) NSInteger minimumNumberOfAttributesRequired;
 
++ (NSArray *)helpImageTitles;
+
 - (void)save; // Saves defaultShape to NSUserDefaults
 
 /// Delegate
