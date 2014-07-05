@@ -34,13 +34,13 @@
 }
 
 - (NSArray *)formulaStrings {
-    return @[ @"$baseEdgeLengthArea = $baseEdgeLength * $baseEdgeLength",
-              @"$baseEdgeLength = sqrt($baseEdgeLengthArea)",
+    return @[ @"$baseArea = $baseEdgeLength * $baseEdgeLength",
+              @"$baseEdgeLength = sqrt($baseArea)",
               
               // Volume
-              @"$volume = $baseEdgeLengthArea * $height / 3",
-              @"$baseEdgeLengthArea = $volume / $height * 3",
-              @"$height = $volume / $baseEdgeLengthArea * 3",
+              @"$volume = $baseArea * $height / 3",
+              @"$baseArea = $volume / $height * 3",
+              @"$height = $volume / $baseArea * 3",
               
               @"$lateralSurfaceArea = $baseEdgeLength * sqrt(pow($baseEdgeLength, 2) + 4*pow($height, 2))",
               @"$baseEdgeLength = sqrt(sqrt(pow($lateralSurfaceArea, 2)+4 pow($height, 4))-2 pow($height, 2))",
@@ -51,9 +51,9 @@
               @"$slantHeight = $lateralSurfaceArea / (2 * $baseEdgeLength)",
               
               // Surface Area
-              @"$surfaceArea = $lateralSurfaceArea + $baseEdgeLengthArea",
-              @"$baseEdgeLengthArea = $surfaceArea - $lateralSurfaceArea",
-              @"$lateralSurfaceArea = $surfaceArea - $baseEdgeLengthArea",
+              @"$surfaceArea = $lateralSurfaceArea + $baseArea",
+              @"$baseArea = $surfaceArea - $lateralSurfaceArea",
+              @"$lateralSurfaceArea = $surfaceArea - $baseArea",
               
               // Slant Height
               @"$slantHeight = sqrt(pow($baseEdgeLength/2, 2)  +  pow($height, 2))",
