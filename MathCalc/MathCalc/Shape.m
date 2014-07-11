@@ -9,6 +9,7 @@
 #import "Shape.h"
 #import "JLDelegateProxy.h"
 #import "DDMathEvaluator.h"
+#import "NSString+JLAdditions.h"
 
 @implementation Shape {
     id <ShapeDelegate> delegateProxy;

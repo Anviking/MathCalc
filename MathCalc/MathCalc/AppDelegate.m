@@ -10,9 +10,8 @@
 #import "NavigationControllerDelegate.h"
 #import "MasterViewController.h"
 #import "BackgroundView.h"
+#import "MathCore.h"
 
-
-@import MathCore;
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

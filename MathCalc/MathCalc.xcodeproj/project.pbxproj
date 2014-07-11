@@ -13,91 +13,12 @@
 		8F0C22AD194376FE0084A695 /* VENCalculatorInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0C22A6194376FE0084A695 /* VENCalculatorInputView.m */; };
 		8F0C22AE194376FE0084A695 /* VENCalculatorInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0C22A7194376FE0084A695 /* VENCalculatorInputView.xib */; };
 		8F0C22AF194376FE0084A695 /* VENMoneyCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F0C22A9194376FE0084A695 /* VENMoneyCalculator.m */; };
-		8F1067361954CB6B00B73FEA /* UnitFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3676051954BE8A00314113 /* UnitFormatter.m */; };
-		8F1067371954CB6B00B73FEA /* LengthFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3676081954C3C900314113 /* LengthFormatter.m */; };
-		8F1067381954CB6F00B73FEA /* UnitFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F3676041954BE8A00314113 /* UnitFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F1067391954CB6F00B73FEA /* LengthFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F3676071954C3C900314113 /* LengthFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F10673A1954CC2E00B73FEA /* NSNumber+JLAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FB2026D18F89E4F00EBCB81 /* NSNumber+JLAdditions.h */; };
-		8F10673B1954CC3400B73FEA /* NSNumber+JLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2026E18F89E4F00EBCB81 /* NSNumber+JLAdditions.m */; };
 		8F10673D1954CD3E00B73FEA /* UnitFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10673C1954CD3E00B73FEA /* UnitFormatterTests.m */; };
-		8F1067401954D14B00B73FEA /* AreaFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F10673E1954D14B00B73FEA /* AreaFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F1067411954D14B00B73FEA /* AreaFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10673F1954D14B00B73FEA /* AreaFormatter.m */; };
-		8F1067441954D15500B73FEA /* VolumeFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1067421954D15500B73FEA /* VolumeFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F1067451954D15500B73FEA /* VolumeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1067431954D15500B73FEA /* VolumeFormatter.m */; };
-		8F1067481954D15F00B73FEA /* AngleFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F1067461954D15F00B73FEA /* AngleFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F1067491954D15F00B73FEA /* AngleFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1067471954D15F00B73FEA /* AngleFormatter.m */; };
 		8F1640CC1965E26D0006AED1 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1640CB1965E26D0006AED1 /* HelpViewController.m */; };
 		8F1640E71965E7870006AED1 /* Help in Resources */ = {isa = PBXBuildFile; fileRef = 8F1640E61965E7870006AED1 /* Help */; };
-		8F2851EA19462602008A70BB /* Cylinder.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F2851E819462602008A70BB /* Cylinder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F2851EB19462602008A70BB /* Cylinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2851E919462602008A70BB /* Cylinder.m */; };
 		8F2851ED1946269E008A70BB /* CylinderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2851EC1946269E008A70BB /* CylinderTests.m */; };
 		8F3676031954BDB900314113 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3676021954BDB900314113 /* SettingsViewController.m */; };
-		8F620D9019425AA800D96758 /* MathCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F620D8F19425AA800D96758 /* MathCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F620D9619425AA900D96758 /* MathCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F620D8B19425AA800D96758 /* MathCore.framework */; };
 		8F620D9D19425AA900D96758 /* MathCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F620D9C19425AA900D96758 /* MathCoreTests.m */; };
-		8F620DA019425AA900D96758 /* MathCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F620D8B19425AA800D96758 /* MathCore.framework */; };
-		8F620DA119425AA900D96758 /* MathCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8F620D8B19425AA800D96758 /* MathCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		8F620DAE19425ADD00D96758 /* Formula.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BD718F17D7200E8C3D8 /* Formula.m */; };
-		8F620DAF19425ADD00D96758 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BD518F17D7200E8C3D8 /* Circle.m */; };
-		8F620DB019425ADD00D96758 /* Sphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C4318F28C1500E8C3D8 /* Sphere.m */; };
-		8F620DB119425ADD00D96758 /* RightTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C3D18F1ADAB00E8C3D8 /* RightTriangle.m */; };
-		8F620DB219425ADD00D96758 /* Pyramid.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C4F18F2F98C00E8C3D8 /* Pyramid.m */; };
-		8F620DB319425ADD00D96758 /* Shape.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BD918F17D7200E8C3D8 /* Shape.m */; };
-		8F620DB419425ADD00D96758 /* Cuboid.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9EC41928C2ED00D2FD9D /* Cuboid.m */; };
-		8F620DB519425ADD00D96758 /* Cone.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9ED01929463600D2FD9D /* Cone.m */; };
-		8F620DB719425AEC00D96758 /* Formula.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BD618F17D7200E8C3D8 /* Formula.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F620DB919425AEC00D96758 /* Circle.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BD418F17D7200E8C3D8 /* Circle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F620DBA19425AEC00D96758 /* Sphere.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8C4218F28C1500E8C3D8 /* Sphere.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F620DBB19425AEC00D96758 /* RightTriangle.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8C3C18F1ADAB00E8C3D8 /* RightTriangle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F620DBC19425AEC00D96758 /* Pyramid.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8C4E18F2F98C00E8C3D8 /* Pyramid.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F620DBD19425AEC00D96758 /* Shape.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BD818F17D7200E8C3D8 /* Shape.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F620DBE19425AEC00D96758 /* Cuboid.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F6A9EC31928C2ED00D2FD9D /* Cuboid.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F620DBF19425AEC00D96758 /* Cone.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F6A9ECF1929463600D2FD9D /* Cone.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8F620DC019425B9500D96758 /* _DDFunctionContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BE318F17DAE00E8C3D8 /* _DDFunctionContainer.h */; };
-		8F620DC119425B9500D96758 /* _DDFunctionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BE418F17DAE00E8C3D8 /* _DDFunctionContainer.m */; };
-		8F620DC219425B9500D96758 /* _DDFunctionExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BE518F17DAE00E8C3D8 /* _DDFunctionExpression.h */; };
-		8F620DC319425B9500D96758 /* _DDFunctionExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BE618F17DAE00E8C3D8 /* _DDFunctionExpression.m */; };
-		8F620DC419425B9500D96758 /* _DDFunctionTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BE718F17DAE00E8C3D8 /* _DDFunctionTerm.h */; };
-		8F620DC519425B9500D96758 /* _DDFunctionTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BE818F17DAE00E8C3D8 /* _DDFunctionTerm.m */; };
-		8F620DC619425B9500D96758 /* _DDFunctionUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BE918F17DAE00E8C3D8 /* _DDFunctionUtilities.h */; };
-		8F620DC719425B9500D96758 /* _DDFunctionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BEA18F17DAE00E8C3D8 /* _DDFunctionUtilities.m */; };
-		8F620DC819425B9500D96758 /* _DDGroupTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BEB18F17DAE00E8C3D8 /* _DDGroupTerm.h */; };
-		8F620DC919425B9500D96758 /* _DDGroupTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BEC18F17DAE00E8C3D8 /* _DDGroupTerm.m */; };
-		8F620DCA19425B9500D96758 /* _DDNumberExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BED18F17DAE00E8C3D8 /* _DDNumberExpression.h */; };
-		8F620DCB19425B9500D96758 /* _DDNumberExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BEE18F17DAE00E8C3D8 /* _DDNumberExpression.m */; };
-		8F620DCC19425B9500D96758 /* _DDNumberTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BEF18F17DAE00E8C3D8 /* _DDNumberTerm.h */; };
-		8F620DCD19425B9500D96758 /* _DDNumberTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF018F17DAE00E8C3D8 /* _DDNumberTerm.m */; };
-		8F620DCE19425B9500D96758 /* _DDOperatorInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BF118F17DAE00E8C3D8 /* _DDOperatorInfo.h */; };
-		8F620DCF19425B9500D96758 /* _DDOperatorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF218F17DAE00E8C3D8 /* _DDOperatorInfo.m */; };
-		8F620DD019425B9500D96758 /* _DDOperatorTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BF318F17DAE00E8C3D8 /* _DDOperatorTerm.h */; };
-		8F620DD119425B9500D96758 /* _DDOperatorTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF418F17DAE00E8C3D8 /* _DDOperatorTerm.m */; };
-		8F620DD219425B9500D96758 /* _DDParserTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BF518F17DAE00E8C3D8 /* _DDParserTerm.h */; };
-		8F620DD319425B9500D96758 /* _DDParserTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF618F17DAE00E8C3D8 /* _DDParserTerm.m */; };
-		8F620DD419425B9500D96758 /* _DDRewriteRule.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BF718F17DAE00E8C3D8 /* _DDRewriteRule.h */; };
-		8F620DD519425B9500D96758 /* _DDRewriteRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF818F17DAE00E8C3D8 /* _DDRewriteRule.m */; };
-		8F620DD619425B9500D96758 /* _DDVariableExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BF918F17DAE00E8C3D8 /* _DDVariableExpression.h */; };
-		8F620DD719425B9500D96758 /* _DDVariableExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BFA18F17DAE00E8C3D8 /* _DDVariableExpression.m */; };
-		8F620DD819425B9500D96758 /* _DDVariableTerm.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BFB18F17DAE00E8C3D8 /* _DDVariableTerm.h */; };
-		8F620DD919425B9500D96758 /* _DDVariableTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BFC18F17DAE00E8C3D8 /* _DDVariableTerm.m */; };
-		8F620DDA19425B9500D96758 /* DDExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BFD18F17DAE00E8C3D8 /* DDExpression.h */; };
-		8F620DDB19425B9500D96758 /* DDExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BFE18F17DAE00E8C3D8 /* DDExpression.m */; };
-		8F620DDC19425B9500D96758 /* DDMathEvaluator+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8BFF18F17DAE00E8C3D8 /* DDMathEvaluator+Private.h */; };
-		8F620DDD19425B9500D96758 /* DDMathEvaluator.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8C0018F17DAE00E8C3D8 /* DDMathEvaluator.h */; };
-		8F620DDE19425B9500D96758 /* DDMathEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0118F17DAE00E8C3D8 /* DDMathEvaluator.m */; };
-		8F620DDF19425B9500D96758 /* DDMathParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8C0218F17DAE00E8C3D8 /* DDMathParser.h */; };
-		8F620DE019425B9500D96758 /* DDMathParserMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8C0318F17DAE00E8C3D8 /* DDMathParserMacros.h */; };
-		8F620DE119425B9500D96758 /* DDMathStringToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8C0418F17DAE00E8C3D8 /* DDMathStringToken.h */; };
-		8F620DE219425B9500D96758 /* DDMathStringToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0518F17DAE00E8C3D8 /* DDMathStringToken.m */; };
-		8F620DE319425B9500D96758 /* DDMathStringTokenizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8C0618F17DAE00E8C3D8 /* DDMathStringTokenizer.h */; };
-		8F620DE419425B9500D96758 /* DDMathStringTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0718F17DAE00E8C3D8 /* DDMathStringTokenizer.m */; };
-		8F620DE519425B9500D96758 /* DDParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8C0818F17DAE00E8C3D8 /* DDParser.h */; };
-		8F620DE619425B9500D96758 /* DDParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0918F17DAE00E8C3D8 /* DDParser.m */; };
-		8F620DE719425B9500D96758 /* DDParserTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8C0A18F17DAE00E8C3D8 /* DDParserTypes.h */; };
-		8F620DE819425B9500D96758 /* DDParserTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0B18F17DAE00E8C3D8 /* DDParserTypes.m */; };
-		8F620DE919425B9500D96758 /* DDTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8C0C18F17DAE00E8C3D8 /* DDTypes.h */; };
-		8F620DEA19425B9500D96758 /* DDTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0D18F17DAE00E8C3D8 /* DDTypes.m */; };
-		8F620DEB19425B9500D96758 /* NSString+DDMathParsing.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCE8C0E18F17DAE00E8C3D8 /* NSString+DDMathParsing.h */; };
-		8F620DEC19425B9500D96758 /* NSString+DDMathParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0F18F17DAE00E8C3D8 /* NSString+DDMathParsing.m */; };
 		8F6A9EC71928C2FE00D2FD9D /* CuboidTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9EC61928C2FE00D2FD9D /* CuboidTests.m */; };
 		8F6A9ED31929464700D2FD9D /* ConeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9ED21929464700D2FD9D /* ConeTests.m */; };
 		8F88EC8F191404E600586014 /* PreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F88EC8E191404E600586014 /* PreviewView.m */; };
@@ -105,11 +26,46 @@
 		8F88EC961914129700586014 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8F88EC941914129700586014 /* Localizable.strings */; };
 		8F9C1FB818F9E7E2003D6DFA /* AttributeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FB718F9E7E2003D6DFA /* AttributeTableViewCell.m */; };
 		8F9C1FC418FBC5BE003D6DFA /* BackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FC318FBC5BE003D6DFA /* BackgroundView.m */; };
-		8FB880761953483C006EE8AA /* Triangle.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FB880741953483C006EE8AA /* Triangle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8FB880771953483C006EE8AA /* Triangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB880751953483C006EE8AA /* Triangle.m */; };
+		8FA14B5819701D5B008A23F4 /* NSNumber+JLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2026E18F89E4F00EBCB81 /* NSNumber+JLAdditions.m */; };
+		8FA14B5919701D5B008A23F4 /* UnitFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3676051954BE8A00314113 /* UnitFormatter.m */; };
+		8FA14B5A19701D5B008A23F4 /* LengthFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F3676081954C3C900314113 /* LengthFormatter.m */; };
+		8FA14B5B19701D5B008A23F4 /* AreaFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F10673F1954D14B00B73FEA /* AreaFormatter.m */; };
+		8FA14B5C19701D5B008A23F4 /* VolumeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1067431954D15500B73FEA /* VolumeFormatter.m */; };
+		8FA14B5D19701D5B008A23F4 /* AngleFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1067471954D15F00B73FEA /* AngleFormatter.m */; };
+		8FA14B5E19701D5B008A23F4 /* Formula.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BD718F17D7200E8C3D8 /* Formula.m */; };
+		8FA14B5F19701D60008A23F4 /* Shape.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BD918F17D7200E8C3D8 /* Shape.m */; };
+		8FA14B6019701D60008A23F4 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BD518F17D7200E8C3D8 /* Circle.m */; };
+		8FA14B6119701D60008A23F4 /* Sphere.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C4318F28C1500E8C3D8 /* Sphere.m */; };
+		8FA14B6219701D60008A23F4 /* RightTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C3D18F1ADAB00E8C3D8 /* RightTriangle.m */; };
+		8FA14B6319701D60008A23F4 /* Pyramid.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C4F18F2F98C00E8C3D8 /* Pyramid.m */; };
+		8FA14B6419701D60008A23F4 /* Cuboid.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9EC41928C2ED00D2FD9D /* Cuboid.m */; };
+		8FA14B6519701D60008A23F4 /* Cone.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F6A9ED01929463600D2FD9D /* Cone.m */; };
+		8FA14B6619701D60008A23F4 /* Cylinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F2851E919462602008A70BB /* Cylinder.m */; };
+		8FA14B6719701D60008A23F4 /* Triangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB880751953483C006EE8AA /* Triangle.m */; };
+		8FA14B6819701D65008A23F4 /* _DDFunctionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BE418F17DAE00E8C3D8 /* _DDFunctionContainer.m */; };
+		8FA14B6919701D65008A23F4 /* _DDFunctionExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BE618F17DAE00E8C3D8 /* _DDFunctionExpression.m */; };
+		8FA14B6A19701D65008A23F4 /* _DDFunctionTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BE818F17DAE00E8C3D8 /* _DDFunctionTerm.m */; };
+		8FA14B6B19701D65008A23F4 /* _DDFunctionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BEA18F17DAE00E8C3D8 /* _DDFunctionUtilities.m */; };
+		8FA14B6C19701D65008A23F4 /* _DDGroupTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BEC18F17DAE00E8C3D8 /* _DDGroupTerm.m */; };
+		8FA14B6D19701D65008A23F4 /* _DDNumberExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BEE18F17DAE00E8C3D8 /* _DDNumberExpression.m */; };
+		8FA14B6E19701D65008A23F4 /* _DDNumberTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF018F17DAE00E8C3D8 /* _DDNumberTerm.m */; };
+		8FA14B6F19701D65008A23F4 /* _DDOperatorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF218F17DAE00E8C3D8 /* _DDOperatorInfo.m */; };
+		8FA14B7019701D65008A23F4 /* _DDOperatorTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF418F17DAE00E8C3D8 /* _DDOperatorTerm.m */; };
+		8FA14B7119701D65008A23F4 /* _DDParserTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF618F17DAE00E8C3D8 /* _DDParserTerm.m */; };
+		8FA14B7219701D65008A23F4 /* _DDRewriteRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BF818F17DAE00E8C3D8 /* _DDRewriteRule.m */; };
+		8FA14B7319701D65008A23F4 /* _DDVariableExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BFA18F17DAE00E8C3D8 /* _DDVariableExpression.m */; };
+		8FA14B7419701D65008A23F4 /* _DDVariableTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BFC18F17DAE00E8C3D8 /* _DDVariableTerm.m */; };
+		8FA14B7519701D65008A23F4 /* DDExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8BFE18F17DAE00E8C3D8 /* DDExpression.m */; };
+		8FA14B7619701D65008A23F4 /* DDMathEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0118F17DAE00E8C3D8 /* DDMathEvaluator.m */; };
+		8FA14B7719701D65008A23F4 /* DDMathStringToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0518F17DAE00E8C3D8 /* DDMathStringToken.m */; };
+		8FA14B7819701D65008A23F4 /* DDMathStringTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0718F17DAE00E8C3D8 /* DDMathStringTokenizer.m */; };
+		8FA14B7919701D65008A23F4 /* DDParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0918F17DAE00E8C3D8 /* DDParser.m */; };
+		8FA14B7A19701D65008A23F4 /* DDParserTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0B18F17DAE00E8C3D8 /* DDParserTypes.m */; };
+		8FA14B7B19701D65008A23F4 /* DDTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0D18F17DAE00E8C3D8 /* DDTypes.m */; };
+		8FA14B7C19701D65008A23F4 /* NSString+DDMathParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCE8C0F18F17DAE00E8C3D8 /* NSString+DDMathParsing.m */; };
+		8FA14B7D19701D68008A23F4 /* JLDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FB418F96E78003D6DFA /* JLDelegateProxy.m */; };
+		8FA14B8019701DCD008A23F4 /* NSString+JLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FA14B7F19701DCD008A23F4 /* NSString+JLAdditions.m */; };
 		8FB8807919534C5E006EE8AA /* TriangleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FB8807819534C5E006EE8AA /* TriangleTests.m */; };
-		8FCBC0C219425CED00A28021 /* JLDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F9C1FB318F96E78003D6DFA /* JLDelegateProxy.h */; };
-		8FCBC0C319425CED00A28021 /* JLDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F9C1FB418F96E78003D6DFA /* JLDelegateProxy.m */; };
 		8FCE8B9B18F17D4C00E8C3D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE8B9A18F17D4C00E8C3D8 /* Foundation.framework */; };
 		8FCE8B9D18F17D4C00E8C3D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE8B9C18F17D4C00E8C3D8 /* CoreGraphics.framework */; };
 		8FCE8B9F18F17D4C00E8C3D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE8B9E18F17D4C00E8C3D8 /* UIKit.framework */; };
@@ -141,34 +97,6 @@
 			remoteGlobalIDString = 8FCE8B9618F17D4C00E8C3D8;
 			remoteInfo = MathCalc;
 		};
-		8F620D9719425AA900D96758 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8FCE8B8F18F17D4C00E8C3D8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8F620D8A19425AA800D96758;
-			remoteInfo = MathCore;
-		};
-		8F620D9E19425AA900D96758 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8FCE8B8F18F17D4C00E8C3D8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8F620D8A19425AA800D96758;
-			remoteInfo = MathCore;
-		};
-		8F620DA219425AA900D96758 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8FCE8B8F18F17D4C00E8C3D8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8F620D8A19425AA800D96758;
-			remoteInfo = MathCore;
-		};
-		8F620DAB19425AAA00D96758 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8FCE8B8F18F17D4C00E8C3D8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8F620D8A19425AA800D96758;
-			remoteInfo = MathCore;
-		};
 		8FCE8BC018F17D4C00E8C3D8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8FCE8B8F18F17D4C00E8C3D8 /* Project object */;
@@ -185,7 +113,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8F620DA119425AA900D96758 /* MathCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,7 +149,6 @@
 		8F3676051954BE8A00314113 /* UnitFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitFormatter.m; sourceTree = "<group>"; };
 		8F3676071954C3C900314113 /* LengthFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LengthFormatter.h; sourceTree = "<group>"; };
 		8F3676081954C3C900314113 /* LengthFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LengthFormatter.m; sourceTree = "<group>"; };
-		8F620D8B19425AA800D96758 /* MathCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MathCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F620D8E19425AA800D96758 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F620D8F19425AA800D96758 /* MathCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MathCore.h; sourceTree = "<group>"; };
 		8F620D9519425AA800D96758 /* MathCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -247,6 +173,8 @@
 		8F9C1FB718F9E7E2003D6DFA /* AttributeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributeTableViewCell.m; sourceTree = "<group>"; };
 		8F9C1FC218FBC5BE003D6DFA /* BackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundView.h; sourceTree = "<group>"; };
 		8F9C1FC318FBC5BE003D6DFA /* BackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundView.m; sourceTree = "<group>"; };
+		8FA14B7E19701DCD008A23F4 /* NSString+JLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+JLAdditions.h"; sourceTree = "<group>"; };
+		8FA14B7F19701DCD008A23F4 /* NSString+JLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+JLAdditions.m"; sourceTree = "<group>"; };
 		8FA9234219588FF400B9456F /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8FA923441958925000B9456F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		8FA923461958933000B9456F /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Main.strings; sourceTree = "<group>"; };
@@ -342,18 +270,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8F620D8719425AA800D96758 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8F620D9219425AA800D96758 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F620D9619425AA900D96758 /* MathCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,7 +282,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FCE8B9D18F17D4C00E8C3D8 /* CoreGraphics.framework in Frameworks */,
-				8F620DA019425AA900D96758 /* MathCore.framework in Frameworks */,
 				8FCE8B9F18F17D4C00E8C3D8 /* UIKit.framework in Frameworks */,
 				8FCE8B9B18F17D4C00E8C3D8 /* Foundation.framework in Frameworks */,
 			);
@@ -486,7 +405,6 @@
 			children = (
 				8FCE8B9718F17D4C00E8C3D8 /* MathCalc.app */,
 				8FCE8BBB18F17D4C00E8C3D8 /* MathCalcTests.xctest */,
-				8F620D8B19425AA800D96758 /* MathCore.framework */,
 				8F620D9519425AA800D96758 /* MathCoreTests.xctest */,
 			);
 			name = Products;
@@ -597,6 +515,8 @@
 		8FCE8BDF18F17D8800E8C3D8 /* Calculation */ = {
 			isa = PBXGroup;
 			children = (
+				8FA14B7E19701DCD008A23F4 /* NSString+JLAdditions.h */,
+				8FA14B7F19701DCD008A23F4 /* NSString+JLAdditions.m */,
 				8FB2026D18F89E4F00EBCB81 /* NSNumber+JLAdditions.h */,
 				8FB2026E18F89E4F00EBCB81 /* NSNumber+JLAdditions.m */,
 				8F3676041954BE8A00314113 /* UnitFormatter.h */,
@@ -671,77 +591,7 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		8F620D8819425AA800D96758 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8F620DC819425B9500D96758 /* _DDGroupTerm.h in Headers */,
-				8F1067401954D14B00B73FEA /* AreaFormatter.h in Headers */,
-				8F620DE119425B9500D96758 /* DDMathStringToken.h in Headers */,
-				8F620DD619425B9500D96758 /* _DDVariableExpression.h in Headers */,
-				8F620DC619425B9500D96758 /* _DDFunctionUtilities.h in Headers */,
-				8F620DBD19425AEC00D96758 /* Shape.h in Headers */,
-				8F620DE019425B9500D96758 /* DDMathParserMacros.h in Headers */,
-				8F620DDC19425B9500D96758 /* DDMathEvaluator+Private.h in Headers */,
-				8F1067481954D15F00B73FEA /* AngleFormatter.h in Headers */,
-				8F620DD819425B9500D96758 /* _DDVariableTerm.h in Headers */,
-				8F620DB719425AEC00D96758 /* Formula.h in Headers */,
-				8FCBC0C219425CED00A28021 /* JLDelegateProxy.h in Headers */,
-				8F620DCC19425B9500D96758 /* _DDNumberTerm.h in Headers */,
-				8F2851EA19462602008A70BB /* Cylinder.h in Headers */,
-				8F620DCA19425B9500D96758 /* _DDNumberExpression.h in Headers */,
-				8F10673A1954CC2E00B73FEA /* NSNumber+JLAdditions.h in Headers */,
-				8F620DBF19425AEC00D96758 /* Cone.h in Headers */,
-				8F620DDD19425B9500D96758 /* DDMathEvaluator.h in Headers */,
-				8F620DD219425B9500D96758 /* _DDParserTerm.h in Headers */,
-				8F620DB919425AEC00D96758 /* Circle.h in Headers */,
-				8FB880761953483C006EE8AA /* Triangle.h in Headers */,
-				8F620DE719425B9500D96758 /* DDParserTypes.h in Headers */,
-				8F620DC219425B9500D96758 /* _DDFunctionExpression.h in Headers */,
-				8F620DD419425B9500D96758 /* _DDRewriteRule.h in Headers */,
-				8F620DE319425B9500D96758 /* DDMathStringTokenizer.h in Headers */,
-				8F1067441954D15500B73FEA /* VolumeFormatter.h in Headers */,
-				8F620DEB19425B9500D96758 /* NSString+DDMathParsing.h in Headers */,
-				8F620DE919425B9500D96758 /* DDTypes.h in Headers */,
-				8F620DD019425B9500D96758 /* _DDOperatorTerm.h in Headers */,
-				8F620DBB19425AEC00D96758 /* RightTriangle.h in Headers */,
-				8F620DE519425B9500D96758 /* DDParser.h in Headers */,
-				8F620DDA19425B9500D96758 /* DDExpression.h in Headers */,
-				8F620DDF19425B9500D96758 /* DDMathParser.h in Headers */,
-				8F620DCE19425B9500D96758 /* _DDOperatorInfo.h in Headers */,
-				8F620DBE19425AEC00D96758 /* Cuboid.h in Headers */,
-				8F620DC019425B9500D96758 /* _DDFunctionContainer.h in Headers */,
-				8F1067381954CB6F00B73FEA /* UnitFormatter.h in Headers */,
-				8F620DC419425B9500D96758 /* _DDFunctionTerm.h in Headers */,
-				8F620DBC19425AEC00D96758 /* Pyramid.h in Headers */,
-				8F620D9019425AA800D96758 /* MathCore.h in Headers */,
-				8F620DBA19425AEC00D96758 /* Sphere.h in Headers */,
-				8F1067391954CB6F00B73FEA /* LengthFormatter.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		8F620D8A19425AA800D96758 /* MathCore */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8F620DA419425AA900D96758 /* Build configuration list for PBXNativeTarget "MathCore" */;
-			buildPhases = (
-				8F620D8619425AA800D96758 /* Sources */,
-				8F620D8719425AA800D96758 /* Frameworks */,
-				8F620D8819425AA800D96758 /* Headers */,
-				8F620D8919425AA800D96758 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MathCore;
-			productName = MathCore;
-			productReference = 8F620D8B19425AA800D96758 /* MathCore.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		8F620D9419425AA800D96758 /* MathCoreTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F620DA819425AA900D96758 /* Build configuration list for PBXNativeTarget "MathCoreTests" */;
@@ -753,8 +603,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				8F620D9819425AA900D96758 /* PBXTargetDependency */,
-				8F620DAC19425AAA00D96758 /* PBXTargetDependency */,
 			);
 			name = MathCoreTests;
 			productName = MathCoreTests;
@@ -773,8 +621,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				8F620D9F19425AA900D96758 /* PBXTargetDependency */,
-				8F620DA319425AA900D96758 /* PBXTargetDependency */,
 			);
 			name = MathCalc;
 			productName = MathCalc;
@@ -809,9 +655,6 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = anviking;
 				TargetAttributes = {
-					8F620D8A19425AA800D96758 = {
-						CreatedOnToolsVersion = 6.0;
-					};
 					8F620D9419425AA800D96758 = {
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = 8F620D8A19425AA800D96758;
@@ -837,20 +680,12 @@
 			targets = (
 				8FCE8B9618F17D4C00E8C3D8 /* MathCalc */,
 				8FCE8BBA18F17D4C00E8C3D8 /* MathCalcTests */,
-				8F620D8A19425AA800D96758 /* MathCore */,
 				8F620D9419425AA800D96758 /* MathCoreTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		8F620D8919425AA800D96758 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8F620D9319425AA800D96758 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -884,51 +719,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8F620D8619425AA800D96758 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8F620DEC19425B9500D96758 /* NSString+DDMathParsing.m in Sources */,
-				8F620DE819425B9500D96758 /* DDParserTypes.m in Sources */,
-				8F620DAF19425ADD00D96758 /* Circle.m in Sources */,
-				8F620DD119425B9500D96758 /* _DDOperatorTerm.m in Sources */,
-				8F620DB419425ADD00D96758 /* Cuboid.m in Sources */,
-				8F620DCD19425B9500D96758 /* _DDNumberTerm.m in Sources */,
-				8F620DD519425B9500D96758 /* _DDRewriteRule.m in Sources */,
-				8F620DE619425B9500D96758 /* DDParser.m in Sources */,
-				8F620DAE19425ADD00D96758 /* Formula.m in Sources */,
-				8F620DDB19425B9500D96758 /* DDExpression.m in Sources */,
-				8F620DC119425B9500D96758 /* _DDFunctionContainer.m in Sources */,
-				8F620DB219425ADD00D96758 /* Pyramid.m in Sources */,
-				8F620DB519425ADD00D96758 /* Cone.m in Sources */,
-				8F620DCB19425B9500D96758 /* _DDNumberExpression.m in Sources */,
-				8F620DB019425ADD00D96758 /* Sphere.m in Sources */,
-				8F620DCF19425B9500D96758 /* _DDOperatorInfo.m in Sources */,
-				8F620DB119425ADD00D96758 /* RightTriangle.m in Sources */,
-				8F620DC519425B9500D96758 /* _DDFunctionTerm.m in Sources */,
-				8F10673B1954CC3400B73FEA /* NSNumber+JLAdditions.m in Sources */,
-				8F620DD719425B9500D96758 /* _DDVariableExpression.m in Sources */,
-				8F620DDE19425B9500D96758 /* DDMathEvaluator.m in Sources */,
-				8F620DD319425B9500D96758 /* _DDParserTerm.m in Sources */,
-				8F1067371954CB6B00B73FEA /* LengthFormatter.m in Sources */,
-				8F620DC319425B9500D96758 /* _DDFunctionExpression.m in Sources */,
-				8F1067491954D15F00B73FEA /* AngleFormatter.m in Sources */,
-				8FB880771953483C006EE8AA /* Triangle.m in Sources */,
-				8FCBC0C319425CED00A28021 /* JLDelegateProxy.m in Sources */,
-				8F620DE419425B9500D96758 /* DDMathStringTokenizer.m in Sources */,
-				8F620DB319425ADD00D96758 /* Shape.m in Sources */,
-				8F620DE219425B9500D96758 /* DDMathStringToken.m in Sources */,
-				8F1067451954D15500B73FEA /* VolumeFormatter.m in Sources */,
-				8F1067361954CB6B00B73FEA /* UnitFormatter.m in Sources */,
-				8F620DD919425B9500D96758 /* _DDVariableTerm.m in Sources */,
-				8F620DC719425B9500D96758 /* _DDFunctionUtilities.m in Sources */,
-				8F620DC919425B9500D96758 /* _DDGroupTerm.m in Sources */,
-				8F620DEA19425B9500D96758 /* DDTypes.m in Sources */,
-				8F1067411954D14B00B73FEA /* AreaFormatter.m in Sources */,
-				8F2851EB19462602008A70BB /* Cylinder.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8F620D9119425AA800D96758 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -941,17 +731,56 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FA14B6719701D60008A23F4 /* Triangle.m in Sources */,
 				8F9C1FC418FBC5BE003D6DFA /* BackgroundView.m in Sources */,
+				8FA14B7919701D65008A23F4 /* DDParser.m in Sources */,
+				8FA14B6019701D60008A23F4 /* Circle.m in Sources */,
+				8FA14B7D19701D68008A23F4 /* JLDelegateProxy.m in Sources */,
+				8FA14B7A19701D65008A23F4 /* DDParserTypes.m in Sources */,
+				8FA14B6819701D65008A23F4 /* _DDFunctionContainer.m in Sources */,
+				8FA14B7219701D65008A23F4 /* _DDRewriteRule.m in Sources */,
 				8F0C22AD194376FE0084A695 /* VENCalculatorInputView.m in Sources */,
+				8FA14B6319701D60008A23F4 /* Pyramid.m in Sources */,
+				8FA14B7419701D65008A23F4 /* _DDVariableTerm.m in Sources */,
+				8FA14B7C19701D65008A23F4 /* NSString+DDMathParsing.m in Sources */,
+				8FA14B5B19701D5B008A23F4 /* AreaFormatter.m in Sources */,
+				8FA14B6B19701D65008A23F4 /* _DDFunctionUtilities.m in Sources */,
+				8FA14B6419701D60008A23F4 /* Cuboid.m in Sources */,
+				8FA14B5A19701D5B008A23F4 /* LengthFormatter.m in Sources */,
 				8FCE8BAB18F17D4C00E8C3D8 /* AppDelegate.m in Sources */,
+				8FA14B8019701DCD008A23F4 /* NSString+JLAdditions.m in Sources */,
 				8F0C22AF194376FE0084A695 /* VENMoneyCalculator.m in Sources */,
+				8FA14B5F19701D60008A23F4 /* Shape.m in Sources */,
+				8FA14B5E19701D5B008A23F4 /* Formula.m in Sources */,
+				8FA14B7719701D65008A23F4 /* DDMathStringToken.m in Sources */,
+				8FA14B7119701D65008A23F4 /* _DDParserTerm.m in Sources */,
+				8FA14B7B19701D65008A23F4 /* DDTypes.m in Sources */,
+				8FA14B7619701D65008A23F4 /* DDMathEvaluator.m in Sources */,
+				8FA14B6E19701D65008A23F4 /* _DDNumberTerm.m in Sources */,
+				8FA14B7819701D65008A23F4 /* DDMathStringTokenizer.m in Sources */,
 				8FCE8BB118F17D4C00E8C3D8 /* MasterViewController.m in Sources */,
+				8FA14B5D19701D5B008A23F4 /* AngleFormatter.m in Sources */,
 				8FCE8BA718F17D4C00E8C3D8 /* main.m in Sources */,
 				8F9C1FB818F9E7E2003D6DFA /* AttributeTableViewCell.m in Sources */,
+				8FA14B6A19701D65008A23F4 /* _DDFunctionTerm.m in Sources */,
+				8FA14B7319701D65008A23F4 /* _DDVariableExpression.m in Sources */,
+				8FA14B6619701D60008A23F4 /* Cylinder.m in Sources */,
 				8F88EC8F191404E600586014 /* PreviewView.m in Sources */,
+				8FA14B6D19701D65008A23F4 /* _DDNumberExpression.m in Sources */,
+				8FA14B6219701D60008A23F4 /* RightTriangle.m in Sources */,
+				8FA14B5C19701D5B008A23F4 /* VolumeFormatter.m in Sources */,
+				8FA14B7519701D65008A23F4 /* DDExpression.m in Sources */,
 				8FCE8BB418F17D4C00E8C3D8 /* DetailViewController.m in Sources */,
+				8FA14B6F19701D65008A23F4 /* _DDOperatorInfo.m in Sources */,
 				8F0C22AC194376FE0084A695 /* VENCalculatorInputTextField.m in Sources */,
 				8F1640CC1965E26D0006AED1 /* HelpViewController.m in Sources */,
+				8FA14B6919701D65008A23F4 /* _DDFunctionExpression.m in Sources */,
+				8FA14B6C19701D65008A23F4 /* _DDGroupTerm.m in Sources */,
+				8FA14B6119701D60008A23F4 /* Sphere.m in Sources */,
+				8FA14B6519701D60008A23F4 /* Cone.m in Sources */,
+				8FA14B5919701D5B008A23F4 /* UnitFormatter.m in Sources */,
+				8FA14B5819701D5B008A23F4 /* NSNumber+JLAdditions.m in Sources */,
+				8FA14B7019701D65008A23F4 /* _DDOperatorTerm.m in Sources */,
 				8F88EC92191407F900586014 /* BlurView.m in Sources */,
 				8F3676031954BDB900314113 /* SettingsViewController.m in Sources */,
 			);
@@ -983,26 +812,6 @@
 			isa = PBXTargetDependency;
 			target = 8FCE8B9618F17D4C00E8C3D8 /* MathCalc */;
 			targetProxy = 8F2851F419462771008A70BB /* PBXContainerItemProxy */;
-		};
-		8F620D9819425AA900D96758 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8F620D8A19425AA800D96758 /* MathCore */;
-			targetProxy = 8F620D9719425AA900D96758 /* PBXContainerItemProxy */;
-		};
-		8F620D9F19425AA900D96758 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8F620D8A19425AA800D96758 /* MathCore */;
-			targetProxy = 8F620D9E19425AA900D96758 /* PBXContainerItemProxy */;
-		};
-		8F620DA319425AA900D96758 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8F620D8A19425AA800D96758 /* MathCore */;
-			targetProxy = 8F620DA219425AA900D96758 /* PBXContainerItemProxy */;
-		};
-		8F620DAC19425AAA00D96758 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8F620D8A19425AA800D96758 /* MathCore */;
-			targetProxy = 8F620DAB19425AAA00D96758 /* PBXContainerItemProxy */;
 		};
 		8FCE8BC118F17D4C00E8C3D8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1051,58 +860,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		8F620DA519425AA900D96758 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MathCore/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8F620DA619425AA900D96758 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = MathCore/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		8F620DA919425AA900D96758 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1228,6 +985,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MathCalc/MathCalc-Prefix.pch";
 				INFOPLIST_FILE = "MathCalc/MathCalc-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1244,6 +1002,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MathCalc/MathCalc-Prefix.pch";
 				INFOPLIST_FILE = "MathCalc/MathCalc-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1301,15 +1060,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8F620DA419425AA900D96758 /* Build configuration list for PBXNativeTarget "MathCore" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8F620DA519425AA900D96758 /* Debug */,
-				8F620DA619425AA900D96758 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8F620DA819425AA900D96758 /* Build configuration list for PBXNativeTarget "MathCoreTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@import MathCore;
+#import "MathCore.h"
+
 @interface HelpViewController : UITableViewController
 
 @property (nonatomic, strong) Shape *shape;

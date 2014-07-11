@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <MathCore/Circle.h>
+#import "Circle.h"
 #import "Sphere.h"
 #import "RightTriangle.h"
 #import "Pyramid.h"
@@ -21,13 +21,5 @@
 #import "AreaFormatter.h"
 #import "VolumeFormatter.h"
 #import "AngleFormatter.h"
-
-//! Project version number for MathCore.
-FOUNDATION_EXPORT double MathCoreVersionNumber;
-
-//! Project version string for MathCore.
-FOUNDATION_EXPORT const unsigned char MathCoreVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <MathCore/PublicHeader.h>
 
 

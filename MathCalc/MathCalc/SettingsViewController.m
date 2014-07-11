@@ -7,8 +7,7 @@
 //
 
 #import "SettingsViewController.h"
-
-@import MathCore;
+#import "MathCore.h"
 
 @implementation SettingsViewController {
     NSArray *array;
